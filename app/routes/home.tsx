@@ -12,17 +12,16 @@ export default function Home() {
       <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2">
         <ProfileCard
           username={"origemjhanpoll"}
-          name={"Origem Jhanpoll"}
-          role={"Developer"}
+          name={"Jean Paul"}
+          role={"Mobile Developer"}
           description={"Passionate developer with a love for creating innovative solutions."}
-          age={28}
-          tags={["JavaScript", "TypeScript", "React", "Node.js"]}
-          photoUrl={"https://framerusercontent.com/images/PVRe5xa6b75JHWq2R6KN2cO8z0.png"}
+
+          tags={["28 y.o", "JavaScript", "TypeScript", "React", "Node.js"]}
+          photoUrl={"https://avatars.githubusercontent.com/u/131689163?s=400&u=d07e3e813d2f38294a86809206dcc28f5bb41570&v=4"}
         />
         <Local
-          name="My Local Place"
-          address="123 Main St, Anytown"
-          description="A cozy place to hang out and relax."
+          address="São Luís - MA, Brasil"
+          description={`${new Date().toLocaleTimeString()} GMT-3 (local time)`}
         />
         <div className="hidden md:block">
           <Actions />
