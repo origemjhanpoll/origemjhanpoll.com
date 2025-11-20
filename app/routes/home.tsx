@@ -42,31 +42,28 @@ export default function Home() {
         <Projects
           projects={[
             {
-              title: "My Awesome App",
-              description: "A full-stack application built with React and Node.js",
-              tags: ["React", "Node.js", "MongoDB"],
-              githubUrl: "https://github.com/user/repo",
-              liveUrl: "https://demo.com",
-              imageUrl: "https://images.pexels.com/photos/34468507/pexels-photo-34468507.jpeg",
-
+              title: "E-commerce Dashboard",
+              description: "A comprehensive dashboard for managing online store inventory and sales analytics.",
+              liveUrl: "https://dashboard-demo.com",
+              imageUrl: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
             },
             {
-              title: "My Awesome App",
-              description: "A full-stack application built with React and Node.js",
-              tags: ["React", "Node.js", "MongoDB"],
-              githubUrl: "https://github.com/user/repo",
-              liveUrl: "https://demo.com",
-              imageUrl: "https://images.pexels.com/photos/34468507/pexels-photo-34468507.jpeg",
-
+              title: "Travel Companion",
+              description: "Mobile-first application for planning trips and discovering local hidden gems.",
+              liveUrl: "https://travel-app.com",
+              imageUrl: "https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg",
             },
             {
-              title: "My Awesome App",
-              description: "A full-stack application built with React and Node.js",
-              tags: ["React", "Node.js", "MongoDB"],
-              githubUrl: "https://github.com/user/repo",
-              liveUrl: "https://demo.com",
-              imageUrl: "https://images.pexels.com/photos/34468507/pexels-photo-34468507.jpeg",
-
+              title: "AI Content Gen",
+              description: "AI-powered tool that helps marketers generate creative copy in seconds.",
+              liveUrl: "https://ai-content.com",
+              imageUrl: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+            },
+            {
+              title: "FitTrack Pro",
+              description: "Health monitoring platform integrating with wearable devices for real-time stats.",
+              liveUrl: "https://fittrack.com",
+              imageUrl: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
             },
           ]}
         />

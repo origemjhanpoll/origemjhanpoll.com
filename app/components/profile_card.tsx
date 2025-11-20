@@ -32,7 +32,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 				)}
 			</div>
 			<div className="flex flex-col justify-center items-center md:items-start mt-4">
-				<span className="text-sm text-[var(--color-text-muted)]">@{username}</span>
+				<span className="text-sm text-[var(--color-text-secondary)]">@{username}</span>
 				<h1 className="text-2xl my-1">Hello! I'm {name}</h1>
 				<h2 className="text-xl text-[var(--color-text-secondary)]">{role}</h2>
 			</div>

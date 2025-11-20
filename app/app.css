@@ -11,8 +11,9 @@ body {
   --color-card-bg: #101010;
   --color-tag-bg: #333333;
   --color-text-primary: #ffffff;
-  --color-text-muted: #aaaaaa;
-  --color-text-secondary: #cccccc;
+  --color-text-secondary: #aaaaaa;
+  --color-text-tertiary: #666666;
+
 
   background-color: black;
   color: white;
@@ -22,8 +23,8 @@ body {
     --color-card-bg: #efefef;
     --color-tag-bg: #e0e0e0;
     --color-text-primary: #000000;
-    --color-text-muted: #666666;
     --color-text-secondary: #333333;
+    --color-text-tertiary: #999999;
 
     background-color: white;
     color: black;
