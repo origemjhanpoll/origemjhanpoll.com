@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ProfileCardProps {
+interface ProfileProps {
 	username: string;
 	name: string;
 	role: string;
@@ -10,7 +10,7 @@ interface ProfileCardProps {
 }
 
 
-const ProfileCard: React.FC<ProfileCardProps> = ({
+const Profile: React.FC<ProfileProps> = ({
 	username,
 	name,
 	role,
@@ -39,7 +39,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 			<p className="my-4 leading-relaxed break-words md:text-start text-center">{description}</p>
 			<div className="flex flex-wrap gap-2 justify-center md:justify-start">
 				{tags.map((tag, index) => (
-					<span key={index} className="bg-[var(--color-tag-bg)] px-3 py-2 rounded-lg text-sm">{tag}</span>
+					<span key={index} className="bg-[var(--color-tag-bg)] px-4 py-2 rounded-full text-sm">{tag}</span>
 				))}
 			</div>
 			<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans h-14 mt-6 mb-2">
@@ -54,4 +54,4 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 	);
 };
 
-export default ProfileCard;
+export default Profile;

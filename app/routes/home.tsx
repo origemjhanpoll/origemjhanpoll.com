@@ -1,21 +1,20 @@
-import ProfileCard from "~/components/profile_card";
 import SocialLinks from "~/components/social_links";
 import { FaInstagram, FaLinkedin, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import MainBanner from "~/components/main_banner";
 import Projects from "~/components/projects";
 import Local from "~/components/local";
 import Actions from "~/components/actions";
+import Profile from "~/components/profile";
 
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 md:p-4 p-2">
       <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2">
-        <ProfileCard
+        <Profile
           username={"origemjhanpoll"}
           name={"Jean Paul"}
           role={"Mobile Developer"}
           description={"Passionate developer with a love for creating innovative solutions."}
-
           tags={["28 y.o", "JavaScript", "TypeScript", "React", "Node.js"]}
           photoUrl={"https://avatars.githubusercontent.com/u/131689163?s=400&u=d07e3e813d2f38294a86809206dcc28f5bb41570&v=4"}
         />

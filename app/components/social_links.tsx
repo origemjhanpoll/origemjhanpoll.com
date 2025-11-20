@@ -22,7 +22,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
             key={index}
             href={item.href}
             aria-label={item.label}
-            className="grow p-8 flex items-center justify-center bg-gray-800 rounded-3xl hover:bg-gray-700 transition"
+            className="grow p-8 flex items-center justify-center bg-[var(--color-tag-bg)] hover:brightness-95 rounded-3xl transition"
           >
             {item.icon}
           </a>
