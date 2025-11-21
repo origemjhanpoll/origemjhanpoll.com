@@ -25,10 +25,10 @@ const Profile: React.FC<ProfileProps> = ({
 					<img
 						src={photoUrl}
 						alt={`${name}'s profile`}
-						className="w-30 h-30 rounded-full object-cover bg-[var(--color-tag-bg)]"
+						className="w-30 h-30 rounded-2xl object-cover bg-[var(--color-tag-bg)]"
 					/>
 				) : (
-					<div className="w-30 h-30 rounded-full bg-[var(--color-tag-bg)]" />
+					<div className="w-30 h-30 rounded-2xl bg-[var(--color-tag-bg)]" />
 				)}
 			</div>
 			<div className="flex flex-col justify-center items-center md:items-start mt-4">

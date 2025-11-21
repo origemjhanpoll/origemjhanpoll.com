@@ -28,16 +28,16 @@ export const Local: React.FC<LocalProps> = ({ address }) => {
 
 	return (
 		<section className="relative overflow-hidden bg-[var(--color-card-bg)] rounded-3xl">
-			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-5 font-sans">
-				{address && <p>{address}</p>}
-				<p className='text-[var(--color-text-secondary)] text-sm'>
+			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-6">
+				{address && <h1 className='text-lg font-semibold'>{address}</h1>}
+				<p className='text-[var(--color-text-secondary)] text-sm font-sans'>
 					{timeString}
 				</p>
 			</div>
 			<img
 				src={localImage}
 				alt="Image local"
-				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50"
+				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50 invert dark:invert-0"
 			/>
 			<div className="absolute top-1/2 right-[20%] -translate-y-1/2 flex items-center justify-center">
 				<span className="relative flex size-8 items-center justify-center">

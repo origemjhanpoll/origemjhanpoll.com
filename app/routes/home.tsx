@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden flex-1 lg:flex">
-        <MainBanner url={"https://images.pexels.com/photos/2842827/pexels-photo-2842827.jpeg"} />
+        <MainBanner url={"https://images.pexels.com/photos/34772003/pexels-photo-34772003.jpeg"} />
       </div>
       <div className="flex flex-col-reverse md:flex-col lg:w-100 w-full md:gap-4 gap-2">
         <SocialLinks
