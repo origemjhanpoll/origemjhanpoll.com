@@ -20,7 +20,6 @@ export default function Home() {
         />
         <Local
           address="São Luís - MA, Brasil"
-          description={`${new Date().toLocaleTimeString()} GMT-3 (local time)`}
         />
         <div className="hidden md:block">
           <Actions />

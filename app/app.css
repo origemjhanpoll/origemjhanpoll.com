@@ -3,23 +3,25 @@
 @theme {
   --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --animate-ping: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 html,
 body {
   /* Cores para dark mode (padrão) */
+  --color-primary: #ffffff;
   --color-card-bg: #101010;
   --color-tag-bg: #333333;
   --color-text-primary: #ffffff;
   --color-text-secondary: #aaaaaa;
   --color-text-tertiary: #666666;
 
-
   background-color: black;
   color: white;
 
   /* Cores para light mode */
   @media (prefers-color-scheme: light) {
+    --color-primary: #000000;
     --color-card-bg: #efefef;
     --color-tag-bg: #e0e0e0;
     --color-text-primary: #000000;
