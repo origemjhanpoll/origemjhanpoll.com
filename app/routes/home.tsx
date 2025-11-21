@@ -1,6 +1,6 @@
 import SocialLinks from "~/components/social_links";
 import { FaInstagram, FaLinkedin, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import MainBanner from "~/components/main_banner";
+import { MainBanner } from "~/components/main_banner";
 import Projects from "~/components/projects";
 import Local from "~/components/local";
 import Actions from "~/components/actions";
@@ -26,7 +26,11 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden flex-1 lg:flex">
-        <MainBanner url={"https://images.pexels.com/photos/34772003/pexels-photo-34772003.jpeg"} />
+        <MainBanner
+          url={"https://www.pexels.com/pt-br/download/video/12978459/"}
+          title="Building the Future"
+          buttonText="View Projects"
+        />
       </div>
       <div className="flex flex-col-reverse md:flex-col lg:w-100 w-full md:gap-4 gap-2">
         <SocialLinks
