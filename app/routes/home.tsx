@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 
 import { getProfileService } from "~/services/profile_service";
 import { getProjectsService } from "~/services/projects_service";
+import { getMainService } from "~/services/main_service";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 import iconBR from "../assets/png/br.png";
@@ -26,6 +27,7 @@ export default function Home() {
   ];
 
   const profileData = getProfileService(locale);
+  const mainData = getMainService(locale);
   const [projectsData, setProjectsData] = useState<{
     professional: { title: string; items: any[] };
     personal: { title: string; items: any[] };
@@ -46,7 +48,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 md:p-4 p-2">
-      <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2">
+      <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2 transition-all">
         <Profile
           username={profileData.username}
           name={profileData.name}
@@ -81,11 +83,12 @@ export default function Home() {
           ]} />
         </div>
       </div>
-      <div className="hidden flex-1 lg:flex">
+      <div className="hidden flex-1 lg:flex transition-all duration-300">
         <Main
-          url={"https://www.pexels.com/pt-br/download/video/12978459/"}
-          title="Building the Future"
-          buttonText="View Projects"
+          url={mainData.url}
+          title={mainData.title}
+          description={mainData.description}
+          buttonText={mainData.buttonText}
         />
       </div>
       <div className="flex flex-col-reverse md:flex-col lg:w-100 w-full md:gap-4 gap-2">

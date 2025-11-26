@@ -52,7 +52,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <div
       onClick={() => project.url && window.open(project.url, '_blank')}
-      className="group flex flex-row items-center gap-4 p-2 hover:bg-[var(--color-tag-bg)]/80 transition-colors rounded-lg cursor-pointer duration-300"
+      className="group flex flex-row items-center gap-4 p-2 transition hover:scale-105 active:scale-95 cursor-pointer duration-300 rounded-xl"
     >
       <div className="relative size-20 shrink-0">
         {(project.thumbnail) ?

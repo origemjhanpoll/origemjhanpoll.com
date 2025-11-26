@@ -29,6 +29,12 @@
     "localTimeLabel": "Local Time",
     "address": "São Luís - MA, Brazil"
   },
+  "main": {
+    "url": "https://www.pexels.com/pt-br/download/video/12978459/",
+    "title": "Your Mobile App Ready for Market",
+    "description": "Custom app development for companies seeking scale, quality and high-level user experience.",
+    "buttonText": "Simulate Project"
+  },
   "about": {
     "title": "A little about me.",
     "history_label": "History",

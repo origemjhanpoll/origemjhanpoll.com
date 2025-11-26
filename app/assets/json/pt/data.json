@@ -29,6 +29,12 @@
     "localTimeLabel": "Horário Local",
     "address": "São Luís - MA, Brasil"
   },
+  "main": {
+    "url": "https://www.pexels.com/pt-br/download/video/12978459/",
+    "title": "Seu App Mobile Pronto Para o Mercado",
+    "description": "Criação de aplicativos personalizados para empresas que buscam escala, qualidade e experiência do usuário de alto nível.",
+    "buttonText": "Simular Projeto"
+  },
   "about": {
     "title": "Um pouco sobre mim.",
     "history_label": "História",

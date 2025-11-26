@@ -38,7 +38,7 @@ export const Local: React.FC<LocalProps> = ({ address, label }) => {
 			<img
 				src={localImage}
 				alt="Image local"
-				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50 invert dark:invert-0"
+				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50"
 			/>
 			<div className="absolute top-1/2 right-[20%] -translate-y-1/2 flex items-center justify-center">
 				<span className="relative flex size-8 items-center justify-center">
