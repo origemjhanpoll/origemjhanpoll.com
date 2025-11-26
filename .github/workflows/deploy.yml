@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.HOSTINGER_USERNAME }}
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           port: ${{ secrets.HOSTINGER_PORT }}
-          source: "dist/**"
+          source: "build/client/**"
           target: "domains/origemjhanpoll.com/public_html/"
-          strip_components: 1
+          strip_components: 2
           overwrite: true
