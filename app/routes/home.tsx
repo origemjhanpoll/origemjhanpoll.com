@@ -9,10 +9,25 @@ import { useState, useEffect } from "react";
 
 import { getProfileService } from "~/services/profile_service";
 import { getProjectsService } from "~/services/projects_service";
+import { getMainService } from "~/services/main_service";
 import { MdOutlineFileDownload } from "react-icons/md";
 
+import iconBR from "../assets/png/br.png";
+import iconCN from "../assets/png/cn.png";
+import iconUS from "../assets/png/us.png";
+
+
 export default function Home() {
-  const profileData = getProfileService();
+  const [locale, setLocale] = useState('pt');
+  const [currentFlagIndex, setCurrentFlagIndex] = useState(0);
+  const flags = [
+    { icon: iconBR, locale: 'pt' },
+    { icon: iconUS, locale: 'en' },
+    { icon: iconCN, locale: 'cn' }
+  ];
+
+  const profileData = getProfileService(locale);
+  const mainData = getMainService(locale);
   const [projectsData, setProjectsData] = useState<{
     professional: { title: string; items: any[] };
     personal: { title: string; items: any[] };
@@ -22,12 +37,18 @@ export default function Home() {
   });
 
   useEffect(() => {
-    getProjectsService().then(data => setProjectsData(data));
-  }, []);
+    getProjectsService(locale).then(data => setProjectsData(data));
+  }, [locale]);
+
+  const handleFlagClick = () => {
+    const nextIndex = (currentFlagIndex + 1) % flags.length;
+    setCurrentFlagIndex(nextIndex);
+    setLocale(flags[nextIndex].locale);
+  };
 
   return (
     <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 md:p-4 p-2">
-      <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2">
+      <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2 transition-all">
         <Profile
           username={profileData.username}
           name={profileData.name}
@@ -36,9 +57,12 @@ export default function Home() {
           tags={profileData.tags}
           photoUrl={profileData.photo}
           buttons={profileData.buttons}
+          flag={flags[currentFlagIndex].icon}
+          onClickFlag={handleFlagClick}
         />
         <Local
-          address="São Luís - MA, Brasil"
+          address={profileData.address}
+          label={profileData.localTimeLabel}
         />
         <div className="hidden md:block">
           <Actions listActions={[
@@ -59,11 +83,15 @@ export default function Home() {
           ]} />
         </div>
       </div>
-      <div className="hidden flex-1 lg:flex">
+      <div className="hidden flex-1 lg:flex transition-all duration-300">
         <Main
-          url={"https://www.pexels.com/pt-br/download/video/12978459/"}
-          title="Building the Future"
-          buttonText="View Projects"
+          url={mainData.url}
+          title={mainData.title}
+          description={mainData.description}
+          buttonText={mainData.buttonText}
+          onClick={() => {
+            window.location.href = '/simulate';
+          }}
         />
       </div>
       <div className="flex flex-col-reverse md:flex-col lg:w-100 w-full md:gap-4 gap-2">

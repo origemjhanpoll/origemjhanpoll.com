@@ -1,4 +1,6 @@
-import data from "../assets/json/pt/data.json";
+import dataPt from "../assets/json/pt/data.json";
+import dataEn from "../assets/json/en/data.json";
+import dataCn from "../assets/json/cn/data.json";
 
 interface GitHubRepo {
   name: string;
@@ -8,7 +10,18 @@ interface GitHubRepo {
   topics: string[];
 }
 
-export const getProjectsService = async () => {
+export const getProjectsService = async (locale: string = 'pt') => {
+  let data;
+  switch (locale) {
+    case 'en':
+      data = dataEn;
+      break;
+    case 'cn':
+      data = dataCn;
+      break;
+    default:
+      data = dataPt;
+  }
   try {
     const response = await fetch('https://api.github.com/users/origemjhanpoll/repos');
     const githubRepos: GitHubRepo[] = await response.json();

@@ -2,7 +2,7 @@ import dataPt from "../assets/json/pt/data.json";
 import dataEn from "../assets/json/en/data.json";
 import dataCn from "../assets/json/cn/data.json";
 
-export const getProfileService = (locale: string = 'pt') => {
+export const getMainService = (locale: string = 'pt') => {
   let data;
   switch (locale) {
     case 'en':
@@ -14,5 +14,5 @@ export const getProfileService = (locale: string = 'pt') => {
     default:
       data = dataPt;
   }
-  return data.profile;
+  return data.main;
 };

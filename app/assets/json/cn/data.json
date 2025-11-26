@@ -1,8 +1,8 @@
 {
   "profile": {
-    "name": "Olá! Eu sou Jean Paul",
-    "role": "Mobile Developer",
-    "description": "6+ anos criando soluções mobile e web intuitivas e seguras. Especializado em interfaces responsivas, Design Systems escaláveis e experiência do usuário.",
+    "name": "你好！我是 Jean Paul",
+    "role": "移动开发工程师",
+    "description": "6年以上创建直观和安全的移动和Web解决方案经验。专注于响应式界面、可扩展的设计系统和用户体验。",
     "username": "origemjhanpoll",
     "tags": [
       "29 y.o",
@@ -18,28 +18,28 @@
     "photo": "",
     "buttons": [
       {
-        "text": "Entre em contato",
+        "text": "联系我",
         "url": "https://api.whatsapp.com/send/?phone=5598991391108"
       },
       {
-        "text": "CV",
+        "text": "简历",
         "url": "https://github.com/origemjhanpoll/origemjhanpoll_site/raw/793f80b036f1dfb562e65f6976bcf461b91ea622/app/assets/Jean%20Paul%20-%20PTBR.pdf"
       }
     ],
-    "localTimeLabel": "Horário Local",
-    "address": "São Luís - MA, Brasil"
+    "localTimeLabel": "当地时间",
+    "address": "São Luís - MA, 巴西"
   },
   "main": {
     "url": "https://www.pexels.com/pt-br/download/video/12978459/",
-    "title": "Seu App Mobile Pronto Para o Mercado",
-    "description": "Criação de aplicativos personalizados para empresas que buscam escala, qualidade e experiência do usuário de alto nível.",
-    "buttonText": "Simular Projeto"
+    "title": "您的移动应用已准备好上市",
+    "description": "为寻求规模、质量和高水平用户体验的企业定制应用程序开发。",
+    "buttonText": "模拟项目"
   },
   "about": {
-    "title": "Um pouco sobre mim.",
-    "history_label": "História",
-    "history": "Sou especializado em desenvolvimento mobile, com mais de 6 anos de experiência criando soluções robustas, intuitivas e seguras para Android, iOS e web. Tenho domínio de Flutter, Dart, React Native, React, JavaScript e TypeScript, além de experiência com ferramentas como Firebase, Datadog e Codemagic. Me destaco na criação de interfaces responsivas, aplicação de Design Systems escaláveis e foco constante na experiência do usuário.\n\nAo longo da minha trajetória, atuei diretamente na melhoria de performance, organização de código, segurança de dados e componentização de interfaces em diversos projetos mobile e web. Tenho também forte atuação em UX/UI, motion design e prototipagem com Figma e Adobe Suite, utilizando animações e micro interações para tornar produtos mais envolventes e agradáveis de usar.",
-    "technologies_label": "Tecnologias",
+    "title": "关于我",
+    "history_label": "经历",
+    "history": "我专注于移动开发，拥有超过6年的经验，为Android、iOS和Web创建强大、直观和安全的解决方案。我精通Flutter、Dart、React Native、React、JavaScript和TypeScript，以及Firebase、Datadog和Codemagic等工具。我擅长创建响应式界面、实施可扩展的设计系统，并始终专注于用户体验。\n\n在我的职业生涯中，我直接参与了各种移动和Web项目的性能改进、代码组织、数据安全和界面组件化工作。我在UX/UI、动效设计以及使用Figma和Adobe Suite进行原型设计方面也有很强的专业能力，利用动画和微交互使产品更具吸引力和愉悦感。",
+    "technologies_label": "技术栈",
     "technologies": [
       "Flutter",
       "Dart",
@@ -50,7 +50,7 @@
       "ReactJs",
       "JavaScript"
     ],
-    "others_label": "Outros",
+    "others_label": "其他",
     "others": [
       "Bitbucket",
       "CI/CD",
@@ -66,12 +66,12 @@
     ]
   },
   "projects": {
-    "title": "PROFISSIONAL",
-    "title2": "PESSOAL",
+    "title": "专业项目",
+    "title2": "个人项目",
     "items": [
       {
         "title": "Brasil Card Digital",
-        "description": "Aplicativo de banco digital com cartões Private Label customizados e cartão de crédito BrasilCard.",
+        "description": "数字银行应用程序，具有定制的私人标签卡和BrasilCard信用卡。",
         "thumbnail": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
         "technologies": [
           "Flutter",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Gupy EduCorp",
-        "description": "Plataforma de educação corporativa com gamificação, ranking, pontos e quiz interativo para treinamento de colaboradores.",
+        "description": "企业教育平台，具有游戏化、排名、积分和互动测验功能，用于员工培训。",
         "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
         "technologies": [
           "Flutter",
@@ -120,7 +120,7 @@
       },
       {
         "title": "Maestro Mateus",
-        "description": "Sistema de gestão de rotinas e tarefas diárias para colaboradores de rede de supermercados.",
+        "description": "超市连锁员工的日常任务管理系统。",
         "thumbnail": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
         "technologies": [
           "React Native",
@@ -144,11 +144,11 @@
     ]
   },
   "contact": {
-    "title": "Entre em Contato",
-    "description": "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato através de qualquer um dos canais abaixo:",
+    "title": "联系方式",
+    "description": "我随时欢迎新的机会和合作。请随时通过以下任何渠道与我联系：",
     "contact_items": [
       {
-        "title": "Email",
+        "title": "邮箱",
         "value": "origemjhanpoll@gmail.com",
         "icon": "email",
         "url": "mailto:origemjhanpoll@gmail.com",

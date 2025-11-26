@@ -3,9 +3,10 @@ import localImage from '../assets/local_image_1.png';
 
 interface LocalProps {
 	address?: string;
+	label: string;
 }
 
-export const Local: React.FC<LocalProps> = ({ address }) => {
+export const Local: React.FC<LocalProps> = ({ address, label }) => {
 	const [timeString, setTimeString] = useState<string>("");
 
 	useEffect(() => {
@@ -17,7 +18,7 @@ export const Local: React.FC<LocalProps> = ({ address }) => {
 			const sign = offset >= 0 ? '+' : '-';
 			const gmt = `GMT${sign}${Math.abs(offset)}`;
 
-			setTimeString(`${time} ${gmt} Horario Local`);
+			setTimeString(`${time} ${gmt}`);
 		};
 
 		updateTime();
@@ -30,14 +31,14 @@ export const Local: React.FC<LocalProps> = ({ address }) => {
 		<section className="relative overflow-hidden bg-[var(--color-card-bg)] rounded-3xl">
 			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-8">
 				{address && <h1 className='text-lg font-semibold'>{address}</h1>}
-				<p className='text-[var(--color-text-secondary)] text-sm font-sans'>
-					{timeString}
+				<p className='text-[var(--color-text-secondary)] text-sm font-light'>
+					{timeString} {label}
 				</p>
 			</div>
 			<img
 				src={localImage}
 				alt="Image local"
-				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50 invert dark:invert-0"
+				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50"
 			/>
 			<div className="absolute top-1/2 right-[20%] -translate-y-1/2 flex items-center justify-center">
 				<span className="relative flex size-8 items-center justify-center">
