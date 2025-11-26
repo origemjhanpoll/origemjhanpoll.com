@@ -59,7 +59,8 @@ export default function Home() {
           onClickFlag={handleFlagClick}
         />
         <Local
-          address="São Luís - MA, Brasil"
+          address={profileData.address}
+          label={profileData.localTimeLabel}
         />
         <div className="hidden md:block">
           <Actions listActions={[

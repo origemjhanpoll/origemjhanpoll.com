@@ -3,9 +3,10 @@ import localImage from '../assets/local_image_1.png';
 
 interface LocalProps {
 	address?: string;
+	label: string;
 }
 
-export const Local: React.FC<LocalProps> = ({ address }) => {
+export const Local: React.FC<LocalProps> = ({ address, label }) => {
 	const [timeString, setTimeString] = useState<string>("");
 
 	useEffect(() => {
@@ -17,7 +18,7 @@ export const Local: React.FC<LocalProps> = ({ address }) => {
 			const sign = offset >= 0 ? '+' : '-';
 			const gmt = `GMT${sign}${Math.abs(offset)}`;
 
-			setTimeString(`${time} ${gmt} Horario Local`);
+			setTimeString(`${time} ${gmt}`);
 		};
 
 		updateTime();
@@ -31,7 +32,7 @@ export const Local: React.FC<LocalProps> = ({ address }) => {
 			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-8">
 				{address && <h1 className='text-lg font-semibold'>{address}</h1>}
 				<p className='text-[var(--color-text-secondary)] text-sm font-light'>
-					{timeString}
+					{timeString} {label}
 				</p>
 			</div>
 			<img
