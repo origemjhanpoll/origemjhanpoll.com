@@ -25,19 +25,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Test SSH Connection
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOSTINGER_HOST }}
-          username: ${{ secrets.HOSTINGER_USERNAME }}
-          key: ${{ secrets.HOSTINGER_SSH_KEY }}
-          port: ${{ secrets.HOSTINGER_PORT }}
-          script: |
-            pwd
-            ls -la
-            echo "Target dir: ${{ secrets.HOSTINGER_TARGET_DIR }}"
-            mkdir -p ${{ secrets.HOSTINGER_TARGET_DIR }}
-
       - name: Deploy to Hostinger via SSH
         uses: appleboy/scp-action@master
         with:
@@ -46,6 +33,6 @@ jobs:
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           port: ${{ secrets.HOSTINGER_PORT }}
           source: "build/client/*"
-          target: "${{ secrets.HOSTINGER_TARGET_DIR }}"
+          target: "domains/origemjhanpoll.com/public_html/"
           strip_components: 2
-          rm: true
+          overwrite: true
