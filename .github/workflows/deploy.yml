@@ -32,6 +32,7 @@ jobs:
           username: ${{ secrets.HOSTINGER_USERNAME }}
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           port: ${{ secrets.HOSTINGER_PORT }}
-          source: "build/*,package.json,public/*" # Ajuste conforme necessário. Se for apenas estático, talvez seja build/client/*
-          target: ${{ secrets.HOSTINGER_TARGET_DIR }}
-          strip_components: 0 # Mantém a estrutura de pastas
+          source: "build/client/*"
+          target: "${{ secrets.HOSTINGER_TARGET_DIR }}"
+          strip_components: 2
+          rm: true
