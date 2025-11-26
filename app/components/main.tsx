@@ -6,7 +6,7 @@ interface MainBannerProps {
   buttonText?: string;
 }
 
-export const MainBanner: React.FC<MainBannerProps> = ({
+export const Main: React.FC<MainBannerProps> = ({
   url,
   title = "Welcome",
   buttonText = "Explore",
@@ -36,4 +36,4 @@ export const MainBanner: React.FC<MainBannerProps> = ({
   );
 };
 
-export default MainBanner;
+export default Main;

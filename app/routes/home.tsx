@@ -1,6 +1,6 @@
-import SocialLinks from "~/components/social_links";
-import { FaInstagram, FaLinkedin, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import { MainBanner } from "~/components/main_banner";
+import Social from "~/components/social";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { Main } from "~/components/main";
 import Projects from "~/components/projects";
 import Local from "~/components/local";
 import Actions from "~/components/actions";
@@ -26,20 +26,18 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden flex-1 lg:flex">
-        <MainBanner
+        <Main
           url={"https://www.pexels.com/pt-br/download/video/12978459/"}
           title="Building the Future"
           buttonText="View Projects"
         />
       </div>
       <div className="flex flex-col-reverse md:flex-col lg:w-100 w-full md:gap-4 gap-2">
-        <SocialLinks
+        <Social
           icons={[
-            { icon: <FaYoutube />, href: "#", label: "YouTube" },
-            { icon: <FaInstagram />, href: "#", label: "Instagram" },
-            { icon: <FaTiktok />, href: "#", label: "TikTok" },
-            { icon: <FaXTwitter />, href: "#", label: "X (Twitter)" },
-            { icon: <FaLinkedin />, href: "#", label: "LinkedIn" },
+            { icon: <FaLinkedin size={32} />, href: "https://linkedin.com/in/origemjhanpoll", label: "LinkedIn" },
+            { icon: <FaGithub size={32} />, href: "https://github.com/origemjhanpoll", label: "Github" },
+            { icon: <FaInstagram size={32} />, href: "https://instagram.com/origemjhanpoll", label: "Instagram" },
           ]} />
         <Projects
           projects={[
