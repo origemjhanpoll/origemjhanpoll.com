@@ -22,9 +22,9 @@ export const Actions: React.FC<ActionsProps> = ({ listActions }) => {
         <button
           key={index}
           onClick={() => window.open(action.url, '_blank')}
-          className={`${action.isFull && 'w-full'} ${action.color || 'bg-[var(--color-primary)]'} flex h-16 items-center justify-center gap-2 px-6 text-[var(--color-card-bg)] text-lg font-semibold rounded-full transition hover:scale-105 active:scale-95 cursor-pointer duration-300`}>
+          className={`${action.isFull && 'w-full'} ${action.color || 'bg-[var(--color-primary)]'} flex min-h-16 items-center justify-center gap-2 px-6 py-3 text-[var(--color-card-bg)] text-lg font-semibold rounded-full transition hover:scale-105 active:scale-95 cursor-pointer duration-300 whitespace-nowrap`}>
           {action.icon}
-          {action.title}
+          <span className="leading-tight">{action.title}</span>
         </button>
       ))}
     </section>
