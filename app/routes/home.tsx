@@ -1,5 +1,5 @@
 import Social from "~/components/social";
-import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { Main } from "~/components/main";
 import Projects from "~/components/projects";
 import Local from "~/components/local";
@@ -72,6 +72,7 @@ export default function Home() {
             { icon: <FaLinkedin size={32} />, href: "https://linkedin.com/in/origemjhanpoll", label: "LinkedIn" },
             { icon: <FaGithub size={32} />, href: "https://github.com/origemjhanpoll", label: "Github" },
             { icon: <FaInstagram size={32} />, href: "https://instagram.com/origemjhanpoll", label: "Instagram" },
+            { icon: <FaTelegram size={32} />, href: "https://t.me/origemjhanpoll", label: "Telegram" },
           ]} />
         <Projects
           professionalProjects={projectsData.professional.items}
