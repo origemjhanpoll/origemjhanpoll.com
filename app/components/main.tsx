@@ -28,7 +28,7 @@ export const Main: React.FC<MainBannerProps> = ({
         <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
           {title}
         </h1>
-        <button className="px-8 py-3 bg-white text-black rounded-full font-semibold text-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer">
+        <button className="px-8 py-3 bg-white text-black rounded-full font-semibold text-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer duration-300">
           {buttonText}
         </button>
       </div>
