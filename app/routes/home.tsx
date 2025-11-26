@@ -11,8 +11,21 @@ import { getProfileService } from "~/services/profile_service";
 import { getProjectsService } from "~/services/projects_service";
 import { MdOutlineFileDownload } from "react-icons/md";
 
+import iconBR from "../assets/png/br.png";
+import iconCN from "../assets/png/cn.png";
+import iconUS from "../assets/png/us.png";
+
+
 export default function Home() {
-  const profileData = getProfileService();
+  const [locale, setLocale] = useState('pt');
+  const [currentFlagIndex, setCurrentFlagIndex] = useState(0);
+  const flags = [
+    { icon: iconBR, locale: 'pt' },
+    { icon: iconUS, locale: 'en' },
+    { icon: iconCN, locale: 'cn' }
+  ];
+
+  const profileData = getProfileService(locale);
   const [projectsData, setProjectsData] = useState<{
     professional: { title: string; items: any[] };
     personal: { title: string; items: any[] };
@@ -22,8 +35,14 @@ export default function Home() {
   });
 
   useEffect(() => {
-    getProjectsService().then(data => setProjectsData(data));
-  }, []);
+    getProjectsService(locale).then(data => setProjectsData(data));
+  }, [locale]);
+
+  const handleFlagClick = () => {
+    const nextIndex = (currentFlagIndex + 1) % flags.length;
+    setCurrentFlagIndex(nextIndex);
+    setLocale(flags[nextIndex].locale);
+  };
 
   return (
     <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 md:p-4 p-2">
@@ -36,6 +55,8 @@ export default function Home() {
           tags={profileData.tags}
           photoUrl={profileData.photo}
           buttons={profileData.buttons}
+          flag={flags[currentFlagIndex].icon}
+          onClickFlag={handleFlagClick}
         />
         <Local
           address="São Luís - MA, Brasil"

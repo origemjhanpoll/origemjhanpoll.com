@@ -1,0 +1,172 @@
+{
+  "profile": {
+    "name": "你好！我是 Jean Paul",
+    "role": "移动开发工程师",
+    "description": "6年以上创建直观和安全的移动和Web解决方案经验。专注于响应式界面、可扩展的设计系统和用户体验。",
+    "username": "origemjhanpoll",
+    "tags": [
+      "29 y.o",
+      "Flutter",
+      "Dart",
+      "React Native",
+      "TypeScript",
+      "Android",
+      "iOS",
+      "ReactJs",
+      "JavaScript"
+    ],
+    "photo": "",
+    "buttons": [
+      {
+        "text": "联系我",
+        "url": "https://api.whatsapp.com/send/?phone=5598991391108"
+      },
+      {
+        "text": "简历",
+        "url": "https://github.com/origemjhanpoll/origemjhanpoll_site/raw/793f80b036f1dfb562e65f6976bcf461b91ea622/app/assets/Jean%20Paul%20-%20PTBR.pdf"
+      }
+    ]
+  },
+  "about": {
+    "title": "关于我",
+    "history_label": "经历",
+    "history": "我专注于移动开发，拥有超过6年的经验，为Android、iOS和Web创建强大、直观和安全的解决方案。我精通Flutter、Dart、React Native、React、JavaScript和TypeScript，以及Firebase、Datadog和Codemagic等工具。我擅长创建响应式界面、实施可扩展的设计系统，并始终专注于用户体验。\n\n在我的职业生涯中，我直接参与了各种移动和Web项目的性能改进、代码组织、数据安全和界面组件化工作。我在UX/UI、动效设计以及使用Figma和Adobe Suite进行原型设计方面也有很强的专业能力，利用动画和微交互使产品更具吸引力和愉悦感。",
+    "technologies_label": "技术栈",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "React Native",
+      "TypeScript",
+      "Android",
+      "iOS",
+      "ReactJs",
+      "JavaScript"
+    ],
+    "others_label": "其他",
+    "others": [
+      "Bitbucket",
+      "CI/CD",
+      "Codemagic",
+      "CSS",
+      "Figma",
+      "Firebase",
+      "Git",
+      "Google Cloud",
+      "GraphQL",
+      "HTML",
+      "Jira"
+    ]
+  },
+  "projects": {
+    "title": "专业项目",
+    "title2": "个人项目",
+    "items": [
+      {
+        "title": "Brasil Card Digital",
+        "description": "数字银行应用程序，具有定制的私人标签卡和BrasilCard信用卡。",
+        "thumbnail": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "Codemagic"
+        ],
+        "images": [
+          "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
+          "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
+          "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
+        ],
+        "url": "https://www.brasilcarddigital.com.br",
+        "github": null,
+        "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
+        "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
+        "year": 2025,
+        "types": [
+          "Mobile"
+        ]
+      },
+      {
+        "title": "Gupy EduCorp",
+        "description": "企业教育平台，具有游戏化、排名、积分和互动测验功能，用于员工培训。",
+        "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "Codemagic"
+        ],
+        "images": [
+          "https://play-lh.googleusercontent.com/Vey5GE62pfmHe9f7yOgfLwg-1ZFVx5CbP0rz5xcJ52DkSwR1GRNBkZkMUFqsDEFW0pU",
+          "https://play-lh.googleusercontent.com/kF08zTJcjcpWcff14M7V6mK2-vCwdAWUi5B_pzVRzeZxF4i7-6K7oIWIz9Q9tGuAuzo",
+          "https://play-lh.googleusercontent.com/Fj4zrwjdBzRjVFG7Vbnnlz-WW9GBlQBRPxp7oRnu2Ttpu-c5j4Rs3OvqLFlNqrEFPtM"
+        ],
+        "url": "https://www.gupy.io/plataforma-de-educacao-corporativa",
+        "github": null,
+        "playstore": "https://play.google.com/store/apps/details?id=com.workeduc.appv4&hl",
+        "appstore": "https://apps.apple.com/bo/app/gupy-educorp/id1287059492?platform=iphone",
+        "year": 2021,
+        "types": [
+          "Mobile",
+          "Web"
+        ]
+      },
+      {
+        "title": "Maestro Mateus",
+        "description": "超市连锁员工的日常任务管理系统。",
+        "thumbnail": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
+        "technologies": [
+          "React Native",
+          "Firebase"
+        ],
+        "images": [
+          "https://play-lh.googleusercontent.com/tPZK5HpZXwaxrKouU7X-jajx0hhS-RuUlAjXHbcmrY3Pn4qqtaSnHlAy07hiOQlFAQ",
+          "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
+          "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
+        ],
+        "url": "https://www.linkedin.com/company/pulseoficial/",
+        "github": null,
+        "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
+        "appstore": null,
+        "year": 2019,
+        "types": [
+          "Mobile",
+          "Web"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "联系方式",
+    "description": "我随时欢迎新的机会和合作。请随时通过以下任何渠道与我联系：",
+    "contact_items": [
+      {
+        "title": "邮箱",
+        "value": "origemjhanpoll@gmail.com",
+        "icon": "email",
+        "url": "mailto:origemjhanpoll@gmail.com",
+        "type": "email"
+      },
+      {
+        "title": "WhatsApp",
+        "value": "+55 (98) 99139-1108",
+        "icon": "whatsapp",
+        "url": "https://api.whatsapp.com/send/?phone=5598991391108",
+        "type": "whatsapp"
+      },
+      {
+        "title": "LinkedIn",
+        "value": "origemjhanpoll",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/origemjhanpoll",
+        "type": "linkedin"
+      },
+      {
+        "title": "GitHub",
+        "value": "origemjhanpoll",
+        "icon": "github",
+        "url": "https://github.com/origemjhanpoll",
+        "type": "github"
+      }
+    ]
+  }
+}
