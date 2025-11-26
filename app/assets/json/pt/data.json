@@ -1,6 +1,6 @@
 {
   "profile": {
-    "name": "Olá, eu sou Jean Paul",
+    "name": "Olá! Eu sou Jean Paul",
     "role": "Mobile Developer",
     "description": "Sou um desenvolvedor mobile focado na criação de aplicativos móveis de alto desempenho com código limpo e design excelente. Vamos transformar ideias em realidade!",
     "username": "origemjhanpoll",
@@ -23,7 +23,7 @@
       },
       {
         "text": "CV",
-        "url": "https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf"
+        "url": "https://github.com/origemjhanpoll/origemjhanpoll_site/raw/793f80b036f1dfb562e65f6976bcf461b91ea622/app/assets/Jean%20Paul%20-%20PTBR.pdf"
       }
     ]
   },
@@ -58,7 +58,8 @@
     ]
   },
   "projects": {
-    "title": "Projetos",
+    "title": "Projetos Profissionais",
+    "title2": "Projetos Pessoais",
     "items": [
       {
         "title": "Brasil Card Digital",
