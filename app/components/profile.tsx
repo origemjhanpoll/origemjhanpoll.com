@@ -34,14 +34,15 @@ const Profile: React.FC<ProfileProps> = ({
 			</div>
 			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-end text-[var(--color-text-primary)] font-sans md:text-start text-start overflow-y-auto p-4 md:p-6 pt-40 md:pt-48'>
 				<div className="flex flex-col justify-center items-center md:items-start mt-4">
-					<span className="text-sm font-medium text-[var(--color-text-secondary)]">@{username}</span>
+					<span className="text-md font-medium text-[var(--color-text-secondary)]">@{username}</span>
 					<h1 className="text-4xl md:text-6xl font-bold my-1 text-[var(--color-text-primary)] md:text-start text-center">{name}</h1>
-					<h2 className="text-xl text-[var(--color-text-secondary)]">{role}</h2>
 				</div>
-				<p className="my-4 leading-relaxed break-words md:text-start text-center text-[var(--color-text-primary)]">{description}</p>
+				<span className="my-4 leading-relaxed break-words md:text-start text-center text-[var(--color-text-secondary)] font-light text-sm">
+					<span className="text-lg font-light text-[var(--color-text-primary)] pr-1">{role}</span>
+					{description}</span>
 				<div className="flex flex-wrap gap-2 justify-center md:justify-start">
 					{tags.map((tag, index) => (
-						<span key={index} className="border border-[var(--color-text-secondary)]/30  px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)]">{tag}</span>
+						<span key={index} className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300">{tag}</span>
 					))}
 				</div>
 				<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 mt-6 mb-2">

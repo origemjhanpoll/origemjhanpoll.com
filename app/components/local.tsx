@@ -30,7 +30,7 @@ export const Local: React.FC<LocalProps> = ({ address }) => {
 		<section className="relative overflow-hidden bg-[var(--color-card-bg)] rounded-3xl">
 			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-8">
 				{address && <h1 className='text-lg font-semibold'>{address}</h1>}
-				<p className='text-[var(--color-text-secondary)] text-sm font-sans'>
+				<p className='text-[var(--color-text-secondary)] text-sm font-light'>
 					{timeString}
 				</p>
 			</div>
