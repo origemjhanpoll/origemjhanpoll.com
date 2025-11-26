@@ -34,14 +34,14 @@ const Profile: React.FC<ProfileProps> = ({
 			</div>
 			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-end text-[var(--color-text-primary)] font-sans md:text-start text-start overflow-y-auto p-6'>
 				<div className="flex flex-col justify-center items-center md:items-start mt-4">
-					<span className="text-sm text-gray-300">@{username}</span>
+					<span className="text-sm 	text-[var(--color-text-secondary)]">@{username}</span>
 					<h1 className="text-3xl font-bold my-1 text-[var(--color-text-primary)]">{name}</h1>
-					<h2 className="text-xl text-gray-200">{role}</h2>
+					<h2 className="text-xl text-[var(--color-text-secondary)]">{role}</h2>
 				</div>
 				<p className="my-4 leading-relaxed break-words md:text-start text-center text-[var(--color-text-secondary)]">{description}</p>
 				<div className="flex flex-wrap gap-2 justify-center md:justify-start">
 					{tags.map((tag, index) => (
-						<span key={index} className="border border-white/30 px-4 py-1.5 rounded-full text-white/90 text-sm backdrop-blur-sm">{tag}</span>
+						<span key={index} className="border border-[var(--color-text-secondary)]/30  px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)]">{tag}</span>
 					))}
 				</div>
 				<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 mt-6 mb-2">

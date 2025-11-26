@@ -18,12 +18,12 @@
     "photo": "",
     "buttons": [
       {
-        "text": "Meu Currículo",
-        "url": "https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf"
-      },
-      {
         "text": "Entre em contato",
         "url": "https://api.whatsapp.com/send/?phone=5598991391108"
+      },
+      {
+        "text": "CV",
+        "url": "https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf"
       }
     ]
   },

@@ -2,19 +2,31 @@ import React from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa6";
 
-export const Actions: React.FC = () => {
+interface ListActionsProps {
+  title: string;
+  url: string;
+  icon: React.ReactNode;
+  isFull?: boolean;
+  color?: string;
+}
+
+interface ActionsProps {
+  listActions: ListActionsProps[];
+
+}
+
+export const Actions: React.FC<ActionsProps> = ({ listActions }) => {
   return (
-    <section className="flex flex-row gap-4 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] p-6 rounded-3xl font-sans">
-      <button
-        onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-        className="flex items-center justify-center gap-2 w-full bg-[var(--color-primary)] text-[var(--color-card-bg)] text-lg font-semibold px-2 rounded-full transition hover:bg-neutral-200 hover:scale-105 active:scale-95 cursor-pointer duration-300">
-        <FaWhatsapp size={24} />
-        Entre em contato
-      </button>
-      <button className="flex items-center justify-center gap-2 bg-[var(--color-tag-bg)] text-[var(--color-primary)] text-lg font-semibold px-8 py-4 rounded-full transition hover:bg-neutral-600 hover:scale-105 active:scale-95 cursor-pointer duration-300">
-        <MdOutlineFileDownload size={24} />
-        CV
-      </button>
+    <section className="flex flex-row gap-4 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans p-6">
+      {listActions.map((action, index) => (
+        <button
+          key={index}
+          onClick={() => window.open(action.url, '_blank')}
+          className={`${action.isFull && 'w-full'} ${action.color || 'bg-[var(--color-primary)]'} flex h-16 items-center justify-center gap-2 px-6 text-[var(--color-card-bg)] text-lg font-semibold rounded-full transition hover:scale-105 active:scale-95 cursor-pointer duration-300 `}>
+          {action.icon}
+          {action.title}
+        </button>
+      ))}
     </section>
   );
 }

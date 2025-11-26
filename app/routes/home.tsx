@@ -1,5 +1,5 @@
 import Social from "~/components/social";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { Main } from "~/components/main";
 import Projects from "~/components/projects";
 import Local from "~/components/local";
@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 
 import { getProfileService } from "~/services/profile_service";
 import { getProjectsService } from "~/services/projects_service";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function Home() {
   const profileData = getProfileService();
@@ -40,7 +41,22 @@ export default function Home() {
           address="São Luís - MA, Brasil"
         />
         <div className="hidden md:block">
-          <Actions />
+          <Actions listActions={[
+            {
+              title: profileData.buttons[0].text,
+              url: profileData.buttons[0].url,
+              icon: <FaWhatsapp size={24} />,
+              color: "bg-[var(--color-primary)]",
+              isFull: true,
+            },
+            {
+              title: profileData.buttons[1].text,
+              url: profileData.buttons[1].url,
+              icon: <MdOutlineFileDownload size={24} />,
+              color: "bg-[var(--color-tag-bg)] text-[var(--color-tag-text)]",
+            }
+
+          ]} />
         </div>
       </div>
       <div className="hidden flex-1 lg:flex">
