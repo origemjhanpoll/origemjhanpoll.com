@@ -1,9 +1,21 @@
 {
-  "initial": {
+  "profile": {
     "name": "Olá, eu sou Jean Paul",
-    "role": "Desenvolvedor de Software",
-    "description": "Sou um engenheiro de software focado na criação de aplicativos móveis de alto desempenho com código limpo e design excelente. Vamos transformar ideias em realidade!",
-    "photo": "path/to/image.jpg",
+    "role": "Mobile Developer",
+    "description": "Sou um desenvolvedor mobile focado na criação de aplicativos móveis de alto desempenho com código limpo e design excelente. Vamos transformar ideias em realidade!",
+    "username": "origemjhanpoll",
+    "tags": [
+      "29 y.o",
+      "Flutter",
+      "Dart",
+      "React Native",
+      "TypeScript",
+      "Android",
+      "iOS",
+      "ReactJs",
+      "JavaScript"
+    ],
+    "photo": "",
     "buttons": [
       {
         "text": "Meu Currículo",
@@ -50,8 +62,8 @@
     "items": [
       {
         "title": "Brasil Card Digital",
-        "description": "A BRASIL CARD, atuando desde 1999 no mercado brasileiro, está presente em todo o território nacional. Oferecemos o cartão Private Label customizado para cada negócio e o cartão de crédito BrasilCard para clientes finais.",
-        "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
+        "description": "Aplicativo de banco digital com cartões Private Label customizados e cartão de crédito BrasilCard.",
+        "thumbnail": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
         "technologies": [
           "Flutter",
           "Dart",
@@ -74,8 +86,8 @@
       },
       {
         "title": "Gupy EduCorp",
-        "description": "A Gupy EduCorp é uma solução para desenvolvimento de colaboradores baseada em doses de conhecimento e Gamificação, o que torna o aprendizado interativo e divertido, aprimorando os resultados das empresas. Ranking, pontos e recompensas, além de outros como um quiz online, o Batalha, são recursos que a Gupy EduCorp utiliza para motivar de forma inovadora os colaboradores das empresas em seus treinamentos no aplicativo.",
-        "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
+        "description": "Plataforma de educação corporativa com gamificação, ranking, pontos e quiz interativo para treinamento de colaboradores.",
+        "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
         "technologies": [
           "Flutter",
           "Dart",
@@ -99,8 +111,8 @@
       },
       {
         "title": "Maestro Mateus",
-        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. O Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.",
-        "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
+        "description": "Sistema de gestão de rotinas e tarefas diárias para colaboradores de rede de supermercados.",
+        "thumbnail": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
         "technologies": [
           "React Native",
           "Firebase"

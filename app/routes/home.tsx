@@ -5,18 +5,36 @@ import Projects from "~/components/projects";
 import Local from "~/components/local";
 import Actions from "~/components/actions";
 import Profile from "~/components/profile";
+import { useState, useEffect } from "react";
+
+import { getProfileService } from "~/services/profile_service";
+import { getProjectsService } from "~/services/projects_service";
 
 export default function Home() {
+  const profileData = getProfileService();
+  const [projectsData, setProjectsData] = useState<{
+    professional: { title: string; items: any[] };
+    personal: { title: string; items: any[] };
+  }>({
+    professional: { title: "Projetos", items: [] },
+    personal: { title: "Projetos Pessoais", items: [] }
+  });
+
+  useEffect(() => {
+    getProjectsService().then(data => setProjectsData(data));
+  }, []);
+
   return (
     <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 md:p-4 p-2">
       <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2">
         <Profile
-          username={"origemjhanpoll"}
-          name={"Jean Paul"}
-          role={"Mobile Developer"}
-          description={"Passionate developer with a love for creating innovative solutions."}
-          tags={["28 y.o", "JavaScript", "TypeScript", "React", "Node.js"]}
-          photoUrl={"https://avatars.githubusercontent.com/u/131689163?s=400&u=d07e3e813d2f38294a86809206dcc28f5bb41570&v=4"}
+          username={profileData.username}
+          name={profileData.name}
+          role={profileData.role}
+          description={profileData.description}
+          tags={profileData.tags}
+          photoUrl={profileData.photo}
+          buttons={profileData.buttons}
         />
         <Local
           address="São Luís - MA, Brasil"
@@ -40,32 +58,8 @@ export default function Home() {
             { icon: <FaInstagram size={32} />, href: "https://instagram.com/origemjhanpoll", label: "Instagram" },
           ]} />
         <Projects
-          projects={[
-            {
-              title: "E-commerce Dashboard",
-              description: "A comprehensive dashboard for managing online store inventory and sales analytics.",
-              liveUrl: "https://dashboard-demo.com",
-              imageUrl: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
-            },
-            {
-              title: "Travel Companion",
-              description: "Mobile-first application for planning trips and discovering local hidden gems.",
-              liveUrl: "https://travel-app.com",
-              imageUrl: "https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg",
-            },
-            {
-              title: "AI Content Gen",
-              description: "AI-powered tool that helps marketers generate creative copy in seconds.",
-              liveUrl: "https://ai-content.com",
-              imageUrl: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
-            },
-            {
-              title: "FitTrack Pro",
-              description: "Health monitoring platform integrating with wearable devices for real-time stats.",
-              liveUrl: "https://fittrack.com",
-              imageUrl: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
-            },
-          ]}
+          professionalProjects={projectsData.professional.items}
+          personalProjects={projectsData.personal.items}
         />
       </div>
     </div>
