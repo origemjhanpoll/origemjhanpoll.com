@@ -30,7 +30,7 @@ export const getProjectsService = async () => {
         items: data.projects.items
       },
       personal: {
-        title: "Projetos Pessoais",
+        title: data.projects.title2,
         items: githubProjects
       }
     };
@@ -42,7 +42,7 @@ export const getProjectsService = async () => {
         items: data.projects.items
       },
       personal: {
-        title: "Projetos Pessoais",
+        title: data.projects.title2,
         items: []
       }
     };

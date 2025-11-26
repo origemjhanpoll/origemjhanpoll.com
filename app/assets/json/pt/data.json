@@ -58,7 +58,8 @@
     ]
   },
   "projects": {
-    "title": "Projetos",
+    "title": "Projetos Profissionais",
+    "title2": "Projetos Pessoais",
     "items": [
       {
         "title": "Brasil Card Digital",

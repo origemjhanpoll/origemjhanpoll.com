@@ -1,12 +1,13 @@
 import React from 'react';
 import { MdOpenInNew } from 'react-icons/md';
-import { FaSquareGithub } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 
 
 interface ProjectsProps {
   professionalProjects: Project[];
   personalProjects: Project[];
+  titleProfessional: string;
+  titlePersonal: string;
 }
 
 interface Project {
@@ -23,10 +24,10 @@ interface Project {
   types?: string[];
 }
 
-const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProjects }) => {
+const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProjects, titleProfessional, titlePersonal }) => {
   return (
     <section className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-4 font-sans md:overflow-y-auto">
-      <h2 className="text-2xl font-bold mb-4">Projetos</h2>
+      <h2 className="text-2xl font-bold mb-4">{titleProfessional}</h2>
       <div className="flex flex-col gap-2">
         {professionalProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
@@ -35,7 +36,7 @@ const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProje
 
       {personalProjects.length > 0 && (
         <>
-          <h3 className="text-2xl font-bold mt-6 mb-4">Projetos Pessoais</h3>
+          <h3 className="text-2xl font-bold mt-6 mb-4">{titlePersonal}</h3>
           <div className="flex flex-col gap-2">
             {personalProjects.map((project, index) => (
               <ProjectCard key={`personal-${index}`} project={project} />
@@ -54,7 +55,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       className="group flex flex-row items-center gap-4 p-2 hover:bg-[var(--color-tag-bg)]/80 transition-colors rounded-lg cursor-pointer duration-300"
     >
       <div className="relative size-20 shrink-0">
-        {project.thumbnail ?
+        {(project.thumbnail) ?
           <img
             src={project.thumbnail}
             alt={project.title}

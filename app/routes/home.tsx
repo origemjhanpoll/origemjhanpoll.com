@@ -77,6 +77,8 @@ export default function Home() {
         <Projects
           professionalProjects={projectsData.professional.items}
           personalProjects={projectsData.personal.items}
+          titleProfessional={projectsData.professional.title}
+          titlePersonal={projectsData.personal.title}
         />
       </div>
     </div>
