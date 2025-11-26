@@ -44,16 +44,16 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 				</div>
 				<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 mt-6 mb-2">
 					{props.buttons.map((button, index) => (
-						<a
+						<button
 							key={index}
-							href={button.url}
-							className={`font-semibold px-8 py-3 rounded-full transition text-center ${index === 0
+							onClick={() => window.open(button.url, '_blank')}
+							className={`font-semibold px-8 py-3 rounded-full transition text-center whitespace-nowrap ${index === 0
 								? "w-full bg-[var(--color-primary)] text-[var(--color-card-bg)]"
 								: "bg-[var(--color-primary)]/20	 text-[var(--color-text-primary)] font-medium"
 								}`}
 						>
 							{button.text}
-						</a>
+						</button>
 					))}
 				</div>
 			</div>
