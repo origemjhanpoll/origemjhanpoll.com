@@ -3,6 +3,16 @@ import dataEn from "../assets/json/en/data.json";
 import dataCn from "../assets/json/cn/data.json";
 
 export const getProfileService = (locale: string = 'pt') => {
-  const data = locale === 'en' ? dataEn : locale === 'cn' ? dataCn : dataPt;
+  let data;
+  switch (locale) {
+    case 'en':
+      data = dataEn;
+      break;
+    case 'cn':
+      data = dataCn;
+      break;
+    default:
+      data = dataPt;
+  }
   return data.profile;
 };

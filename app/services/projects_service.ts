@@ -11,7 +11,17 @@ interface GitHubRepo {
 }
 
 export const getProjectsService = async (locale: string = 'pt') => {
-  const data = locale === 'en' ? dataEn : locale === 'cn' ? dataCn : dataPt;
+  let data;
+  switch (locale) {
+    case 'en':
+      data = dataEn;
+      break;
+    case 'cn':
+      data = dataCn;
+      break;
+    default:
+      data = dataPt;
+  }
   try {
     const response = await fetch('https://api.github.com/users/origemjhanpoll/repos');
     const githubRepos: GitHubRepo[] = await response.json();
