@@ -15,6 +15,9 @@ body {
   --color-text-primary: #ffffff;
   --color-text-secondary: #aaaaaa;
   --color-text-tertiary: #666666;
+  --color-button-bg: #ffffff;
+  --color-button-text: #101010;
+
 
   background-color: black;
   color: white;

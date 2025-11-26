@@ -89,6 +89,9 @@ export default function Home() {
           title={mainData.title}
           description={mainData.description}
           buttonText={mainData.buttonText}
+          onClick={() => {
+            window.location.href = '/simulate';
+          }}
         />
       </div>
       <div className="flex flex-col-reverse md:flex-col lg:w-100 w-full md:gap-4 gap-2">
