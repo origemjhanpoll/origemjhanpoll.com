@@ -15,14 +15,16 @@ export const MainBanner: React.FC<MainBannerProps> = ({
     <section className="relative flex flex-1 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans overflow-hidden group">
       <video
         src={url}
-        className="w-full h-full object-cover bg-[var(--color-tag-bg)]"
+        className="w-full h-full object-cover"
         autoPlay
         loop
         muted
         playsInline
       />
 
-      <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center gap-6 p-6 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-[var(--color-tag-bg)] opacity-20 duration-300"></div>
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 p-6">
         <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
           {title}
         </h1>
