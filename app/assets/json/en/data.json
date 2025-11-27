@@ -19,12 +19,12 @@
     "photo": "",
     "buttons": [
       {
-        "text": "Get in touch",
+        "text": "Contact me",
         "url": "https://api.whatsapp.com/send/?phone=5598991391108"
       },
       {
         "text": "CV",
-        "url": "https://github.com/origemjhanpoll/origemjhanpoll_site/raw/793f80b036f1dfb562e65f6976bcf461b91ea622/app/assets/Jean%20Paul%20-%20PTBR.pdf"
+        "url": "https://drive.google.com/file/d/17gWvzjrgMUB-mvlbidoHIMOCdGjKOdxo/view"
       }
     ],
     "localTimeLabel": "Local Time",
