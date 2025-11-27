@@ -51,6 +51,7 @@ export default function Home() {
       <div className="flex flex-col w-full lg:w-100 md:gap-y-4 gap-y-2 transition-all">
         <Profile
           username={profileData.username}
+          greeting={profileData.greeting}
           name={profileData.name}
           role={profileData.role}
           description={profileData.description}

@@ -27,7 +27,7 @@ interface Project {
 const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProjects, titleProfessional, titlePersonal }) => {
   return (
     <section className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-4 font-sans md:overflow-y-auto">
-      <h2 className="text-lg font-semibold text-[var(--color-text-primary)] mb-4">{titleProfessional}</h2>
+      <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-4">{titleProfessional}</h2>
       <div className="flex flex-col gap-2">
         {professionalProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
@@ -36,7 +36,7 @@ const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProje
 
       {personalProjects.length > 0 && (
         <>
-          <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mt-6 mb-4">{titlePersonal}</h3>
+          <h3 className="text-md font-medium text-[var(--color-text-secondary)] mt-6 mb-4">{titlePersonal}</h3>
           <div className="flex flex-col gap-2">
             {personalProjects.map((project, index) => (
               <ProjectCard key={`personal-${index}`} project={project} />
@@ -73,7 +73,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
           {project.title}
         </h3>
-        <p className="text-[var(--color-text-secondary)] text-sm font-light line-clamp-3">
+        <p className="font-light text-[var(--color-text-secondary)] line-clamp-3">
           {project.description}
         </p>
       </div>
