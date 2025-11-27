@@ -73,7 +73,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
           {project.title}
         </h3>
-        <p className="text-[var(--color-text-secondary)] text-sm font-light line-clamp-3">
+        <p className="font-light text-[var(--color-text-secondary)] line-clamp-3">
           {project.description}
         </p>
       </div>

@@ -1,8 +1,9 @@
 {
   "profile": {
-    "name": "Hello! I'm Jean Paul",
+    "greeting": "Hello!",
+    "name": "I'm Jean Paul",
     "role": "Mobile Developer",
-    "description": "6+ years creating intuitive and secure mobile and web solutions. Specialized in responsive interfaces, scalable Design Systems and user experience.",
+    "description": "with 6+ years creating intuitive and secure mobile and web solutions. Specialized in responsive interfaces, scalable Design Systems and user experience.",
     "username": "origemjhanpoll",
     "tags": [
       "29 y.o",

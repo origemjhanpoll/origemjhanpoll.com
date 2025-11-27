@@ -1,8 +1,9 @@
 {
   "profile": {
-    "name": "你好！我是 Jean Paul",
-    "role": "移动开发工程师",
-    "description": "6年以上创建直观和安全的移动和Web解决方案经验。专注于响应式界面、可扩展的设计系统和用户体验。",
+    "greeting": "你好！",
+    "name": "我是 Jean Paul",
+    "role": "移动开发者",
+    "description": "拥有6年以上创建直观且安全的移动和Web解决方案。专注于响应式界面、可扩展的设计系统和用户体验。",
     "username": "origemjhanpoll",
     "tags": [
       "29 y.o",
