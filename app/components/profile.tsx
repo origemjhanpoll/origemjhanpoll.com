@@ -28,7 +28,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 				<div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card-bg)] via-[var(--color-card-bg)]/50 to-[var(--color-card-bg)]/10"></div>
 			</div>
 
-			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start overflow-y-auto p-4 md:p-6 pt-40 md:pt-48'>
+			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start overflow-y-auto p-4 md:p-6 sm:pt-48 pt-48'>
 				<div className="flex flex-col justify-center items-center md:items-start mt-auto">
 					<span className="text-md font-medium text-[var(--color-text-secondary)]">@{props.username}</span>
 					<h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] md:text-start text-center">{props.greeting}</h2>
