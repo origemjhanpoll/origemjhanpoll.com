@@ -1,21 +1,13 @@
-import Social from "~/components/social";
-import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
-import { Main } from "~/components/main";
-import Projects from "~/components/projects";
-import Local from "~/components/local";
-import Actions from "~/components/actions";
-import Profile from "~/components/profile";
 import { useState, useEffect } from "react";
-
-import { getProfileService } from "~/services/profile_service";
-import { getProjectsService } from "~/services/projects_service";
-import { getMainService } from "~/services/main_service";
+import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
+
+import { Social, Main, Projects, Local, Actions, Profile, Details } from "~/components";
+import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
 import iconUS from "../assets/png/us.png";
-import Details from "~/components/details";
 
 
 export default function Home() {
@@ -54,6 +46,7 @@ export default function Home() {
 
   const profileData = getProfileService(locale);
   const mainData = getMainService(locale);
+  const socialData = getSocialService(locale);
   const [projectsData, setProjectsData] = useState<{
     professional: { title: string; items: any[] };
     personal: { title: string; items: any[] };
@@ -85,8 +78,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 md:p-4 p-2">
-
+    <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 p-4 md:p-6">
       {!selectedProject && (
         <div className="flex flex-col w-full lg:w-100 2xl:w-125 md:gap-y-4 gap-y-2 transition-all">
           <Profile
@@ -150,12 +142,20 @@ export default function Home() {
 
       <div className="flex flex-col-reverse md:flex-col lg:w-100 2xl:w-125 w-full md:gap-4 gap-2">
         <Social
-          icons={[
-            { icon: <FaLinkedin size={32} />, href: "https://linkedin.com/in/origemjhanpoll", label: "LinkedIn" },
-            { icon: <FaGithub size={32} />, href: "https://github.com/origemjhanpoll", label: "Github" },
-            { icon: <FaInstagram size={32} />, href: "https://instagram.com/origemjhanpoll", label: "Instagram" },
-            { icon: <FaTelegram size={32} />, href: "https://t.me/origemjhanpoll", label: "Telegram" },
-          ]} />
+          icons={socialData.links.map((link: any) => {
+            const iconMap: { [key: string]: React.ReactNode } = {
+              'LinkedIn': <FaLinkedin size={32} />,
+              'GitHub': <FaGithub size={32} />,
+              'Instagram': <FaInstagram size={32} />,
+              'Telegram': <FaTelegram size={32} />,
+            };
+            return {
+              icon: iconMap[link.name],
+              href: link.url,
+              label: link.label,
+            };
+          })}
+        />
         <Projects
           titleProfessional={projectsData.professional.title}
           titlePersonal={projectsData.personal.title}

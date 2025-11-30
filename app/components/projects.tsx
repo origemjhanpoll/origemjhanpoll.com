@@ -26,7 +26,7 @@ interface Project {
 
 const Projects: React.FC<ProjectsProps> = (props) => {
   return (
-    <section className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans md:overflow-y-auto 2xl:p-8 p-6">
+    <section className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans md:overflow-y-auto p-4 md:p-6 2xl:p-8">
       <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-4">{props.titleProfessional}</h2>
       <div className="flex flex-col gap-2">
         {props.professionalProjects.map((project, index) => (

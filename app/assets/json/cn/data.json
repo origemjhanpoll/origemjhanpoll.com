@@ -148,6 +148,30 @@
       }
     ]
   },
+  "social": {
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/origemjhanpoll",
+        "label": "LinkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/origemjhanpoll",
+        "label": "Github"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/origemjhanpoll",
+        "label": "Instagram"
+      },
+      {
+        "name": "Telegram",
+        "url": "https://t.me/origemjhanpoll",
+        "label": "Telegram"
+      }
+    ]
+  },
   "contact": {
     "title": "联系方式",
     "description": "我随时欢迎新的机会和合作。请随时通过以下任何渠道与我联系：",
