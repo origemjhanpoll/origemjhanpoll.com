@@ -44,7 +44,7 @@ export const meta: Route.MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "origemjhanpoll.jpeg",
+      content: "/origemjhanpoll.jpeg",
     },
   ];
 };
