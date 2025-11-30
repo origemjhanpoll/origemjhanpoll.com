@@ -45,6 +45,12 @@ export const getProjectsService = async (locale: string = 'pt') => {
       personal: {
         title: data.projects.title2,
         items: githubProjects
+      },
+      translations: {
+        availableInStores: data.projects.availableInStores,
+        screenshots: data.projects.screenshots,
+        technologies: data.projects.technologies,
+        selectProject: data.projects.selectProject
       }
     };
   } catch (error) {
@@ -57,6 +63,12 @@ export const getProjectsService = async (locale: string = 'pt') => {
       personal: {
         title: data.projects.title2,
         items: []
+      },
+      translations: {
+        availableInStores: data.projects.availableInStores,
+        screenshots: data.projects.screenshots,
+        technologies: data.projects.technologies,
+        selectProject: data.projects.selectProject
       }
     };
   }
