@@ -25,14 +25,14 @@ export const links: Route.LinksFunction = () => [
 
 export const meta: Route.MetaFunction = () => {
   return [
-    { title: "Origem — Tecnologia & Projetos" },
+    { title: "Jean Paul — Mobile Developer" },
     {
       name: "description",
-      content: "Portfólio e projetos desenvolvidos por Jean Paul.",
+      content: "Veja meus projetos, serviços e soluções digitais.",
     },
     {
       property: "og:title",
-      content: "Origem — Tecnologia & Projetos",
+      content: "Jean Paul — Mobile Developer",
     },
     {
       property: "og:description",
@@ -44,7 +44,7 @@ export const meta: Route.MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "https://origemjhanpoll.com/assets/jeanpaul-B6n7Y6lK.jpeg",
+      content: "origemjhanpoll.jpeg",
     },
   ];
 };
