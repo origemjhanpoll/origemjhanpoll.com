@@ -29,10 +29,18 @@ interface DetailsProps {
 
 const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, screenshots, technologies, selectProject }) => {
   const [showContent, setShowContent] = useState(false);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (project) {
       setTimeout(() => setShowContent(true), 10);
+      // Scroll to top suavemente quando um projeto é selecionado
+      if (containerRef.current) {
+        containerRef.current.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     } else {
       setShowContent(false);
     }
@@ -50,7 +58,7 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
         </button>
       </div>
       {project ? (
-        <div className="flex flex-col overflow-y-auto gap-6">
+        <div ref={containerRef} className="flex flex-col overflow-y-auto gap-6">
           <div className="flex flex-col items-center justify-start md:items-center md:flex-row gap-6 px-4 md:px-6 2xl:px-8">
             {project.thumbnail && (
               <img
@@ -125,7 +133,7 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300"
+                    className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-lg backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300"
                   >
                     {tech}
                   </span>
