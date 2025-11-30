@@ -4,8 +4,10 @@ import dataCn from "../assets/json/cn/data.json";
 
 interface GitHubRepo {
   name: string;
+  full_name: string;
   description: string | null;
   html_url: string;
+  default_branch: string;
   language: string | null;
   topics: string[];
 }
@@ -33,6 +35,7 @@ export const getProjectsService = async (locale: string = 'pt') => {
         description: repo.description || '',
         url: repo.html_url,
         github: repo.html_url,
+        markdown: `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/README.md`,
         technologies: repo.language ? [repo.language, ...repo.topics] : repo.topics,
         types: ['Open Source']
       }));

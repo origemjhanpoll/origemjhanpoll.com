@@ -7,7 +7,8 @@ interface ProjectsProps {
   personalProjects: Project[];
   titleProfessional: string;
   titlePersonal: string;
-  onClick?: (project: Project, isProfessional: boolean) => void;
+  selectedProject?: Project | null;
+  onClick?: (project: Project) => void;
 }
 
 interface Project {
@@ -30,7 +31,12 @@ const Projects: React.FC<ProjectsProps> = (props) => {
       <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-4">{props.titleProfessional}</h2>
       <div className="flex flex-col gap-2">
         {props.professionalProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} onClick={() => props.onClick && props.onClick(project, true)} />
+          <ProjectCard
+            key={index}
+            project={project}
+            isSelected={props.selectedProject?.title === project.title}
+            onClick={() => props.onClick && props.onClick(project)}
+          />
         ))}
       </div>
 
@@ -39,7 +45,12 @@ const Projects: React.FC<ProjectsProps> = (props) => {
           <h3 className="text-md font-medium text-[var(--color-text-secondary)] mt-6 mb-4">{props.titlePersonal}</h3>
           <div className="flex flex-col gap-2">
             {props.personalProjects.map((project, index) => (
-              <ProjectCard key={`personal-${index}`} project={project} onClick={() => props.onClick && props.onClick(project, false)} />
+              <ProjectCard
+                key={`personal-${index}`}
+                project={project}
+                isSelected={props.selectedProject?.title === project.title}
+                onClick={() => props.onClick && props.onClick(project)}
+              />
             ))}
           </div>
         </>
@@ -48,11 +59,12 @@ const Projects: React.FC<ProjectsProps> = (props) => {
   );
 };
 
-const ProjectCard: React.FC<{ project: Project, onClick?: () => void }> = ({ project, onClick }) => {
+const ProjectCard: React.FC<{ project: Project, isSelected?: boolean, onClick?: () => void }> = ({ project, isSelected, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="group flex flex-row items-center gap-4 p-2 transition hover:scale-105 active:scale-95 cursor-pointer duration-300 rounded-xl"
+      className={`group flex flex-row items-center gap-4 p-2 transition hover:scale-105 active:scale-95 cursor-pointer duration-300 rounded-xl ${isSelected ? 'bg-[var(--color-tag-bg)] ring-2 ring-[var(--color-primary)]' : ''
+        }`}
     >
       <div className="relative size-20 shrink-0">
         {(project.thumbnail) ?
