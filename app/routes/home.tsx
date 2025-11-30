@@ -57,13 +57,13 @@ export default function Home() {
       selectProject: string;
     };
   }>({
-    professional: { title: "Projetos", items: [] },
-    personal: { title: "Projetos Pessoais", items: [] },
+    professional: { title: "", items: [] },
+    personal: { title: "", items: [] },
     translations: {
-      availableInStores: "Disponível nas lojas:",
-      screenshots: "Screenshots",
-      technologies: "Tecnologias",
-      selectProject: "Selecione um projeto para ver os detalhes"
+      availableInStores: "",
+      screenshots: "",
+      technologies: "",
+      selectProject: ""
     }
   });
 
