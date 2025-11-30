@@ -70,10 +70,10 @@ const ProjectCard: React.FC<{ project: Project, onClick?: () => void }> = ({ pro
         </div>
       </div>
       <div className="flex flex-col self-start">
-        <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
+        <h3 className="text-lg font-semibold text-[var(--color-text-primary)] leading-tight">
           {project.title}
         </h3>
-        <p className="font-light text-[var(--color-text-secondary)] line-clamp-3">
+        <p className="font-light text-[var(--color-text-secondary)] line-clamp-3 leading-tight">
           {project.description}
         </p>
       </div>
