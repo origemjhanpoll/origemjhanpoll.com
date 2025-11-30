@@ -75,9 +75,9 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-medium inline-flex items-center gap-2 mt-2 text-blue-400 hover:underline"
+                  className="text-lg font-medium inline-flex items-center gap-2 mt-2 text-blue-400 hover:underline break-all"
                 >
-                  <FaExternalLinkAlt size={18} />
+                  <FaExternalLinkAlt size={18} className="flex-shrink-0" />
                   {project.url}
                 </a>
               )}
