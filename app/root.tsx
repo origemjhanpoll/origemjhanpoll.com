@@ -21,6 +21,11 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap",
   },
+  {
+    rel: "icon",
+    href: "/favicon.ico",
+    type: "image/x-icon",
+  },
 ];
 
 export const meta: Route.MetaFunction = () => {
@@ -44,7 +49,15 @@ export const meta: Route.MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "/origemjhanpoll.jpeg",
+      content: "https://origemjhanpoll.com/origemjhanpoll.jpeg",
+    },
+    {
+      property: "twitter:image",
+      content: "https://origemjhanpoll.com/origemjhanpoll.jpeg",
+    },
+    {
+      name: "image",
+      content: "https://origemjhanpoll.com/origemjhanpoll.jpeg",
     },
   ];
 };
