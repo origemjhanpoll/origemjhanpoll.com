@@ -49,15 +49,15 @@ export const meta: Route.MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "https://origemjhanpoll.com/origemjhanpoll.jpeg",
+      content: "https://origemjhanpoll.com/tumblr.jpeg",
     },
     {
       property: "twitter:image",
-      content: "https://origemjhanpoll.com/origemjhanpoll.jpeg",
+      content: "https://origemjhanpoll.com/tumblr.jpeg",
     },
     {
       name: "image",
-      content: "https://origemjhanpoll.com/origemjhanpoll.jpeg",
+      content: "https://origemjhanpoll.com/tumblr.jpeg",
     },
   ];
 };
