@@ -69,6 +69,10 @@
   "projects": {
     "title": "PROFISSIONAL",
     "title2": "PESSOAL",
+    "availableInStores": "Disponível nas lojas:",
+    "screenshots": "Screenshots",
+    "technologies": "Tecnologias",
+    "selectProject": "Selecione um projeto para ver os detalhes",
     "items": [
       {
         "title": "Brasil Card Digital",

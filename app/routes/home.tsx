@@ -57,9 +57,21 @@ export default function Home() {
   const [projectsData, setProjectsData] = useState<{
     professional: { title: string; items: any[] };
     personal: { title: string; items: any[] };
+    translations: {
+      availableInStores: string;
+      screenshots: string;
+      technologies: string;
+      selectProject: string;
+    };
   }>({
     professional: { title: "Projetos", items: [] },
-    personal: { title: "Projetos Pessoais", items: [] }
+    personal: { title: "Projetos Pessoais", items: [] },
+    translations: {
+      availableInStores: "Disponível nas lojas:",
+      screenshots: "Screenshots",
+      technologies: "Tecnologias",
+      selectProject: "Selecione um projeto para ver os detalhes"
+    }
   });
 
   useEffect(() => {
@@ -125,7 +137,14 @@ export default function Home() {
       )}
       {selectedProject && (
         <div className={`${isModalOpen ? 'fixed inset-0 z-[9999] flex lg:hidden' : 'hidden lg:flex flex-1'}`}>
-          <Details project={selectedProject} onClose={() => setSelectedProject(null)} />
+          <Details
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+            availableInStores={projectsData.translations.availableInStores}
+            screenshots={projectsData.translations.screenshots}
+            technologies={projectsData.translations.technologies}
+            selectProject={projectsData.translations.selectProject}
+          />
         </div>
       )}
 
