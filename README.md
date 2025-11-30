@@ -1,88 +1,46 @@
-# Welcome to React Router!
+# Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Este é o repositório para o meu portfólio pessoal.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Tecnologias Utilizadas
 
-## Features
+- **React:** Uma biblioteca JavaScript para construir interfaces de usuário.
+- **TypeScript:** Um superconjunto de JavaScript que adiciona tipagem estática.
+- **Vite:** Um build tool que visa fornecer uma experiência de desenvolvimento mais rápida e enxuta para projetos web modernos.
+- **Tailwind CSS:** Um framework CSS utilitário para criar designs personalizados rapidamente.
+- **React Router:** Para roteamento declarativo em aplicações React.
+- **Docker:** Para containerização e fácil implantação.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Como Executar o Projeto Localmente
 
-## Getting Started
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+2. **Navegue até o diretório do projeto:**
+   ```bash
+   cd seu-repositorio
+   ```
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+5. **Abra seu navegador e acesse `http://localhost:5173`**
 
-### Installation
+## Estrutura do Projeto
 
-Install the dependencies:
+O projeto está estruturado da seguinte forma:
 
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
-# origemjhanpoll_site
+- **`app/`**: Contém o código-fonte da aplicação.
+  - **`components/`**: Componentes React reutilizáveis.
+  - **`routes/`**: Componentes de página para cada rota.
+  - **`services/`**: Lógica de negócios e chamadas de API.
+  - **`assets/`**: Imagens, fontes e outros arquivos estáticos.
+- **`public/`**: Arquivos estáticos que são servidos diretamente.
+- **`Dockerfile`**: Define o ambiente para construir e rodar a aplicação em um container Docker.
+- **`package.json`**: Lista as dependências do projeto e define os scripts.
+- **`vite.config.ts`**: Arquivo de configuração para o Vite.
