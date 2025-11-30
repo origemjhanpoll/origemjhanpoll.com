@@ -22,7 +22,7 @@ const Social: React.FC<SocialLinksProps> = ({
             href={item.href}
             target={item.href}
             aria-label={item.label}
-            className="flex p-4 hover:scale-150 active:scale-95 cursor-pointer transition-transform duration-300"
+            className="flex p-4 hover:scale-150 active:scale-100 cursor-pointer transition-transform duration-300"
           >
             {item.icon}
           </a>
