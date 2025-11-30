@@ -78,9 +78,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen md:gap-4 gap-2 p-4 md:p-6">
+    <div className="flex flex-col md:flex-row h-screen gap-2 md:gap-4 p-2 md:p-5">
       {!selectedProject && (
-        <div className="flex flex-col w-full lg:w-100 2xl:w-125 md:gap-y-4 gap-y-2 transition-all">
+        <div className="flex flex-col w-full lg:w-100 2xl:w-125 md:gap-y-4 gap-y-2 transition-all duration-300">
           <Profile
             username={profileData.username}
             greeting={profileData.greeting}
@@ -140,7 +140,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="flex flex-col-reverse md:flex-col lg:w-100 2xl:w-125 w-full md:gap-4 gap-2">
+      <div className="flex flex-col-reverse md:flex-col w-full lg:w-100 2xl:w-125 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
         <Social
           icons={socialData.links.map((link: any) => {
             const iconMap: { [key: string]: React.ReactNode } = {
