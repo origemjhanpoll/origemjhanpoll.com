@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { MdClose } from "react-icons/md";
-import { FaGooglePlay, FaAppStore, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import playstoreDark from "../assets/svg/playstore_dark.svg";
 import applestoreDark from "../assets/svg/applestore_dark.svg";
+import MarkdownViewer from "./markdown-viewer";
 
 interface Project {
   title: string;
@@ -10,6 +11,7 @@ interface Project {
   thumbnail?: string;
   url?: string;
   github?: string | null;
+  markdown?: string | null;
   playstore?: string | null;
   appstore?: string | null;
   technologies?: string[];
@@ -34,7 +36,6 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
   useEffect(() => {
     if (project) {
       setTimeout(() => setShowContent(true), 10);
-      // Scroll to top suavemente quando um projeto é selecionado
       if (containerRef.current) {
         containerRef.current.scrollTo({
           top: 0,
@@ -47,7 +48,7 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
   }, [project]);
 
   return (
-    <section className={`flex flex-1 bg-[var(--color-card-bg)] rounded-3xl flex-col transition-all duration-500 ease-out ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+    <section className={`flex flex-1 w-full bg-[var(--color-card-bg)] rounded-3xl flex-col transition-all duration-500 ease-out ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       <div className="flex self-end bg-[var(--color-card-bg)] z-10 p-4 md:p-6 2xl:p-8 rounded-3xl">
         <button
           onClick={onClose}
@@ -70,7 +71,7 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
             <div className="flex flex-col items-center md:items-start">
               <h1 className="text-4xl font-bold text-[var(--color-text-primary)] pb-2">{project.title}</h1>
               <p className="text-lg font-light text-center md:text-left text-[var(--color-text-secondary)] leading-relaxed">{project.description}</p>
-              {project.url && (
+              {project.url && !project.github && (
                 <a
                   href={project.url}
                   target="_blank"
@@ -81,35 +82,46 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
                   {project.url}
                 </a>
               )}
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <div className="hidden md:flex text-2xl font-semibold gap-6 px-4 md:px-6 2xl:px-8 mb-3">
-              <h1>{availableInStores}</h1>
-            </div>
-            <div className="flex flex-row gap-4 px-4 md:px-6 2xl:px-8 justify-center md:justify-start">
-              {project.playstore && (
+              {project.github && (
                 <a
-                  href={project.playstore}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 px-6 py-4 bg-[var(--color-button-bg)] text-[var(--color-button-text)] rounded-lg hover:scale-105 active:scale-95 transition-transform duration-300"
                 >
-                  <img src={playstoreDark} alt="Play Store" className="h-18" />
-                </a>
-              )}
-              {project.appstore && (
-                <a
-                  href={project.appstore}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={applestoreDark} alt="App Store" className="h-18" />
+                  <FaGithub size={28} />
+                  <span className="font-medium">Ver no GitHub</span>
                 </a>
               )}
             </div>
           </div>
-
+          {(project.playstore || project.appstore) && (
+            <div className="flex flex-col">
+              <div className="hidden md:flex text-2xl font-semibold gap-6 px-4 md:px-6 2xl:px-8 mb-3">
+                <h1>{availableInStores}</h1>
+              </div>
+              <div className="flex flex-row gap-4 px-4 md:px-6 2xl:px-8 justify-center md:justify-start">
+                {project.playstore && (
+                  <a
+                    href={project.playstore}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={playstoreDark} alt="Play Store" className="h-18" />
+                  </a>
+                )}
+                {project.appstore && (
+                  <a
+                    href={project.appstore}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={applestoreDark} alt="App Store" className="h-18" />
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
           {project.images && project.images.length > 0 && (
             <div>
               <h3 className="text-2xl font-semibold text-[var(--color-text-primary)] mb-3 px-4 md:px-6 2xl:px-8">{screenshots}</h3>
@@ -124,6 +136,10 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
                 ))}
               </div>
             </div>
+          )}
+
+          {project.github && project.markdown && (
+            <MarkdownViewer url={project.markdown} />
           )}
 
           {project.technologies && project.technologies.length > 0 && (
@@ -148,8 +164,9 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
             {selectProject}
           </p>
         </div>
-      )}
-    </section>
+      )
+      }
+    </section >
   );
 };
 

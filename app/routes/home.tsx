@@ -161,15 +161,12 @@ export default function Home() {
           titlePersonal={projectsData.personal.title}
           professionalProjects={projectsData.professional.items}
           personalProjects={projectsData.personal.items}
-          onClick={(project, isProfessional) => {
-            if (isProfessional) {
-              if (selectedProject === project) {
-                setSelectedProject(null);
-              } else {
-                setSelectedProject(project);
-              }
+          selectedProject={selectedProject}
+          onClick={(project) => {
+            if (selectedProject === project) {
+              setSelectedProject(null);
             } else {
-              window.open(project.url, project.url);
+              setSelectedProject(project);
             }
           }}
         />
