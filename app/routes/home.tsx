@@ -169,7 +169,7 @@ export default function Home() {
                 setSelectedProject(project);
               }
             } else {
-              window.open(project.url, '_blank');
+              window.open(project.url, project.url);
             }
           }}
         />
