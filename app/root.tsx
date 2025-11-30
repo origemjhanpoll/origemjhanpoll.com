@@ -23,6 +23,32 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export const meta: Route.MetaFunction = () => {
+  return [
+    { title: "Origem — Tecnologia & Projetos" },
+    {
+      name: "description",
+      content: "Portfólio e projetos desenvolvidos por Jean Paul.",
+    },
+    {
+      property: "og:title",
+      content: "Origem — Tecnologia & Projetos",
+    },
+    {
+      property: "og:description",
+      content: "Veja meus projetos, serviços e soluções digitais.",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:image",
+      content: "https://origemjhanpoll.com/assets/jeanpaul-B6n7Y6lK.jpeg",
+    },
+  ];
+};
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
