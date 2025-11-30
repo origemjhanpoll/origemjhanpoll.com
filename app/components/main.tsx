@@ -22,7 +22,7 @@ export const Main: React.FC<MainBannerProps> = (props: MainBannerProps) => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card-bg)] via-[var(--color-card-bg)]/60 to-[var(--color-card-bg)]/40"></div>
 
-      <div className="absolute inset-0 opacity-0 min-[70rem]:opacity-100 transition-opacity duration-200 flex flex-col items-center justify-end gap-2 p-6 pointer-events-none min-[70rem]:pointer-events-auto">
+      <div className="absolute inset-0 opacity-0 min-[70rem]:opacity-100 transition-opacity duration-200 flex flex-col items-center justify-end gap-2 p-6 2xl:p-8 pointer-events-none min-[70rem]:pointer-events-auto">
         <h1 className="text-2xl min-[80rem]:text-3xl font-bold text-white text-center tracking-tight animate-[slideUp_0.6s_ease-out] transition-all">
           {props.title}
         </h1>
