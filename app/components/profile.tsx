@@ -34,11 +34,11 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 					<h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] md:text-start text-center">{props.greeting}</h2>
 					<h1 className="text-3xl md:text-5xl font-bold mb-1 text-[var(--color-text-primary)] md:text-start text-center">{props.name}</h1>
 				</div>
-				<div className="my-4 leading-relaxed break-words md:text-start text-center">
+				<div className="my-4 break-words md:text-start text-center leading-tight">
 					<span className="font-medium text-[var(--color-text-primary)] pr-1">
 						{props.role}
 					</span>
-					<span className="font-light text-[var(--color-text-secondary)]">
+					<span className="font-light text-[var(--color-text-secondary)] leading-tight">
 						{props.description}
 					</span>
 				</div>

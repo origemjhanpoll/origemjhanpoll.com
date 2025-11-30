@@ -24,7 +24,7 @@
       },
       {
         "text": "简历",
-        "url": "https://drive.google.com/file/d/17gWvzjrgMUB-mvlbidoHIMOCdGjKOdxo/view"
+        "url": "https://drive.google.com/file/d/1J75O4x0e6geaZ1Y8wvct3ZmNAmYjTuDM/view?usp=sharing"
       }
     ],
     "localTimeLabel": "当地时间",
@@ -145,6 +145,30 @@
           "Mobile",
           "Web"
         ]
+      }
+    ]
+  },
+  "social": {
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/origemjhanpoll",
+        "label": "LinkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/origemjhanpoll",
+        "label": "Github"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/origemjhanpoll",
+        "label": "Instagram"
+      },
+      {
+        "name": "Telegram",
+        "url": "https://t.me/origemjhanpoll",
+        "label": "Telegram"
       }
     ]
   },

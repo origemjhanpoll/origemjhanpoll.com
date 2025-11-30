@@ -27,7 +27,7 @@ export const Main: React.FC<MainBannerProps> = (props: MainBannerProps) => {
           {props.title}
         </h1>
         {props.description && (
-          <p className="font-light text-sm min-[80rem]:text-lg text-[var(--color-text-secondary)] text-center max-w-3xl animate-[slideUp_0.6s_ease-out_0.2s_backwards] trasation-all">
+          <p className="font-light text-sm min-[80rem]:text-lg text-[var(--color-text-secondary)] text-center max-w-3xl leading-tight animate-[slideUp_0.6s_ease-out_0.2s_backwards] trasation-all">
             {props.description}
           </p>
         )}
