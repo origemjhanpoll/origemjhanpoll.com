@@ -2,12 +2,12 @@ import React from 'react';
 import { MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from "react-icons/fa";
 
-
 interface ProjectsProps {
   professionalProjects: Project[];
   personalProjects: Project[];
   titleProfessional: string;
   titlePersonal: string;
+  onClick?: (project: Project, isProfessional: boolean) => void;
 }
 
 interface Project {
@@ -24,22 +24,22 @@ interface Project {
   types?: string[];
 }
 
-const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProjects, titleProfessional, titlePersonal }) => {
+const Projects: React.FC<ProjectsProps> = (props) => {
   return (
     <section className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans md:overflow-y-auto 2xl:p-8 p-6">
-      <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-4">{titleProfessional}</h2>
+      <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-4">{props.titleProfessional}</h2>
       <div className="flex flex-col gap-2">
-        {professionalProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {props.professionalProjects.map((project, index) => (
+          <ProjectCard key={index} project={project} onClick={() => props.onClick && props.onClick(project, true)} />
         ))}
       </div>
 
-      {personalProjects.length > 0 && (
+      {props.personalProjects.length > 0 && (
         <>
-          <h3 className="text-md font-medium text-[var(--color-text-secondary)] mt-6 mb-4">{titlePersonal}</h3>
+          <h3 className="text-md font-medium text-[var(--color-text-secondary)] mt-6 mb-4">{props.titlePersonal}</h3>
           <div className="flex flex-col gap-2">
-            {personalProjects.map((project, index) => (
-              <ProjectCard key={`personal-${index}`} project={project} />
+            {props.personalProjects.map((project, index) => (
+              <ProjectCard key={`personal-${index}`} project={project} onClick={() => props.onClick && props.onClick(project, false)} />
             ))}
           </div>
         </>
@@ -48,10 +48,10 @@ const Projects: React.FC<ProjectsProps> = ({ professionalProjects, personalProje
   );
 };
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+const ProjectCard: React.FC<{ project: Project, onClick?: () => void }> = ({ project, onClick }) => {
   return (
     <div
-      onClick={() => project.url && window.open(project.url, '_blank')}
+      onClick={onClick}
       className="group flex flex-row items-center gap-4 p-2 transition hover:scale-105 active:scale-95 cursor-pointer duration-300 rounded-xl"
     >
       <div className="relative size-20 shrink-0">
