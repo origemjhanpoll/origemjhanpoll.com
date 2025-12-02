@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-import { Social, Main, Projects, Local, Actions, Profile, Details } from "~/components";
+import { Social, Main, Projects, Local, Actions, Profile, Details } from "~/components/_index";
 import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
 
 import iconBR from "../assets/png/br.png";
