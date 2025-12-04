@@ -21,18 +21,23 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap",
   },
+  {
+    rel: "icon",
+    href: "/favicon.ico",
+    type: "image/x-icon",
+  },
 ];
 
 export const meta: Route.MetaFunction = () => {
   return [
-    { title: "Origem — Tecnologia & Projetos" },
+    { title: "Jean Paul — Mobile Developer" },
     {
       name: "description",
-      content: "Portfólio e projetos desenvolvidos por Jean Paul.",
+      content: "Veja meus projetos, serviços e soluções digitais.",
     },
     {
       property: "og:title",
-      content: "Origem — Tecnologia & Projetos",
+      content: "Jean Paul — Mobile Developer",
     },
     {
       property: "og:description",
@@ -44,7 +49,15 @@ export const meta: Route.MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "https://origemjhanpoll.com/assets/jeanpaul-B6n7Y6lK.jpeg",
+      content: "https://origemjhanpoll.com/tumblr.jpg",
+    },
+    {
+      property: "twitter:image",
+      content: "https://origemjhanpoll.com/tumblr.jpg",
+    },
+    {
+      name: "image",
+      content: "https://origemjhanpoll.com/tumblr.jpg",
     },
   ];
 };
