@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react
 import { MdOutlineFileDownload } from "react-icons/md";
 
 import { Social, Main, Projects, Local, Actions, Profile, Details } from "~/components/_index";
-import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
+import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services/_index";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
