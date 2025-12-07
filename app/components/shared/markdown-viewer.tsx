@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { DiVim } from "react-icons/di";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 

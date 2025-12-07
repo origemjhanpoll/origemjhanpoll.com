@@ -1,4 +1,7 @@
 import React from 'react';
+import { Button } from './shared/button';
+import { FaWhatsapp } from 'react-icons/fa';
+import { MdOutlineFileDownload } from 'react-icons/md';
 
 interface ProfileProps {
 	username: string;
@@ -48,16 +51,17 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 				</div>
 				<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 mt-6 mb-2">
 					{props.buttons.map((button, index) => (
-						<button
+						<Button
 							key={index}
 							onClick={() => window.open(button.url, '_blank')}
-							className={`font-semibold px-8 py-3 rounded-full transition text-center whitespace-nowrap ${index === 0
-								? "w-full bg-[var(--color-primary)] text-[var(--color-card-bg)]"
-								: "bg-[var(--color-primary)]/20	 text-[var(--color-text-primary)] font-medium"
-								}`}
-						>
-							{button.text}
-						</button>
+							color={index === 0
+								? "bg-[var(--color-primary)] text-[var(--color-card-bg)]"
+								: "bg-[var(--color-primary)]/20 text-[var(--color-text-primary)]"
+							}
+							isFull={index === 0}
+							label={index === 0 ? button.text : ""}
+							icon={index === 0 ? <FaWhatsapp size={24} /> : <MdOutlineFileDownload size={24} />}
+						/>
 					))}
 				</div>
 			</div>
