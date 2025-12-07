@@ -3,7 +3,8 @@ import { MdClose } from "react-icons/md";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import playstoreDark from "../assets/svg/playstore_dark.svg";
 import applestoreDark from "../assets/svg/applestore_dark.svg";
-import MarkdownViewer from "./markdown-viewer";
+import { MarkdownViewer } from "~/components";
+
 
 interface Project {
   title: string;

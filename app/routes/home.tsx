@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-import { Social, Main, Projects, Local, Actions, Profile, Details } from "~/components/_index";
+import { Social, Main, Projects, Local, Profile, Details, Button } from "~/components";
 import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
 import iconUS from "../assets/png/us.png";
+import Actions from "~/components/actions";
 
 
 export default function Home() {
@@ -97,7 +98,7 @@ export default function Home() {
             address={profileData.address}
             label={profileData.localTimeLabel}
           />
-          <div className="hidden md:block">
+          <div className="hidden md:block lg:hidden">
             <Actions listActions={[
               {
                 title: profileData.buttons[0].text,
@@ -123,8 +124,23 @@ export default function Home() {
             url={mainData.url}
             title={mainData.title}
             description={mainData.description}
-            buttonText={mainData.buttonText}
-          />
+          >
+            <div className="flex flex-row gap-4">
+              <Button
+                onClick={() => window.open(profileData.buttons[0].url, '_blank')}
+                icon={<FaWhatsapp size={24} />}
+                label={profileData.buttons[0].text}
+                collapseMobile={true}
+              />
+              <Button
+                onClick={() => window.open(profileData.buttons[1].url, '_blank')}
+                color="bg-[var(--color-tag-bg)] text-[var(--color-text-primary)]"
+                icon={<MdOutlineFileDownload size={24} />}
+                label={profileData.buttons[1].text}
+                collapseMobile={true}
+              />
+            </div>
+          </Main>
         </div>
       )}
       {selectedProject && (

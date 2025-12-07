@@ -4,8 +4,7 @@ interface MainBannerProps {
   url: string;
   title?: string;
   description?: string;
-  buttonText?: string;
-  onClick?: () => void;
+  children?: React.ReactNode;
 }
 
 export const Main: React.FC<MainBannerProps> = (props: MainBannerProps) => {
@@ -31,12 +30,10 @@ export const Main: React.FC<MainBannerProps> = (props: MainBannerProps) => {
             {props.description}
           </p>
         )}
-        {props.buttonText && (
-          <button
-            onClick={props.onClick}
-            className="px-8 py-3 mt-5 min-h-16 bg-white text-black rounded-full font-semibold text-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer duration-300 animate-[slideUp_0.6s_ease-out_0.3s_backwards]">
-            {props.buttonText}
-          </button>
+        {props.children && (
+          <div className="mt-5 animate-[slideUp_0.6s_ease-out_0.3s_backwards]">
+            {props.children}
+          </div>
         )}
       </div>
 
