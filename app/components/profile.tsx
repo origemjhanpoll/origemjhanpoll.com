@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './shared/button';
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdOutlineFileDownload } from 'react-icons/md';
+import image from '../assets/image/origemjhanpoll.jpeg';
 
 interface ProfileProps {
 	username: string;
@@ -23,7 +24,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 		<section className="relative flex flex-1 flex-col bg-[var(--color-card-bg)] rounded-3xl overflow-hidden">
 			<div className="absolute z-0 top-0 w-full h-[45%] sm:h-[60%]">
 				<img
-					src={props.photoUrl || 'origemjhanpoll.jpeg'}
+					src={props.photoUrl || image}
 					alt={`${props.name}'s profile`}
 					className="w-full h-full object-cover object-bottom"
 				/>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import localImage from '../assets/local_image_1.png';
-
+import localImage from '../assets/image/local_image.png'
 interface LocalProps {
 	address?: string;
 	label: string;
