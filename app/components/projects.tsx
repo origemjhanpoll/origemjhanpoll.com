@@ -63,7 +63,6 @@ const ProjectCard: React.FC<{ project: Project, isSelected?: boolean, onClick?: 
   const { ogImage } = useOgImage(project.github || null);
 
   const getImageSrc = () => {
-    console.log(ogImage);
     if (ogImage) return ogImage;
     if (project.thumbnail) return project.thumbnail;
     return null;
