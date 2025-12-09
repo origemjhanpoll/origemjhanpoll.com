@@ -1,88 +1,68 @@
-# Welcome to React Router!
+# Portfólio - Jean Paul
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Este projeto é o portfólio pessoal e profissional de Jean Paul. O objetivo deste site é apresentar minhas habilidades, experiência, projetos e contatos de forma interativa, moderna e responsiva. O conteúdo é dinâmico e alimentado por arquivos JSON, permitindo fácil manutenção e atualização das informações.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+![Screenshot do Portfólio](app/assets/image/screen.png)
 
-## Features
+## Tecnologias Utilizadas
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Este projeto foi construído utilizando as seguintes tecnologias modernas de desenvolvimento web:
 
-## Getting Started
+-   **React**: Biblioteca para construção de interfaces de usuário (v19).
+-   **React Router v7**: Framework para roteamento e renderização (SSR/SPA).
+-   **TypeScript**: Superconjunto de JavaScript que adiciona tipagem estática.
+-   **Tailwind CSS (v4)**: Framework de CSS utilitário para estilização rápida e responsiva.
+-   **Vite**: Ferramenta de build e desenvolvimento ultra-rápida.
 
-### Installation
+## Estrutura do Projeto
 
-Install the dependencies:
+O código fonte principal reside dentro da pasta `app`. Abaixo está uma descrição detalhada da estrutura e o propósito de cada diretório e arquivo principal:
 
-```bash
-npm install
-```
+### 📂 `app`
 
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+Abaixo está a estrutura de diretórios e arquivos principais do projeto:
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+app/
+├── assets/                 # Recursos estáticos
+│   ├── image/              # Imagens do projeto
+│   └── json/               # Dados do conteúdo (pt, en, cn)
+├── components/             # Componentes de UI
+│   ├── shared/             # Componentes reutilizáveis
+│   ├── actions.tsx         # Lógica de ações do usuário
+│   ├── details.tsx         # Detalhes do projeto
+│   ├── local.tsx           # Componente de horário local
+│   ├── main.tsx            # Banner principal
+│   ├── profile.tsx         # Seção de perfil
+│   ├── projects.tsx        # Lista de projetos
+│   └── social.tsx          # Links de redes sociais
+├── routes/                 # Rotas da aplicação
+│   └── _index.tsx          # Rota principal (Home)
+├── services/               # Lógica de dados
+│   ├── main_service.ts
+│   ├── profile_service.ts
+│   ├── projects_service.ts
+│   └── social_service.ts
+└── root.tsx                # Componente raiz da aplicação
 ```
 
-## Styling
+#### Detalhes dos Diretórios
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+-   **`📂 components`**: Este é o coração da interface do usuário. Aqui residem todos os elementos visuais da aplicação.
+    -   **Principais**: `main.tsx` (Banner de vídeo introdutório), `profile.tsx` (Apresentação pessoal e profissional), `projects.tsx` (Galeria de projetos e portfólio).
+    -   **Funcionais**: `actions.tsx` (Lógica de interatividade), `local.tsx` (Widget de fuso horário), `social.tsx` (Links externos).
+    -   **Estruturais**: `root.tsx` define o layout base da aplicação.
+
+-   **`📂 services`**: Atua como uma camada de API simulada ou "Data Access Object" (DAO).
+    -   Sua função é desacoplar a interface dos dados brutos. Os arquivos aqui (`projects_service.ts`, `profile_service.ts`, etc.) são responsáveis por ler, filtrar e formatar as informações do JSON antes de entregá-las aos componentes. Isso facilita testes e futuras integrações com uma API real.
+
+-   **`📂 assets`**: Repositório de recursos estáticos e dinâmicos.
+    -   **`json/`**: Contém a "alma" do conteúdo. O arquivo `data.json` permite gerenciar textos, projetos, links e configurações sem necessidade de recompilação do código. Suporta internacionalização (pt, en, cn).
+    -   **`image/`**: Armazena ativos visuais otimizados.
+
+-   **`📂 routes`**: Configuração de roteamento baseada em arquivos (File-System Routing) do React Router v7.
+    -   `_index.tsx`: É o ponto de entrada da rota principal, orquestrando a montagem dos componentes na página inicial.
 
 ---
 
-Built with ❤️ using React Router.
-# origemjhanpoll_site
+Este projeto é mantido por [Jean Paul](https://github.com/origemjhanpoll).

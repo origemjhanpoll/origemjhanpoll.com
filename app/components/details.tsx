@@ -150,7 +150,7 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-lg backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300"
+                    className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-lg backdrop-blur-sm text-[var(--color-text-secondary)]"
                   >
                     {tech}
                   </span>
