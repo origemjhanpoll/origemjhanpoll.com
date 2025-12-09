@@ -31,7 +31,7 @@ export const getProjectsService = async (locale: string = 'pt') => {
     const githubProjects = githubRepos
       .filter(repo => repo.description && repo.topics.includes('origemjhanpoll'))
       .map(repo => ({
-        title: repo.name,
+        title: repo.name.replace(/-/g, ' '),
         description: repo.description || '',
         url: repo.html_url,
         github: repo.html_url,
