@@ -47,7 +47,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 				</div>
 				<div className="font-light flex flex-wrap gap-2 justify-center md:justify-start">
 					{props.tags.map((tag, index) => (
-						<span key={index} className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300">{tag}</span>
+						<span key={index} className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)]">{tag}</span>
 					))}
 				</div>
 				<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 mt-6 mb-2">
