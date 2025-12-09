@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from "react-icons/fa";
-
+import { useOgImage } from '~/hooks/use_og_image';
 interface ProjectsProps {
   professionalProjects: Project[];
   personalProjects: Project[];
@@ -60,6 +60,17 @@ const Projects: React.FC<ProjectsProps> = (props) => {
 };
 
 const ProjectCard: React.FC<{ project: Project, isSelected?: boolean, onClick?: () => void }> = ({ project, isSelected, onClick }) => {
+  const { ogImage } = useOgImage(project.github || null);
+
+  const getImageSrc = () => {
+    console.log(ogImage);
+    if (ogImage) return ogImage;
+    if (project.thumbnail) return project.thumbnail;
+    return null;
+  };
+
+  const imageSrc = getImageSrc();
+
   return (
     <div
       onClick={onClick}
@@ -67,9 +78,9 @@ const ProjectCard: React.FC<{ project: Project, isSelected?: boolean, onClick?: 
         }`}
     >
       <div className="relative size-20 shrink-0">
-        {(project.thumbnail) ?
+        {(imageSrc) ?
           <img
-            src={project.thumbnail}
+            src={imageSrc}
             alt={project.title}
             className="size-20 object-cover rounded-xl"
           /> :
