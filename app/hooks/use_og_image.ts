@@ -22,7 +22,11 @@ export const useOgImage = (githubUrl: string | null) => {
         const owner = urlParts[0];
         const repo = urlParts[1];
 
-        const html = await fetch(`/github-proxy/${owner}/${repo}`).then(r => r.text());
+        const proxyUrl = import.meta.env.DEV
+          ? `/github-proxy/${owner}/${repo}`
+          : `/proxy.php?path=${owner}/${repo}`;
+
+        const html = await fetch(proxyUrl).then(r => r.text());
         const ogImageMatch = html.match(/<meta property="og:image" content="(.*?)"/);
         if (ogImageMatch) {
           setOgImage(ogImageMatch[1]);
