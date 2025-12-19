@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 import { Social, Main, Projects, Local, Profile, Details, Button } from "~/components";
@@ -164,6 +164,7 @@ export default function Home() {
               'GitHub': <FaGithub size={32} />,
               'Instagram': <FaInstagram size={32} />,
               'Telegram': <FaTelegram size={32} />,
+              'Discord': <FaDiscord size={32} />,
             };
             return {
               icon: iconMap[link.name],

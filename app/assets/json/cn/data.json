@@ -170,6 +170,11 @@
         "name": "Telegram",
         "url": "https://t.me/origemjhanpoll",
         "label": "Telegram"
+      },
+      {
+        "name": "Discord",
+        "url": "https://discord.origemjhanpoll.com",
+        "label": "Discord"
       }
     ]
   },
