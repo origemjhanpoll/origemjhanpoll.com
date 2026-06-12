@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react
 import { MdOutlineFileDownload } from "react-icons/md";
 
 import { Social, Main, Projects, Local, Profile, Details, Button } from "~/components";
-import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
+import { getProfileService, getProjectsService, getPersonalProjectsService, getMainService, getSocialService } from "~/services";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
@@ -48,29 +48,12 @@ export default function Home() {
   const profileData = getProfileService(locale);
   const mainData = getMainService(locale);
   const socialData = getSocialService(locale);
-  const [projectsData, setProjectsData] = useState<{
-    professional: { title: string; items: any[] };
-    personal: { title: string; items: any[] };
-    translations: {
-      availableInStores: string;
-      screenshots: string;
-      technologies: string;
-      selectProject: string;
-    };
-  }>({
-    professional: { title: "", items: [] },
-    personal: { title: "", items: [] },
-    translations: {
-      availableInStores: "",
-      screenshots: "",
-      technologies: "",
-      selectProject: ""
-    }
-  });
+  const projectsData = getProjectsService(locale);
+  const [personalProjects, setPersonalProjects] = useState<any[]>([]);
 
   useEffect(() => {
-    getProjectsService(locale).then(data => setProjectsData(data));
-  }, [locale]);
+    getPersonalProjectsService().then(items => setPersonalProjects(items));
+  }, []);
 
   const handleFlagClick = () => {
     const nextIndex = (currentFlagIndex + 1) % flags.length;
@@ -176,7 +159,7 @@ export default function Home() {
           titleProfessional={projectsData.professional.title}
           titlePersonal={projectsData.personal.title}
           professionalProjects={projectsData.professional.items}
-          personalProjects={projectsData.personal.items}
+          personalProjects={personalProjects}
           selectedProject={selectedProject}
           onClick={(project) => {
             if (selectedProject === project) {
