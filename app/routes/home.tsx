@@ -48,29 +48,7 @@ export default function Home() {
   const profileData = getProfileService(locale);
   const mainData = getMainService(locale);
   const socialData = getSocialService(locale);
-  const [projectsData, setProjectsData] = useState<{
-    professional: { title: string; items: any[] };
-    personal: { title: string; items: any[] };
-    translations: {
-      availableInStores: string;
-      screenshots: string;
-      technologies: string;
-      selectProject: string;
-    };
-  }>({
-    professional: { title: "", items: [] },
-    personal: { title: "", items: [] },
-    translations: {
-      availableInStores: "",
-      screenshots: "",
-      technologies: "",
-      selectProject: ""
-    }
-  });
-
-  useEffect(() => {
-    getProjectsService(locale).then(data => setProjectsData(data));
-  }, [locale]);
+  const projectsData = getProjectsService(locale);
 
   const handleFlagClick = () => {
     const nextIndex = (currentFlagIndex + 1) % flags.length;
