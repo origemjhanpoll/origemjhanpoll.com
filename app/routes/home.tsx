@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-import { Social, Main, Projects, Local, Profile, Details, Button } from "~/components";
-import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
+import { Social, Main, Projects, Local, Profile, Details, Button, Experience } from "~/components";
+import { getProfileService, getProjectsService, getMainService, getSocialService, getExperienceService } from "~/services";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
@@ -49,6 +49,7 @@ export default function Home() {
   const mainData = getMainService(locale);
   const socialData = getSocialService(locale);
   const projectsData = getProjectsService(locale);
+  const experienceData = getExperienceService(locale);
 
   const handleFlagClick = () => {
     const nextIndex = (currentFlagIndex + 1) % flags.length;
@@ -97,7 +98,7 @@ export default function Home() {
         </div>
       )}
       {!selectedProject && (
-        <div className="hidden flex-1 lg:flex transition-all duration-300">
+        <div className="hidden flex-1 lg:flex lg:flex-col gap-2 md:gap-4 transition-all duration-300">
           <Main
             title={mainData.title}
             description={mainData.description}
@@ -118,6 +119,7 @@ export default function Home() {
               />
             </div>
           </Main>
+          <Experience items={experienceData.items} />
         </div>
       )}
       {selectedProject && (

@@ -1,3 +1,4 @@
+export { getExperienceService } from './experience_service';
 export { getMainService } from './main_service';
 export { getProfileService } from './profile_service';
 export { getProjectsService } from './projects_service';

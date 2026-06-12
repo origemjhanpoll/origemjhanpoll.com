@@ -37,6 +37,73 @@
     "description": "为寻求规模、质量和高水平用户体验的企业定制应用程序开发。",
     "buttonText": ""
   },
+  "experience": {
+    "title": "职业经历",
+    "items": [
+      {
+        "year": "2015",
+        "period": "2015 – 2019",
+        "company": "Grupo Mateus",
+        "url": "https://www.grupomateus.com.br",
+        "logo": "https://www.google.com/s2/favicons?domain=grupomateus.com.br&sz=128",
+        "roles": [
+          {
+            "title": "学徒",
+            "period": "2015 – 2016"
+          },
+          {
+            "title": "产品设计师 (UX/UI)",
+            "period": "2016 – 2017"
+          }
+        ]
+      },
+      {
+        "year": "2019",
+        "period": "2019 – 2021",
+        "company": "Pulse",
+        "url": "https://www.linkedin.com/company/pulseoficial/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHxMkWtbZypVA/company-logo_200_200/company-logo_200_200/0/1704803475942?e=2147483647&v=beta&t=pjU2Qkt7l9ZnaJteQikXp8E4pA2EGw33QnF227sZt6I",
+        "roles": [
+          {
+            "title": "产品设计师 (UX/UI)",
+            "period": "2017 – 2019"
+          },
+          {
+            "title": "移动工程师 (React Native)",
+            "period": "2019 – 2021"
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "period": "2021 – 2024",
+        "company": "Gupy",
+        "url": "https://www.gupy.io",
+        "logo": "https://www.google.com/s2/favicons?domain=gupy.io&sz=128",
+        "roles": [
+          {
+            "title": "移动工程师 (Flutter)",
+            "period": "2021 – 2024"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "period": "2025 – 至今",
+        "company": "Brasil Card",
+        "companyFull": "Brasil Card Instituição de Pagamentos",
+        "current": true,
+        "url": "https://www.brasilcarddigital.com.br",
+        "logo": "https://www.google.com/s2/favicons?domain=brasilcarddigital.com.br&sz=128",
+        "roles": [
+          {
+            "title": "移动工程师 (Flutter)",
+            "period": "2025 – 至今"
+          }
+        ]
+      }
+    ]
+  },
   "about": {
     "title": "关于我",
     "history_label": "经历",
