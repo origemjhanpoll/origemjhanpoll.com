@@ -1,7 +1,7 @@
 import React from 'react';
+import { GeometricBackground } from './geometric-background';
 
 interface MainBannerProps {
-  url: string;
   title?: string;
   description?: string;
   children?: React.ReactNode;
@@ -10,17 +10,9 @@ interface MainBannerProps {
 export const Main: React.FC<MainBannerProps> = (props: MainBannerProps) => {
   return (
     <section className="relative flex flex-1 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans overflow-hidden group">
-      <video
-        src={props.url}
-        className="w-full h-full object-cover opacity-0 animate-[fadeIn_2s_ease-in_forwards]"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <GeometricBackground className="absolute inset-0 w-full h-full opacity-0 animate-[fadeIn_2s_ease-in_forwards]" />
 
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card-bg)] via-[var(--color-card-bg)]/60 to-[var(--color-card-bg)]/40"></div> */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card-bg)] via-[var(--color-card-bg)]/60 to-[var(--color-card-bg)]"></div>
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[var(--color-card-bg)] to-transparent pointer-events-none"></div>
 
       <div className="absolute inset-0 opacity-0 min-[70rem]:opacity-100 transition-opacity duration-200 flex flex-col items-center justify-end gap-2 p-6 2xl:p-8 pointer-events-none min-[70rem]:pointer-events-auto">
         <h1 className="text-2xl min-[80rem]:text-3xl font-bold text-white text-center tracking-tight animate-[slideUp_0.6s_ease-out] transition-all">

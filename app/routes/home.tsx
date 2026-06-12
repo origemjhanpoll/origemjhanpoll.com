@@ -99,7 +99,6 @@ export default function Home() {
       {!selectedProject && (
         <div className="hidden flex-1 lg:flex transition-all duration-300">
           <Main
-            url={mainData.url}
             title={mainData.title}
             description={mainData.description}
           >
