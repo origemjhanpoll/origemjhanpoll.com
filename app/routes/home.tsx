@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react
 import { MdOutlineFileDownload } from "react-icons/md";
 
 import { Social, Main, Projects, Local, Profile, Details, Button } from "~/components";
-import { getProfileService, getProjectsService, getPersonalProjectsService, getMainService, getSocialService } from "~/services";
+import { getProfileService, getProjectsService, getMainService, getSocialService } from "~/services";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
@@ -49,11 +49,6 @@ export default function Home() {
   const mainData = getMainService(locale);
   const socialData = getSocialService(locale);
   const projectsData = getProjectsService(locale);
-  const [personalProjects, setPersonalProjects] = useState<any[]>([]);
-
-  useEffect(() => {
-    getPersonalProjectsService().then(items => setPersonalProjects(items));
-  }, []);
 
   const handleFlagClick = () => {
     const nextIndex = (currentFlagIndex + 1) % flags.length;
@@ -159,7 +154,7 @@ export default function Home() {
           titleProfessional={projectsData.professional.title}
           titlePersonal={projectsData.personal.title}
           professionalProjects={projectsData.professional.items}
-          personalProjects={personalProjects}
+          personalProjects={projectsData.personal.items}
           selectedProject={selectedProject}
           onClick={(project) => {
             if (selectedProject === project) {

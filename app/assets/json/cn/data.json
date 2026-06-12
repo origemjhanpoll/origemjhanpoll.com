@@ -68,86 +68,255 @@
     ]
   },
   "projects": {
-    "title": "专业项目",
-    "title2": "个人项目",
-    "availableInStores": "在商店中可用",
-    "screenshots": "截图",
-    "technologies": "技术栈",
-    "selectProject": "选择一个项目查看详情",
-    "items": [
-      {
-        "title": "Brasil Card Digital",
-        "description": "数字银行应用程序，具有定制的私人标签卡和BrasilCard信用卡。",
-        "thumbnail": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "Firebase",
-          "Codemagic"
-        ],
-        "images": [
-          "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
-          "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
-          "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
-        ],
-        "url": "https://www.brasilcarddigital.com.br",
-        "github": null,
-        "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
-        "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
-        "year": 2025,
-        "types": [
-          "Mobile"
-        ]
-      },
-      {
-        "title": "Gupy EduCorp",
-        "description": "企业教育平台，具有游戏化、排名、积分和互动测验功能，用于员工培训。",
-        "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "Firebase",
-          "Codemagic"
-        ],
-        "images": [
-          "https://play-lh.googleusercontent.com/Vey5GE62pfmHe9f7yOgfLwg-1ZFVx5CbP0rz5xcJ52DkSwR1GRNBkZkMUFqsDEFW0pU",
-          "https://play-lh.googleusercontent.com/kF08zTJcjcpWcff14M7V6mK2-vCwdAWUi5B_pzVRzeZxF4i7-6K7oIWIz9Q9tGuAuzo",
-          "https://play-lh.googleusercontent.com/Fj4zrwjdBzRjVFG7Vbnnlz-WW9GBlQBRPxp7oRnu2Ttpu-c5j4Rs3OvqLFlNqrEFPtM"
-        ],
-        "url": "https://www.gupy.io/plataforma-de-educacao-corporativa",
-        "github": null,
-        "playstore": "https://play.google.com/store/apps/details?id=com.workeduc.appv4&hl",
-        "appstore": "https://apps.apple.com/bo/app/gupy-educorp/id1287059492?platform=iphone",
-        "year": 2021,
-        "types": [
-          "Mobile",
-          "Web"
-        ]
-      },
-      {
-        "title": "Maestro Mateus",
-        "description": "超市连锁员工的日常任务管理系统。",
-        "thumbnail": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
-        "technologies": [
-          "React Native",
-          "Firebase"
-        ],
-        "images": [
-          "https://play-lh.googleusercontent.com/tPZK5HpZXwaxrKouU7X-jajx0hhS-RuUlAjXHbcmrY3Pn4qqtaSnHlAy07hiOQlFAQ",
-          "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
-          "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
-        ],
-        "url": "https://www.linkedin.com/company/pulseoficial/",
-        "github": null,
-        "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
-        "appstore": null,
-        "year": 2019,
-        "types": [
-          "Mobile",
-          "Web"
-        ]
-      }
-    ]
+    "professional": {
+      "title": "专业项目",
+      "items": [
+        {
+          "title": "Brasil Card Digital",
+          "description": "数字银行应用程序，具有定制的私人标签卡和BrasilCard信用卡。",
+          "thumbnail": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "Codemagic"
+          ],
+          "images": [
+            "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
+            "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
+            "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
+          ],
+          "url": "https://www.brasilcarddigital.com.br",
+          "github": null,
+          "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
+          "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
+          "year": 2025,
+          "types": [
+            "Mobile"
+          ]
+        },
+        {
+          "title": "Gupy EduCorp",
+          "description": "企业教育平台，具有游戏化、排名、积分和互动测验功能，用于员工培训。",
+          "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "Codemagic"
+          ],
+          "images": [
+            "https://play-lh.googleusercontent.com/Vey5GE62pfmHe9f7yOgfLwg-1ZFVx5CbP0rz5xcJ52DkSwR1GRNBkZkMUFqsDEFW0pU",
+            "https://play-lh.googleusercontent.com/kF08zTJcjcpWcff14M7V6mK2-vCwdAWUi5B_pzVRzeZxF4i7-6K7oIWIz9Q9tGuAuzo",
+            "https://play-lh.googleusercontent.com/Fj4zrwjdBzRjVFG7Vbnnlz-WW9GBlQBRPxp7oRnu2Ttpu-c5j4Rs3OvqLFlNqrEFPtM"
+          ],
+          "url": "https://www.gupy.io/plataforma-de-educacao-corporativa",
+          "github": null,
+          "playstore": "https://play.google.com/store/apps/details?id=com.workeduc.appv4&hl",
+          "appstore": "https://apps.apple.com/bo/app/gupy-educorp/id1287059492?platform=iphone",
+          "year": 2021,
+          "types": [
+            "Mobile",
+            "Web"
+          ]
+        },
+        {
+          "title": "Maestro Mateus",
+          "description": "超市连锁员工的日常任务管理系统。",
+          "thumbnail": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
+          "technologies": [
+            "React Native",
+            "Firebase"
+          ],
+          "images": [
+            "https://play-lh.googleusercontent.com/tPZK5HpZXwaxrKouU7X-jajx0hhS-RuUlAjXHbcmrY3Pn4qqtaSnHlAy07hiOQlFAQ",
+            "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
+            "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
+          ],
+          "url": "https://www.linkedin.com/company/pulseoficial/",
+          "github": null,
+          "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
+          "appstore": null,
+          "year": 2019,
+          "types": [
+            "Mobile",
+            "Web"
+          ]
+        }
+      ]
+    },
+    "personal": {
+      "title": "个人项目",
+      "items": [
+        {
+          "title": "origemjhanpoll.com",
+          "description": "Jean Paul 的职业作品集，他是一名专注于打造高效解决方案的移动开发者。网站以快速、响应式的界面展示技能、技术、项目和联系方式。内容为动态加载，基于 JSON，使用 React、TypeScript 和 Tailwind CSS v4 构建。",
+          "url": "https://github.com/origemjhanpoll/origemjhanpoll.com",
+          "github": "https://github.com/origemjhanpoll/origemjhanpoll.com",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/origemjhanpoll.com/main/README.md",
+          "technologies": [
+            "react",
+            "json",
+            "typescript",
+            "reactjs",
+            "portifolio",
+            "tawilwindcss",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App GitUsers",
+          "description": "“Petize Challenge”项目是一个编程测试，我使用 Flutter 和 Dart 开发了一款面向移动端和 Web 的应用。它调用 GitHub API 搜索用户并展示其仓库，界面简洁且响应式。",
+          "url": "https://github.com/origemjhanpoll/App-GitUsers",
+          "github": "https://github.com/origemjhanpoll/App-GitUsers",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-GitUsers/main/README.md",
+          "technologies": [
+            "dart",
+            "http",
+            "webview",
+            "mvvm",
+            "flutter",
+            "bloc",
+            "flutter-modular",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App CepSearch",
+          "description": "一款用于查询巴西邮政编码（CEP）的 Flutter 应用。采用 Clean Architecture 和 Bloc 构建，支持查询地址、在地图上查看详情，并保存 CEP 以供离线访问。",
+          "url": "https://github.com/origemjhanpoll/App-CepSearch",
+          "github": "https://github.com/origemjhanpoll/App-CepSearch",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-CepSearch/main/README.md",
+          "technologies": [
+            "dart",
+            "http",
+            "ui",
+            "sharedpreferences",
+            "test",
+            "zipcodes",
+            "zipcode",
+            "flutter",
+            "bloc",
+            "ceps",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App PostsFeed",
+          "description": "一款极简风格的 Flutter 帖子信息流应用，无图片，支持离线使用。采用 MVVM 架构，使用 Bloc 进行状态管理，并通过 shared_preferences 持久化数据。专注于性能与简洁的阅读体验。",
+          "url": "https://github.com/origemjhanpoll/App-PostsFeed",
+          "github": "https://github.com/origemjhanpoll/App-PostsFeed",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-PostsFeed/main/README.md",
+          "technologies": [
+            "android",
+            "dart",
+            "ios",
+            "offline",
+            "read",
+            "feed",
+            "post",
+            "flutter",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App Criptomoedas",
+          "description": "一款展示加密货币信息的 Flutter 应用，采用 MVVM 架构并使用 Bloc 模式进行状态管理。应用界面模块化，遵循 Atomic Design 规范，并集成外部 API 获取实时数据。",
+          "url": "https://github.com/origemjhanpoll/App-Criptomoedas",
+          "github": "https://github.com/origemjhanpoll/App-Criptomoedas",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-Criptomoedas/main/README.md",
+          "technologies": [
+            "dart",
+            "http",
+            "crypto",
+            "websocket",
+            "localstorage",
+            "fluuter",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App Cards",
+          "description": "一款展示客户银行卡列表的 Flutter 应用，可查看每张卡的交易记录和相关信息。采用 MVVM 和 Atomic Design 开发，使用 Provider 进行状态管理。",
+          "url": "https://github.com/origemjhanpoll/App-Cards",
+          "github": "https://github.com/origemjhanpoll/App-Cards",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-Cards/main/README.md",
+          "technologies": [
+            "android",
+            "dart",
+            "http",
+            "ios",
+            "test",
+            "mvvm",
+            "atomic-design",
+            "flutter",
+            "mvvm-architecture",
+            "test-ui",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App MotelsNearby",
+          "description": "Flutter Motels Nearby 是一款展示附近汽车旅馆、套房及住宿价格的应用。使用 Flutter 开发，采用 MVVM 架构并通过 Atomic Design 组织 UI，确保代码模块化且可扩展。",
+          "url": "https://github.com/origemjhanpoll/App-MotelsNearby",
+          "github": "https://github.com/origemjhanpoll/App-MotelsNearby",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-MotelsNearby/main/README.md",
+          "technologies": [
+            "Dart",
+            "dart",
+            "mvvm",
+            "atomic-design",
+            "flutter",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        },
+        {
+          "title": "App YandehExpress",
+          "description": "Yandeh Challenge：一款包含商品列表的 Flutter 应用，采用 Atomic Design、Clean Architecture 和 SOLID 原则。",
+          "url": "https://github.com/origemjhanpoll/App-YandehExpress",
+          "github": "https://github.com/origemjhanpoll/App-YandehExpress",
+          "markdown": "https://raw.githubusercontent.com/origemjhanpoll/App-YandehExpress/main/README.md",
+          "technologies": [
+            "Dart",
+            "solid",
+            "clean-architecture",
+            "atomic-design",
+            "solid-principles",
+            "origemjhanpoll"
+          ],
+          "types": [
+            "Open Source"
+          ]
+        }
+      ]
+    },
+    "translations": {
+      "availableInStores": "在商店中可用",
+      "screenshots": "截图",
+      "technologies": "技术栈",
+      "selectProject": "选择一个项目查看详情"
+    }
   },
   "social": {
     "links": [
