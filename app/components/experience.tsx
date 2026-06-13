@@ -17,78 +17,111 @@ export interface ExperienceItem {
 }
 
 interface ExperienceProps {
+  title: string;
+  yearLabel: string;
+  yearsLabel: string;
   items: ExperienceItem[];
 }
 
-const Tooltip: React.FC<{ item: ExperienceItem }> = ({ item }) => (
-  <div className="pointer-events-none absolute top-[calc(100%+0.625rem)] left-1/2 z-20 w-max max-w-64 -translate-x-1/2 -translate-y-2 scale-95 rounded-2xl border border-white/10 bg-[var(--color-tag-bg)] px-5 py-4 opacity-0 shadow-2xl shadow-black/60 transition-all duration-300 ease-out group-hover/item:translate-y-0 group-hover/item:scale-100 group-hover/item:opacity-100">
-    <p className="text-sm font-semibold leading-tight">
-      {item.companyFull ?? item.company}
-    </p>
-    <p className="text-xs font-medium text-[var(--color-text-secondary)] mb-3">{item.period}</p>
-    <ul className="flex flex-col gap-1.5">
-      {item.roles.map((role) => (
-        <li key={role.period} className="flex items-baseline gap-2">
-          <span className="text-[10px] tabular-nums whitespace-nowrap text-[var(--color-text-tertiary)]">
-            {role.period}
-          </span>
-          <span className="text-xs text-[var(--color-text-secondary)]">
-            {role.title}
-          </span>
-        </li>
-      ))}
-    </ul>
-    <span className="absolute left-1/2 bottom-full -mb-[5px] size-2.5 -translate-x-1/2 rotate-45 border-t border-l border-white/10 bg-[var(--color-tag-bg)]" />
-  </div>
-);
+// A duração e o intervalo são derivados dos cargos (fonte de verdade),
+// não do campo `period` da empresa — que pode estar desatualizado.
+const getTenure = (item: ExperienceItem) => {
+  const currentYear = new Date().getFullYear();
+  const starts: number[] = [];
+  const endYears: number[] = [];
+  let presentLabel: string | null = null;
 
-export const Experience: React.FC<ExperienceProps> = ({ items }) => {
+  for (const role of item.roles) {
+    const [startRaw, endRaw] = role.period.split(/[–-]/).map((part) => part.trim());
+    const start = parseInt(startRaw, 10);
+    if (!Number.isNaN(start)) starts.push(start);
+
+    const end = parseInt(endRaw ?? '', 10);
+    if (Number.isNaN(end)) {
+      if (endRaw) presentLabel = endRaw; // ex.: "Atual" / "Present" / "至今"
+    } else {
+      endYears.push(end);
+    }
+  }
+
+  if (starts.length === 0) return null;
+
+  const isCurrent = item.current || presentLabel != null;
+  const start = Math.min(...starts);
+  const endYear = isCurrent ? currentYear : Math.max(...endYears);
+  const endLabel = isCurrent ? (presentLabel ?? String(currentYear)) : String(endYear);
+
+  return { start, endLabel, years: Math.max(endYear - start, 1) };
+};
+
+export const Experience: React.FC<ExperienceProps> = ({ title, yearLabel, yearsLabel, items }) => {
   return (
-    <section className="@container flex items-center bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-4 md:p-6 2xl:p-8">
-      <div className="flex w-full flex-row">
-        {items.map((item, index) => {
-          const lastRole = item.roles[item.roles.length - 1];
+    <section className="scrollbar-custom flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-4 md:p-6 2xl:p-8 md:overflow-y-auto">
+      <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-6">
+        {title}
+      </h2>
+      <ol className="relative flex flex-col">
+        {[...items].reverse().map((item, index, ordered) => {
+          const isLast = index === ordered.length - 1;
+          const tenure = getTenure(item);
           return (
-            <div
+            <li
               key={item.company}
-              className="group/item relative flex flex-1 flex-col items-center cursor-default"
+              className="relative flex gap-4 pb-8 last:pb-0"
             >
-              <Tooltip item={item} />
-
-              <div className="min-[80rem]:mb-2 flex w-full items-center">
+              {!isLast && (
                 <span
-                  className={`h-px flex-1 ${index === 0 ? 'bg-transparent' : 'bg-white/15'}`}
+                  aria-hidden
+                  className="absolute top-14 bottom-2 left-6 -ml-px w-0 border-l-2 border-dotted border-[var(--color-text-tertiary)]"
                 />
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.companyFull ?? item.company}
-                  className="relative mx-2 flex shrink-0 items-center transition-transform duration-300 group-hover/item:scale-110"
-                >
-                  <span className="block min-[70rem]:hidden size-2.5 shrink-0 rounded-full bg-[var(--color-primary)]" />
-                  <img
-                    src={item.logo}
-                    alt={`Logo ${item.company}`}
-                    loading="lazy"
-                    className="hidden min-[70rem]:block size-7 min-[80rem]:size-9 @3xl:size-10 shrink-0 aspect-square rounded-full bg-white object-contain p-1"
-                  />
-                </a>
-                <span
-                  className={`h-px flex-1 ${index === items.length - 1 ? 'bg-transparent' : 'bg-white/15'}`}
+              )}
+
+              <div className="relative z-10 shrink-0">
+                <img
+                  src={item.logo}
+                  alt={`Logo ${item.company}`}
+                  loading="lazy"
+                  className="size-12 aspect-square shrink-0 rounded-xl bg-white object-contain p-1"
                 />
               </div>
 
-              <span className="hidden min-[80rem]:block px-1 text-center text-sm font-bold leading-tight">
-                {item.company}
-              </span>
-              <span className="hidden min-[80rem]:block mt-0.5 px-1 text-center text-xs font-light leading-tight text-[var(--color-text-secondary)]">
-                {lastRole?.title}
-              </span>
-            </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-t gap-x-2 gap-y-1">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-semibold leading-tight text-[var(--color-text-primary)] transition-colors hover:text-[var(--color-text-secondary)]"
+                  >
+                    {item.companyFull ?? item.company}
+                  </a>
+                </div>
+                {tenure && (
+                  <p className="text-sm font-light text-[var(--color-text-secondary)]">
+                    {`${tenure.start} – ${tenure.endLabel}`}
+                    <span className="text-[var(--color-text-tertiary)]">
+                      {` · ${tenure.years} ${tenure.years === 1 ? yearLabel : yearsLabel}`}
+                    </span>
+                  </p>
+                )}
+
+                <ul className="mt-2 flex flex-col gap-1.5">
+                  {[...item.roles].reverse().map((role) => (
+                    <li key={role.period} className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                      <span className="shrink-0 text-sm font-light tabular-nums whitespace-nowrap text-[var(--color-text-tertiary)]">
+                        {role.period}
+                      </span>
+                      <span className="text-sm font-light text-[var(--color-text-secondary)]">
+                        {role.title}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </section>
   );
 };

@@ -1,8 +1,6 @@
 import React from 'react';
-import { Button } from './shared/button';
-import { FaWhatsapp } from 'react-icons/fa';
-import { MdOutlineFileDownload } from 'react-icons/md';
 import image from '../assets/image/origemjhanpoll.jpeg';
+import GeometricBackground from './geometric-background';
 
 interface ProfileProps {
 	username: string;
@@ -15,11 +13,10 @@ interface ProfileProps {
 	buttons: { text: string; url: string }[];
 	flag: string;
 	onClickFlag: () => void;
+	children?: React.ReactNode;
 }
 
-const Profile: React.FC<ProfileProps> = (props: ProfileProps
-
-) => {
+const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 	return (
 		<section className="relative flex flex-1 flex-col bg-[var(--color-card-bg)] rounded-3xl overflow-hidden">
 			<div className="absolute z-0 top-0 w-full h-[45%] sm:h-[60%]">
@@ -30,8 +27,10 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 				/>
 				<div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card-bg)] via-[var(--color-card-bg)]/50 to-[var(--color-card-bg)]/10"></div>
 			</div>
+			<GeometricBackground className="absolute inset-0 w-full h-full opacity-0 animate-[fadeIn_2s_ease-in_forwards]" />
+			<div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[var(--color-card-bg)] to-transparent pointer-events-none"></div>
 
-			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start overflow-y-auto p-4 md:p-6 2xl:p-8 sm:pt-48 pt-48'>
+			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start md:overflow-y-auto p-4 md:p-6 2xl:p-8 sm:pt-48 pt-48'>
 				<div className="flex flex-col justify-center items-center md:items-start mt-auto">
 					<span className="text-md font-medium text-[var(--color-text-secondary)]">@{props.username}</span>
 					<h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] md:text-start text-center">{props.greeting}</h2>
@@ -50,21 +49,11 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps
 						<span key={index} className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)]">{tag}</span>
 					))}
 				</div>
-				<div className="flex md:hidden w-full flex-row justify-center items-center gap-4 mt-6 mb-2">
-					{props.buttons.map((button, index) => (
-						<Button
-							key={index}
-							onClick={() => window.open(button.url, '_blank')}
-							color={index === 0
-								? "bg-[var(--color-primary)] text-[var(--color-card-bg)]"
-								: "bg-[var(--color-primary)]/20 text-[var(--color-text-primary)]"
-							}
-							isFull={index === 0}
-							label={index === 0 ? button.text : ""}
-							icon={index === 0 ? <FaWhatsapp size={24} /> : <MdOutlineFileDownload size={24} />}
-						/>
-					))}
-				</div>
+				{props.children && (
+					<div className="flex w-full flex-row items-center gap-4 pb-2 pt-10">
+						{props.children}
+					</div>
+				)}
 			</div>
 			<img
 				onClick={props.onClickFlag}

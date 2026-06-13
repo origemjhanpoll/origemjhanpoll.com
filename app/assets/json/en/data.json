@@ -38,11 +38,13 @@
     "buttonText": ""
   },
   "experience": {
-    "title": "Professional Experience",
+    "title": "PROFESSIONAL EXPERIENCE",
+    "yearLabel": "year",
+    "yearsLabel": "years",
     "items": [
       {
         "year": "2015",
-        "period": "2015 – 2019",
+        "period": "2015 – 2017",
         "company": "Grupo Mateus",
         "url": "https://www.grupomateus.com.br",
         "logo": "https://www.google.com/s2/favicons?domain=grupomateus.com.br&sz=128",
@@ -58,8 +60,8 @@
         ]
       },
       {
-        "year": "2019",
-        "period": "2019 – 2021",
+        "year": "2017",
+        "period": "2017 – 2021",
         "company": "Pulse",
         "url": "https://www.linkedin.com/company/pulseoficial/",
         "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHxMkWtbZypVA/company-logo_200_200/company-logo_200_200/0/1704803475942?e=2147483647&v=beta&t=pjU2Qkt7l9ZnaJteQikXp8E4pA2EGw33QnF227sZt6I",

@@ -58,70 +58,107 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen gap-2 md:gap-4 p-2 md:p-5">
-      {!selectedProject && (
-        <div className="flex flex-col w-full lg:w-100 2xl:w-125 md:gap-y-4 gap-y-2 transition-all duration-300">
-          <Profile
-            username={profileData.username}
-            greeting={profileData.greeting}
-            name={profileData.name}
-            role={profileData.role}
-            description={profileData.description}
-            tags={profileData.tags}
-            photoUrl={profileData.photo}
-            buttons={profileData.buttons}
-            flag={flags[currentFlagIndex].icon}
-            onClickFlag={handleFlagClick}
+    <div className="flex flex-col md:flex-row 2xl:justify-center min-h-dvh md:h-screen gap-2 md:gap-4 p-2 md:p-5">
+      <div className="flex flex-col md:w-100 lg:w-120 2xl:w-240 gap-2 md:gap-y-4 gap-y-2 transition-all duration-300">
+        <Profile
+          username={profileData.username}
+          greeting={profileData.greeting}
+          name={profileData.name}
+          role={profileData.role}
+          description={profileData.description}
+          tags={profileData.tags}
+          photoUrl={profileData.photo}
+          buttons={profileData.buttons}
+          flag={flags[currentFlagIndex].icon}
+          onClickFlag={handleFlagClick}
+        >
+          {/* <Button
+            onClick={() => window.open(profileData.buttons[0].url, '_blank')}
+            icon={<FaWhatsapp size={24} />}
+            label={profileData.buttons[0].text}
+            isFull
           />
-          <Local
-            address={profileData.address}
-            label={profileData.localTimeLabel}
-          />
-          <div className="hidden md:block lg:hidden">
-            <Actions listActions={[
-              {
-                title: profileData.buttons[0].text,
-                url: profileData.buttons[0].url,
-                icon: <FaWhatsapp size={24} />,
-                color: "bg-[var(--color-primary)]",
-                isFull: true,
-              },
-              {
-                title: profileData.buttons[1].text,
-                url: profileData.buttons[1].url,
-                icon: <MdOutlineFileDownload size={24} />,
-                color: "bg-[var(--color-tag-bg)] text-[var(--color-tag-text)]",
-              }
+          <Button
+            onClick={() => window.open(profileData.buttons[1].url, '_blank')}
+            outline={true}
+            icon={<MdOutlineFileDownload size={24} />}
+          /> */}
+        </Profile>
+        {/* <Main
+          title={mainData.title}
+          description={mainData.description}
+        /> */}
+        {/* <Experience
+          title={experienceData.title}
+          yearLabel={experienceData.yearLabel}
+          yearsLabel={experienceData.yearsLabel}
+          items={experienceData.items}
+        /> */}
+        {/* <Local
+          address={profileData.address}
+          label={profileData.localTimeLabel}
+        /> */}
+        {/* <div className="hidden md:block lg:hidden">
+          <Actions listActions={[
+            {
+              title: profileData.buttons[0].text,
+              url: profileData.buttons[0].url,
+              icon: <FaWhatsapp size={24} />,
+              color: "bg-[var(--color-primary)]",
+              isFull: true,
+            },
+            {
+              title: profileData.buttons[1].text,
+              url: profileData.buttons[1].url,
+              icon: <MdOutlineFileDownload size={24} />,
+              color: "bg-[var(--color-tag-bg)] text-[var(--color-tag-text)]",
+            }
 
-            ]} />
+          ]} />
+        </div> */}
+      </div>
+
+      <div className="flex flex-col flex-1 gap-2 md:gap-4 transition-all duration-300">
+        <Local
+          address={profileData.address}
+          label={profileData.localTimeLabel}
+        />
+        <Main
+          title={mainData.title}
+          description={mainData.description}
+        >
+          <div className="flex flex-row gap-4">
+            <Button
+              onClick={() => window.open(profileData.buttons[0].url, '_blank')}
+              icon={<FaWhatsapp size={24} />}
+              label={profileData.buttons[0].text}
+              collapseMobile={true}
+            />
+            <Button
+              onClick={() => window.open(profileData.buttons[1].url, '_blank')}
+              outline={true}
+              color="bg-[var(--color-tag-bg)] text-[var(--color-text-primary)]"
+              icon={<MdOutlineFileDownload size={24} />}
+              collapseMobile={true}
+            />
           </div>
-        </div>
-      )}
-      {!selectedProject && (
-        <div className="hidden flex-1 lg:flex lg:flex-col gap-2 md:gap-4 transition-all duration-300">
-          <Main
-            title={mainData.title}
-            description={mainData.description}
-          >
-            <div className="flex flex-row gap-4">
-              <Button
-                onClick={() => window.open(profileData.buttons[0].url, '_blank')}
-                icon={<FaWhatsapp size={24} />}
-                label={profileData.buttons[0].text}
-                collapseMobile={true}
-              />
-              <Button
-                onClick={() => window.open(profileData.buttons[1].url, '_blank')}
-                color="bg-[var(--color-tag-bg)] text-[var(--color-text-primary)]"
-                icon={<MdOutlineFileDownload size={24} />}
-                label={profileData.buttons[1].text}
-                collapseMobile={true}
-              />
-            </div>
-          </Main>
-          <Experience items={experienceData.items} />
-        </div>
-      )}
+
+        </Main>
+        <Social
+          icons={socialData.links.map((link: any) => {
+            const iconMap: { [key: string]: React.ReactNode } = {
+              'LinkedIn': <FaLinkedin className="size-12 " />,
+              'GitHub': <FaGithub className="size-12" />,
+              'Instagram': <FaInstagram className="size-12" />,
+              'Telegram': <FaTelegram className="size-12" />,
+            };
+            return {
+              icon: iconMap[link.name],
+              href: link.url,
+              label: link.label,
+            };
+          })} />
+      </div>
       {selectedProject && (
         <div className={`${isModalOpen ? 'fixed inset-0 z-[9999] flex lg:hidden' : 'hidden lg:flex flex-1'}`}>
           <Details
@@ -135,21 +172,26 @@ export default function Home() {
         </div>
       )}
 
-      <div className="flex flex-col-reverse md:flex-col w-full lg:w-100 2xl:w-125 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
-        <Social
+      <div className="flex flex-col md:w-80 lg:w-110 2xl:w-240 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
+        {/* <Social 
           icons={socialData.links.map((link: any) => {
             const iconMap: { [key: string]: React.ReactNode } = {
-              'LinkedIn': <FaLinkedin size={32} />,
-              'GitHub': <FaGithub size={32} />,
-              'Instagram': <FaInstagram size={32} />,
-              'Telegram': <FaTelegram size={32} />,
+              'LinkedIn': <FaLinkedin className="size-12 " />,
+              'GitHub': <FaGithub className="size-12" />,
+              'Instagram': <FaInstagram className="size-12" />,
+              'Telegram': <FaTelegram className="size-12" />,
             };
             return {
               icon: iconMap[link.name],
               href: link.url,
               label: link.label,
             };
-          })}
+          })} /> */}
+        <Experience
+          title={experienceData.title}
+          yearLabel={experienceData.yearLabel}
+          yearsLabel={experienceData.yearsLabel}
+          items={experienceData.items}
         />
         <Projects
           titleProfessional={projectsData.professional.title}

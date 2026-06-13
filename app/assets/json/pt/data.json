@@ -38,11 +38,13 @@
     "buttonText": ""
   },
   "experience": {
-    "title": "Experiência Profissional",
+    "title": "EXPERIÊNCIAS",
+    "yearLabel": "ano",
+    "yearsLabel": "anos",
     "items": [
       {
         "year": "2015",
-        "period": "2015 – 2019",
+        "period": "2015 – 2017",
         "company": "Grupo Mateus",
         "url": "https://www.grupomateus.com.br",
         "logo": "https://www.google.com/s2/favicons?domain=grupomateus.com.br&sz=128",
@@ -58,18 +60,18 @@
         ]
       },
       {
-        "year": "2019",
-        "period": "2019 – 2021",
+        "year": "2017",
+        "period": "2017 – 2021",
         "company": "Pulse",
         "url": "https://www.linkedin.com/company/pulseoficial/",
         "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHxMkWtbZypVA/company-logo_200_200/company-logo_200_200/0/1704803475942?e=2147483647&v=beta&t=pjU2Qkt7l9ZnaJteQikXp8E4pA2EGw33QnF227sZt6I",
         "roles": [
           {
-            "title": "Product Designer",
+            "title": "Product Designer (UI/UX)",
             "period": "2017 – 2019"
           },
           {
-            "title": "Mobile Engineer",
+            "title": "Mobile Engineer (React Native)",
             "period": "2019 – 2021"
           }
         ]
@@ -82,7 +84,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=gupy.io&sz=128",
         "roles": [
           {
-            "title": "Mobile Engineer",
+            "title": "Mobile Engineer (Flutter)",
             "period": "2021 – 2024"
           }
         ]
@@ -94,10 +96,10 @@
         "companyFull": "Brasil Card Instituição de Pagamentos",
         "current": true,
         "url": "https://www.brasilcarddigital.com.br",
-        "logo": "https://www.google.com/s2/favicons?domain=brasilcarddigital.com.br&sz=128",
+        "logo": "https://play-lh.googleusercontent.com/-rryDhw7Trvu2vNujRvMBCYwBweTPc2tn3E2WRrC1YDuGM0DFiRiicyywX5m98xTggCpdsdLQkdNi2177G5dOXE=w480-h960-rw",
         "roles": [
           {
-            "title": "Mobile Engineer",
+            "title": "Mobile Engineer (Flutter)",
             "period": "2025 – Atual"
           }
         ]
@@ -136,7 +138,7 @@
   },
   "projects": {
     "professional": {
-      "title": "PROFISSIONAL",
+      "title": "APPS",
       "items": [
         {
           "title": "Brasil Card Digital",
@@ -213,7 +215,7 @@
       ]
     },
     "personal": {
-      "title": "PESSOAL",
+      "title": "GITHUB",
       "items": [
         {
           "title": "origemjhanpoll.com",
