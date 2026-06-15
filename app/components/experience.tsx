@@ -108,9 +108,9 @@ export const Experience: React.FC<ExperienceProps> = ({ title, yearLabel, yearsL
                 <ul className="mt-2 flex flex-col gap-1.5">
                   {[...item.roles].reverse().map((role) => (
                     <li key={role.period} className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-                      <span className="shrink-0 text-sm font-light tabular-nums whitespace-nowrap text-[var(--color-text-tertiary)]">
+                      {item.roles.length > 1 && <span className="shrink-0 text-sm font-light tabular-nums whitespace-nowrap text-[var(--color-text-tertiary)]">
                         {role.period}
-                      </span>
+                      </span>}
                       <span className="text-sm font-light text-[var(--color-text-secondary)]">
                         {role.title}
                       </span>

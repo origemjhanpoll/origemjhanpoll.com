@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row 2xl:justify-center min-h-dvh md:h-screen gap-2 md:gap-4 p-2 md:p-5">
-      <div className="flex flex-col min-w-80 md:w-100 lg:w-120 2xl:w-240 gap-2 md:gap-y-4 gap-y-2 transition-all duration-300">
+      <div className="flex flex-col min-w-80 md:w-100 lg:w-120 2xl:w-180 gap-2 md:gap-y-4 gap-y-2 transition-all duration-300">
         <Profile
           username={profileData.username}
           greeting={profileData.greeting}
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="flex flex-col-reverse md:flex-col min-w-80 md:w-100 lg:w-100 2xl:w-240 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
+      <div className="flex flex-col-reverse md:flex-col 2xl:flex-row min-w-80 md:w-100 lg:w-100 2xl:w-240 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
         <Experience
           title={experienceData.title}
           yearLabel={experienceData.yearLabel}

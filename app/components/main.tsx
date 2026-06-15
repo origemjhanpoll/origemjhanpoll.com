@@ -12,8 +12,8 @@ export const Main: React.FC<MainBannerProps> = (props: MainBannerProps) => {
     <section className="flex flex-1 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans overflow-hidden group relative">
       <GeometricBackground className="absolute inset-0 w-full h-full opacity-0 animate-[fadeIn_2s_ease-in_forwards]" />
 
-      <div className="z-10 flex flex-col items-center justify-center gap-2 p-6 2xl:p-8 pointer-events-none min-[70rem]:pointer-events-auto">
-        <h1 className="md:hidden lg:block text-2xl font-bold text-white text-center tracking-tight animate-[slideUp_0.6s_ease-out] transition-all">
+      <div className="z-10 flex flex-1 flex-col items-center justify-center gap-2 p-6 2xl:p-8 pointer-events-none">
+        <h1 className="md:hidden lg:block text-2xl 2xl:text-4xl font-bold text-white text-center tracking-tight animate-[slideUp_0.6s_ease-out] transition-all">
           {props.title && props.title}
         </h1>
         {props.description && (
