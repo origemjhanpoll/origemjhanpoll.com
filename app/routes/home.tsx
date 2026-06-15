@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
@@ -15,29 +15,6 @@ export default function Home() {
   const [locale, setLocale] = useState('pt');
   const [currentFlagIndex, setCurrentFlagIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.matchMedia('(max-width: 1023px)').matches);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    if (selectedProject) {
-      if (isMobile) {
-        setIsModalOpen(true);
-      } else {
-        setIsModalOpen(false);
-      }
-    }
-  }, [isMobile, selectedProject]);
 
   const flags = [
     { icon: iconBR, locale: 'pt' },
@@ -59,7 +36,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row 2xl:justify-center min-h-dvh md:h-screen gap-2 md:gap-4 p-2 md:p-5">
-      <div className="flex flex-col md:w-100 lg:w-120 2xl:w-240 gap-2 md:gap-y-4 gap-y-2 transition-all duration-300">
+      <div className="flex flex-col min-w-80 md:w-100 lg:w-120 2xl:w-240 gap-2 md:gap-y-4 gap-y-2 transition-all duration-300">
         <Profile
           username={profileData.username}
           greeting={profileData.greeting}
@@ -72,7 +49,7 @@ export default function Home() {
           flag={flags[currentFlagIndex].icon}
           onClickFlag={handleFlagClick}
         >
-          {/* <Button
+          <Button
             onClick={() => window.open(profileData.buttons[0].url, '_blank')}
             icon={<FaWhatsapp size={24} />}
             label={profileData.buttons[0].text}
@@ -82,43 +59,11 @@ export default function Home() {
             onClick={() => window.open(profileData.buttons[1].url, '_blank')}
             outline={true}
             icon={<MdOutlineFileDownload size={24} />}
-          /> */}
+          />
         </Profile>
-        {/* <Main
-          title={mainData.title}
-          description={mainData.description}
-        /> */}
-        {/* <Experience
-          title={experienceData.title}
-          yearLabel={experienceData.yearLabel}
-          yearsLabel={experienceData.yearsLabel}
-          items={experienceData.items}
-        /> */}
-        {/* <Local
-          address={profileData.address}
-          label={profileData.localTimeLabel}
-        /> */}
-        {/* <div className="hidden md:block lg:hidden">
-          <Actions listActions={[
-            {
-              title: profileData.buttons[0].text,
-              url: profileData.buttons[0].url,
-              icon: <FaWhatsapp size={24} />,
-              color: "bg-[var(--color-primary)]",
-              isFull: true,
-            },
-            {
-              title: profileData.buttons[1].text,
-              url: profileData.buttons[1].url,
-              icon: <MdOutlineFileDownload size={24} />,
-              color: "bg-[var(--color-tag-bg)] text-[var(--color-tag-text)]",
-            }
-
-          ]} />
-        </div> */}
       </div>
 
-      <div className="flex flex-col flex-1 gap-2 md:gap-4 transition-all duration-300">
+      <div className="flex flex-col flex-1 gap-2 md:gap-4 transition-all duration-300 [&>*:nth-child(2)]:hidden md:[&>*:nth-child(2)]:flex">
         <Local
           address={profileData.address}
           label={profileData.localTimeLabel}
@@ -127,27 +72,22 @@ export default function Home() {
           title={mainData.title}
           description={mainData.description}
         >
-          <div className="flex flex-row gap-4">
-            <Button
-              onClick={() => window.open(profileData.buttons[0].url, '_blank')}
-              icon={<FaWhatsapp size={24} />}
-              label={profileData.buttons[0].text}
-              collapseMobile={true}
-            />
-            <Button
-              onClick={() => window.open(profileData.buttons[1].url, '_blank')}
-              outline={true}
-              color="bg-[var(--color-tag-bg)] text-[var(--color-text-primary)]"
-              icon={<MdOutlineFileDownload size={24} />}
-              collapseMobile={true}
-            />
-          </div>
+          <Button
+            onClick={() => window.open(profileData.buttons[0].url, '_blank')}
+            icon={<FaWhatsapp size={24} />}
+            label={profileData.buttons[0].text}
+          />
+          <Button
+            onClick={() => window.open(profileData.buttons[1].url, '_blank')}
+            outline={true}
+            icon={<MdOutlineFileDownload size={24} />}
+          />
 
         </Main>
         <Social
           icons={socialData.links.map((link: any) => {
             const iconMap: { [key: string]: React.ReactNode } = {
-              'LinkedIn': <FaLinkedin className="size-12 " />,
+              'LinkedIn': <FaLinkedin className="size-12" />,
               'GitHub': <FaGithub className="size-12" />,
               'Instagram': <FaInstagram className="size-12" />,
               'Telegram': <FaTelegram className="size-12" />,
@@ -160,7 +100,7 @@ export default function Home() {
           })} />
       </div>
       {selectedProject && (
-        <div className={`${isModalOpen ? 'fixed inset-0 z-[9999] flex lg:hidden' : 'hidden lg:flex flex-1'}`}>
+        <div className="fixed inset-0 z-[9999] flex lg:static lg:z-auto lg:flex-1">
           <Details
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
@@ -172,21 +112,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="flex flex-col md:w-80 lg:w-110 2xl:w-240 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
-        {/* <Social 
-          icons={socialData.links.map((link: any) => {
-            const iconMap: { [key: string]: React.ReactNode } = {
-              'LinkedIn': <FaLinkedin className="size-12 " />,
-              'GitHub': <FaGithub className="size-12" />,
-              'Instagram': <FaInstagram className="size-12" />,
-              'Telegram': <FaTelegram className="size-12" />,
-            };
-            return {
-              icon: iconMap[link.name],
-              href: link.url,
-              label: link.label,
-            };
-          })} /> */}
+      <div className="flex flex-col-reverse md:flex-col min-w-80 md:w-100 lg:w-100 2xl:w-240 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
         <Experience
           title={experienceData.title}
           yearLabel={experienceData.yearLabel}

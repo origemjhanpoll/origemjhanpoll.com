@@ -29,17 +29,17 @@ export const Local: React.FC<LocalProps> = ({ address, label }) => {
 	return (
 		<section className="relative overflow-hidden bg-[var(--color-card-bg)] rounded-3xl">
 			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-4 md:p-6 2xl:p-8">
-				{address && <h1 className='text-lg font-semibold'>{address}</h1>}
-				<p className='text-[var(--color-text-secondary)] text-sm font-light'>
+				{address && <h1 className='md:text-sm lg:text-lg font-semibold'>{address}</h1>}
+				<p className='text-[var(--color-text-secondary)] md:text-xs lg:text-sm font-light'>
 					{timeString} {label}
 				</p>
 			</div>
 			<img
 				src={localImage}
 				alt="Image local"
-				className="absolute right-0 top-0 w-[80%] h-full object-cover opacity-50"
+				className="absolute right-0 top-0 h-full w-full object-cover opacity-50"
 			/>
-			<div className="absolute top-1/2 right-[20%] -translate-y-1/2 flex items-center justify-center">
+			<div className="md:hidden lg:block absolute top-1/2 right-[20%] -translate-y-1/2 items-center justify-center">
 				<span className="relative flex size-8 items-center justify-center">
 					<span className="animate-ping absolute inline-flex size-8 rounded-full bg-[var(--color-primary)] opacity-75"></span>
 					<span className="absolute inline-flex size-16 rounded-full bg-[radial-gradient(circle,var(--color-primary)_0%,transparent_80%)] opacity-20"></span>
