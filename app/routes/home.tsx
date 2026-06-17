@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-import { Social, Main, Projects, Local, Profile, Details, Button, Experience } from "~/components";
+import { Social, Main, Projects, Local, Profile, Button, Experience } from "~/components";
 import { getProfileService, getProjectsService, getMainService, getSocialService, getExperienceService } from "~/services";
+import { slugify } from "~/utils/slugify";
 
 import iconBR from "../assets/png/br.png";
 import iconCN from "../assets/png/cn.png";
@@ -12,9 +14,9 @@ import Actions from "~/components/actions";
 
 
 export default function Home() {
+  const navigate = useNavigate();
   const [locale, setLocale] = useState('pt');
   const [currentFlagIndex, setCurrentFlagIndex] = useState(0);
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   const flags = [
     { icon: iconBR, locale: 'pt' },
@@ -99,20 +101,6 @@ export default function Home() {
           })} />
       </div>
 
-      {
-        selectedProject && (
-          <div className="fixed inset-0 z-[9999] flex lg:static lg:z-auto lg:flex-1">
-            <Details
-              project={selectedProject}
-              onClose={() => setSelectedProject(null)}
-              availableInStores={projectsData.translations.availableInStores}
-              screenshots={projectsData.translations.screenshots}
-              technologies={projectsData.translations.technologies}
-              selectProject={projectsData.translations.selectProject}
-            />
-          </div>
-        )
-      }
       <div id="home-grid-content-3">
         <Experience
           title={experienceData.title}
@@ -125,13 +113,8 @@ export default function Home() {
           titlePersonal={projectsData.personal.title}
           professionalProjects={projectsData.professional.items}
           personalProjects={projectsData.personal.items}
-          selectedProject={selectedProject}
           onClick={(project) => {
-            if (selectedProject === project) {
-              setSelectedProject(null);
-            } else {
-              setSelectedProject(project);
-            }
+            navigate(`/projects/${slugify(project.title)}?lang=${locale}`);
           }}
         />
       </div>

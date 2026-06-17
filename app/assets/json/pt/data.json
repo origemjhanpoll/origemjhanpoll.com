@@ -384,7 +384,8 @@
       "availableInStores": "Disponível nas lojas",
       "screenshots": "Screenshots",
       "technologies": "Tecnologias",
-      "selectProject": "Selecione um projeto para ver os detalhes"
+      "selectProject": "Selecione um projeto para ver os detalhes",
+      "back": "Voltar"
     }
   },
   "social": {

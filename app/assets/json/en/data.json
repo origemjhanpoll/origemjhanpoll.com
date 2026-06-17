@@ -384,7 +384,8 @@
       "availableInStores": "Available in stores",
       "screenshots": "Screenshots",
       "technologies": "Technologies",
-      "selectProject": "Select a project to see details"
+      "selectProject": "Select a project to see details",
+      "back": "Back"
     }
   },
   "social": {

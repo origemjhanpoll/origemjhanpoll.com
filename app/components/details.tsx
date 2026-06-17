@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { MdClose } from "react-icons/md";
+import React from "react";
+import { MdArrowBack } from "react-icons/md";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import playstoreDark from "../assets/svg/playstore_dark.svg";
 import applestoreDark from "../assets/svg/applestore_dark.svg";
@@ -23,44 +23,29 @@ interface Project {
 
 interface DetailsProps {
   project: Project | null;
-  onClose: () => void;
+  onBack: () => void;
+  backLabel: string;
   availableInStores: string;
   screenshots: string;
   technologies: string;
   selectProject: string;
 }
 
-const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, screenshots, technologies, selectProject }) => {
-  const [showContent, setShowContent] = useState(false);
-  const containerRef = React.useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (project) {
-      setTimeout(() => setShowContent(true), 10);
-      if (containerRef.current) {
-        containerRef.current.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    } else {
-      setShowContent(false);
-    }
-  }, [project]);
-
+const Details: React.FC<DetailsProps> = ({ project, onBack, backLabel, availableInStores, screenshots, technologies, selectProject }) => {
   return (
-    <section className={`flex flex-1 w-full bg-[var(--color-card-bg)] rounded-3xl flex-col transition-all duration-500 ease-out ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-      <div className="flex self-end bg-[var(--color-card-bg)] z-10 p-4 md:p-6 2xl:p-8 rounded-3xl">
+    <section className="scrollbar-custom flex flex-1 w-full bg-[var(--color-card-bg)] rounded-3xl flex-col overflow-y-auto">
+      <div className="flex self-start sticky top-0 bg-[var(--color-card-bg)] z-10 p-4 md:p-6 2xl:p-8 rounded-3xl">
         <button
-          onClick={onClose}
-          className="p-2 rounded-full bg-[var(--color-button-bg)] min-h-16 items-center justify-center gap-2 px-4 py-3 hover:scale-115 active:scale-100 duration-300 cursor-pointer"
-          aria-label="Fechar"
+          onClick={onBack}
+          className="flex rounded-full bg-[var(--color-button-bg)] min-h-16 items-center justify-center gap-2 px-6 py-3 hover:scale-105 active:scale-100 duration-300 cursor-pointer"
+          aria-label={backLabel}
         >
-          <MdClose size={32} className="text-[var(--color-button-text)]" />
+          <MdArrowBack size={28} className="text-[var(--color-button-text)]" />
+          <span className="font-medium text-[var(--color-button-text)]">{backLabel}</span>
         </button>
       </div>
       {project ? (
-        <div ref={containerRef} className="flex flex-col overflow-y-auto gap-6">
+        <div className="flex flex-col gap-6">
           <div className="flex flex-col items-center justify-start md:items-center md:flex-row gap-6 px-4 md:px-6 2xl:px-8">
             {project.thumbnail && (
               <img
@@ -160,7 +145,7 @@ const Details: React.FC<DetailsProps> = ({ project, onClose, availableInStores, 
           )}
         </div>
       ) : (
-        <div className="flex items-center justify-center w-full h-full">
+        <div className="flex flex-1 items-center justify-center w-full">
           <p className="text-[var(--color-text-secondary)] text-center">
             {selectProject}
           </p>
