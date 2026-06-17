@@ -112,6 +112,8 @@ export default function Home() {
         <Projects
           titleProfessional={projectsData.professional.title}
           titlePersonal={projectsData.personal.title}
+          allLabel={projectsData.translations.filterAll}
+          noResultsLabel={projectsData.translations.noProjectsFound}
           professionalProjects={projectsData.professional.items}
           personalProjects={projectsData.personal.items}
           onClick={(project) => {

@@ -385,7 +385,9 @@
       "screenshots": "Screenshots",
       "technologies": "Tecnologias",
       "selectProject": "Selecione um projeto para ver os detalhes",
-      "back": "Voltar"
+      "back": "Voltar",
+      "filterAll": "Todos",
+      "noProjectsFound": "Nenhum projeto encontrado"
     }
   },
   "social": {

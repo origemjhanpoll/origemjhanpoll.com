@@ -385,7 +385,9 @@
       "screenshots": "截图",
       "technologies": "技术栈",
       "selectProject": "选择一个项目查看详情",
-      "back": "返回"
+      "back": "返回",
+      "filterAll": "全部",
+      "noProjectsFound": "未找到项目"
     }
   },
   "social": {
