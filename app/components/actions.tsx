@@ -16,7 +16,7 @@ interface ActionsProps {
 
 export const Actions: React.FC<ActionsProps> = ({ listActions }) => {
   return (
-    <section className="flex flex-row gap-4 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans p-6 2xl:p-8">
+    <section id='actions-section' className="flex flex-row gap-4 bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans p-6 2xl:p-8">
       {listActions.map((action, index) => (
         <Button
           key={index}

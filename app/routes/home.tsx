@@ -35,8 +35,8 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row 2xl:justify-center min-h-dvh md:h-screen gap-2 md:gap-4 p-2 md:p-5">
-      <div className="flex flex-col min-w-80 md:w-100 lg:w-120 2xl:w-180 gap-2 md:gap-y-4 gap-y-2 transition-all duration-300">
+    <div className="home-grid-container">
+      <div id="home-grid-content-1">
         <Profile
           username={profileData.username}
           greeting={profileData.greeting}
@@ -63,7 +63,7 @@ export default function Home() {
         </Profile>
       </div>
 
-      <div className="flex flex-col flex-1 gap-2 md:gap-4 transition-all duration-300 [&>*:nth-child(2)]:hidden md:[&>*:nth-child(2)]:flex">
+      <div id="home-grid-content-2">
         <Local
           address={profileData.address}
           label={profileData.localTimeLabel}
@@ -82,7 +82,6 @@ export default function Home() {
             outline={true}
             icon={<MdOutlineFileDownload size={24} />}
           />
-
         </Main>
         <Social
           icons={socialData.links.map((link: any) => {
@@ -99,20 +98,22 @@ export default function Home() {
             };
           })} />
       </div>
-      {selectedProject && (
-        <div className="fixed inset-0 z-[9999] flex lg:static lg:z-auto lg:flex-1">
-          <Details
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-            availableInStores={projectsData.translations.availableInStores}
-            screenshots={projectsData.translations.screenshots}
-            technologies={projectsData.translations.technologies}
-            selectProject={projectsData.translations.selectProject}
-          />
-        </div>
-      )}
 
-      <div className="flex flex-col-reverse md:flex-col 2xl:flex-row min-w-80 md:w-100 lg:w-100 2xl:w-240 gap-2 md:gap-4 pb-2 md:pb-0 transition-all duration-300">
+      {
+        selectedProject && (
+          <div className="fixed inset-0 z-[9999] flex lg:static lg:z-auto lg:flex-1">
+            <Details
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+              availableInStores={projectsData.translations.availableInStores}
+              screenshots={projectsData.translations.screenshots}
+              technologies={projectsData.translations.technologies}
+              selectProject={projectsData.translations.selectProject}
+            />
+          </div>
+        )
+      }
+      <div id="home-grid-content-3">
         <Experience
           title={experienceData.title}
           yearLabel={experienceData.yearLabel}

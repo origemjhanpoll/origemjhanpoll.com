@@ -14,7 +14,7 @@ const Social: React.FC<SocialLinksProps> = ({
   icons: items,
 }) => {
   return (
-    <section className="bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-6 2xl:p-8">
+    <section id='social-section' className="bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-6 2xl:p-8">
       <div className="flex flex-wrap justify-center gap-6 lg:gap-8 2xl:gap-12">
         {items.map((item, index) => (
           <a

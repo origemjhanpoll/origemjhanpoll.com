@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {icon}
-      {label && <span className="md:hidden lg:block">{label}</span>}
+      {label && <span className="hidden xl:flex">{label}</span>}
     </button>
   );
 };

@@ -18,7 +18,7 @@ interface ProfileProps {
 
 const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 	return (
-		<section className="relative flex flex-1 flex-col bg-[var(--color-card-bg)] rounded-3xl overflow-hidden">
+		<section id='profile-section' className="relative flex flex-1 flex-col bg-[var(--color-card-bg)] rounded-3xl overflow-hidden">
 			<div className="absolute z-0 top-0 w-full h-[45%] sm:h-[60%]">
 				<img
 					src={props.photoUrl || image}

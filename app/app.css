@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./routes/home.css";
 @plugin "@tailwindcss/typography";
 
 @theme {
