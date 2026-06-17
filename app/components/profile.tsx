@@ -59,7 +59,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 				onClick={props.onClickFlag}
 				src={props.flag}
 				alt="flag"
-				className="absolute z-20 top-1 left-1 size-10 flex justify-center items-center border border-[var(--color-text-secondary)]/30 rounded-full text-3xl backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300" />
+				className="absolute z-20 top-1 left-1 size-10 flex justify-center items-center border-2 border-[var(--color-card-bg)]/30 rounded-full text-3xl backdrop-blur-sm text-[var(--color-text-secondary)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300" />
 
 		</section>
 	);
