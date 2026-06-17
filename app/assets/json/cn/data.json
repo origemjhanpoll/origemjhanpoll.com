@@ -3,7 +3,7 @@
     "greeting": "你好！",
     "name": "我是 Jean Paul",
     "role": "移动开发者",
-    "description": "拥有6年以上创建直观且安全的移动和Web解决方案。专注于响应式界面、可扩展的设计系统和用户体验。",
+    "description": "拥有{years}年以上创建直观且安全的移动和Web解决方案。专注于响应式界面、可扩展的设计系统和用户体验。",
     "username": "origemjhanpoll",
     "tags": [
       "29 y.o",
@@ -43,7 +43,7 @@
     "yearsLabel": "年",
     "items": [
       {
-        "year": "2015",
+        "year": 2015,
         "period": "2015 – 2017",
         "company": "Grupo Mateus",
         "url": "https://www.grupomateus.com.br",
@@ -60,7 +60,7 @@
         ]
       },
       {
-        "year": "2017",
+        "year": 2017,
         "period": "2017 – 2021",
         "company": "Pulse",
         "url": "https://www.linkedin.com/company/pulseoficial/",
@@ -77,7 +77,7 @@
         ]
       },
       {
-        "year": "2021",
+        "year": 2021,
         "period": "2021 – 2024",
         "company": "Gupy",
         "url": "https://www.gupy.io",
@@ -90,7 +90,7 @@
         ]
       },
       {
-        "year": "2025",
+        "year": 2025,
         "period": "2025 – 至今",
         "company": "Brasil Card",
         "companyFull": "Brasil Card Instituição de Pagamentos",

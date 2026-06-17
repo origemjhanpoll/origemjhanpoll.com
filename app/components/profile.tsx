@@ -16,7 +16,12 @@ interface ProfileProps {
 	children?: React.ReactNode;
 }
 
+const MOBILE_START_YEAR = 2019;
+
 const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
+	const yearsOfExperience = new Date().getFullYear() - MOBILE_START_YEAR;
+	const description = props.description.replace('{years}', String(yearsOfExperience));
+
 	return (
 		<section id='profile-section' className="relative flex flex-1 flex-col bg-[var(--color-card-bg)] rounded-3xl overflow-hidden">
 			<div className="absolute z-0 top-0 w-full h-[45%] sm:h-[60%]">
@@ -41,7 +46,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 						{props.role}
 					</span>
 					<span className="font-light text-[var(--color-text-secondary)] leading-tight">
-						{props.description}
+						{description}
 					</span>
 				</div>
 				<div className="font-light flex flex-wrap gap-2 justify-center md:justify-start">

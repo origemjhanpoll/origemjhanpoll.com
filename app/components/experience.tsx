@@ -6,7 +6,7 @@ export interface ExperienceRole {
 }
 
 export interface ExperienceItem {
-  year: string;
+  year: number;
   period: string;
   company: string;
   companyFull?: string;
