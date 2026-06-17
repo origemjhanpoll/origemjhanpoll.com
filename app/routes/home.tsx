@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 
@@ -15,14 +14,17 @@ import Actions from "~/components/actions";
 
 export default function Home() {
   const navigate = useNavigate();
-  const [locale, setLocale] = useState('pt');
-  const [currentFlagIndex, setCurrentFlagIndex] = useState(0);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const flags = [
     { icon: iconBR, locale: 'pt' },
     { icon: iconUS, locale: 'en' },
     { icon: iconCN, locale: 'cn' }
   ];
+
+  const localeFromUrl = searchParams.get('lang') ?? 'pt';
+  const currentFlagIndex = Math.max(0, flags.findIndex((flag) => flag.locale === localeFromUrl));
+  const locale = flags[currentFlagIndex].locale;
 
   const profileData = getProfileService(locale);
   const mainData = getMainService(locale);
@@ -32,8 +34,7 @@ export default function Home() {
 
   const handleFlagClick = () => {
     const nextIndex = (currentFlagIndex + 1) % flags.length;
-    setCurrentFlagIndex(nextIndex);
-    setLocale(flags[nextIndex].locale);
+    setSearchParams({ lang: flags[nextIndex].locale }, { replace: true });
   };
 
   return (
