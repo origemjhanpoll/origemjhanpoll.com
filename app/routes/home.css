@@ -29,6 +29,38 @@
 }
 
 /* Breakpoint do Tailwind CSS v4 */
+@variant sm {
+  .home-grid-container {
+    @apply grid gap-2 p-2 h-dvh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      "content-1 content-2"
+      "content-3 content-3";
+  }
+
+  #home-grid-content-1 {
+    @apply grid gap-2 min-h-0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "profile";
+  }
+
+  #home-grid-content-2 {
+    @apply grid gap-2;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content auto;
+    grid-template-areas: "social" "local" "main";
+  }
+
+  #home-grid-content-3 {
+    @apply grid gap-2 min-h-0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "experience" "projects";
+  }
+}
+
 @variant md {
   .home-grid-container {
     @apply grid gap-2 p-2 h-dvh;
@@ -112,7 +144,7 @@
 }
 
 #main-section {
-  @apply hidden lg:grid;
+  @apply hidden sm:grid md:hidden lg:grid;
   grid-area: main;
 }
 

@@ -55,7 +55,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 					))}
 				</div>
 				{props.children && (
-					<div className="flex md:hidden w-full flex-row items-center gap-4 pb-2 pt-10">
+					<div className="flex sm:hidden md:flex lg:hidden w-full flex-row items-center gap-4 pb-2 pt-10">
 						{props.children}
 					</div>
 				)}
