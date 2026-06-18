@@ -53,7 +53,8 @@ const Projects: React.FC<ProjectsProps> = (props) => {
   const headingLabel = filter === 'all' ? props.titleProfessional : filterBrandLabels[filter];
 
   return (
-    <section id='project-section' className="scrollbar-custom flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans md:overflow-y-auto p-4 md:p-6 2xl:p-8">
+    <section id='project-section' className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans overflow-hidden">
+      <div className="scrollbar-custom flex flex-1 flex-col md:overflow-y-auto p-4 md:p-6 2xl:p-8">
       <div className="flex items-center justify-between gap-4 mb-4">
         <h2 className="text-md font-medium text-[var(--color-text-secondary)]">
           {hasResults ? headingLabel : ''}
@@ -110,6 +111,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
           <p className="text-[var(--color-text-secondary)] text-center">{props.noResultsLabel}</p>
         </div>
       )}
+      </div>
     </section>
   );
 };

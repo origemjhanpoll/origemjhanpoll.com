@@ -57,7 +57,8 @@ const getTenure = (item: ExperienceItem) => {
 
 export const Experience: React.FC<ExperienceProps> = ({ title, yearLabel, yearsLabel, items }) => {
   return (
-    <section id='experience-section' className="scrollbar-custom flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl p-4 md:p-6 2xl:p-8 md:overflow-y-auto">
+    <section id='experience-section' className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl overflow-hidden">
+      <div className="scrollbar-custom flex flex-1 flex-col md:overflow-y-auto p-4 md:p-6 2xl:p-8">
       <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-6">
         {title}
       </h2>
@@ -126,6 +127,7 @@ export const Experience: React.FC<ExperienceProps> = ({ title, yearLabel, yearsL
           );
         })}
       </ol>
+      </div>
     </section>
   );
 };
