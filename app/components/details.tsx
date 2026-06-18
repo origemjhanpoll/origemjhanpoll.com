@@ -1,5 +1,4 @@
 import React from "react";
-import { MdArrowBack } from "react-icons/md";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import playstoreDark from "../assets/svg/playstore_dark.svg";
 import applestoreDark from "../assets/svg/applestore_dark.svg";
@@ -23,29 +22,17 @@ interface Project {
 
 interface DetailsProps {
   project: Project | null;
-  onBack: () => void;
-  backLabel: string;
   availableInStores: string;
   screenshots: string;
   technologies: string;
   selectProject: string;
 }
 
-const Details: React.FC<DetailsProps> = ({ project, onBack, backLabel, availableInStores, screenshots, technologies, selectProject }) => {
+const Details: React.FC<DetailsProps> = ({ project, availableInStores, screenshots, technologies, selectProject }) => {
   return (
     <section className="scrollbar-custom flex flex-1 w-full bg-[var(--color-card-bg)] rounded-3xl flex-col overflow-y-auto">
-      <div className="flex self-start sticky top-0 bg-[var(--color-card-bg)] z-10 p-4 md:p-6 2xl:p-8 rounded-3xl">
-        <button
-          onClick={onBack}
-          className="flex rounded-full bg-[var(--color-button-bg)] min-h-16 items-center justify-center gap-2 px-6 py-3 hover:scale-105 active:scale-100 duration-300 cursor-pointer"
-          aria-label={backLabel}
-        >
-          <MdArrowBack size={28} className="text-[var(--color-button-text)]" />
-          <span className="font-medium text-[var(--color-button-text)]">{backLabel}</span>
-        </button>
-      </div>
       {project ? (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 pt-4 md:pt-6 2xl:pt-8">
           <div className="flex flex-col items-center justify-start md:items-center md:flex-row gap-6 px-4 md:px-6 2xl:px-8">
             {project.thumbnail && (
               <img
