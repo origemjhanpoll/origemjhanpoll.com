@@ -34,34 +34,36 @@
 /* Breakpoint do Tailwind CSS v4 */
 @variant sm {
   .home-grid-container {
-    @apply grid gap-2 p-2 h-dvh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content 1fr;
+    @apply grid p-2 gap-2 min-h-dvh mx-auto w-full;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "content-1 content-2"
-      "content-3 content-3";
+      "content-1"
+      "content-2"
+      "content-3";
   }
 
   #home-grid-content-1 {
-    @apply grid gap-2 min-h-0;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    @apply grid;
+    grid-area: content-1;
     grid-template-areas: "profile";
+
   }
 
   #home-grid-content-2 {
     @apply grid gap-2;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content auto;
-    grid-template-areas: "social" "local" "main";
+    grid-area: content-2;
+    grid-template-columns: auto auto;
+    grid-template-areas: "social local";
   }
 
   #home-grid-content-3 {
-    @apply grid gap-2 min-h-0;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    @apply grid gap-2;
+    grid-area: content-3;
     grid-template-areas: "experience" "projects";
   }
+
+
 }
 
 @variant md {
@@ -160,7 +162,7 @@
 @variant tall {
   .home-grid-container {
     @apply grid gap-4 p-4 h-dvh min-h-0;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "content-1 content-3"
@@ -200,8 +202,15 @@
 }
 
 #main-section {
-  @apply hidden sm:grid md:hidden lg:grid;
+  @apply hidden md:hidden lg:grid;
   grid-area: main;
+}
+
+/* Em telas altas (min-height >= 1024px) o layout tall reserva a área "main": exibe o main */
+@variant tall {
+  #main-section {
+    @apply grid;
+  }
 }
 
 #social-section {
