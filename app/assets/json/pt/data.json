@@ -3,7 +3,7 @@
     "greeting": "Olá!",
     "name": "Eu sou Jean Paul",
     "role": "Mobile Developer",
-    "description": "com 6+ anos criando soluções mobile e web intuitivas e seguras. Especializado em interfaces responsivas, Design Systems escaláveis e experiência do usuário.",
+    "description": "com {years}+ anos criando soluções mobile e web intuitivas e seguras. Especializado em interfaces responsivas, Design Systems escaláveis e experiência do usuário.",
     "username": "origemjhanpoll",
     "tags": [
       "29 y.o",
@@ -16,6 +16,99 @@
       "Web",
       "ReactJs",
       "JavaScript"
+    ],
+    "skillsTitle": "Habilidades",
+    "skills": [
+      {
+        "title": "Linguagens e Core",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "Dart",
+          "Kotlin",
+          "Swift",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "title": "Frameworks e Plataformas",
+        "skills": [
+          "Flutter",
+          "React Native",
+          "Android",
+          "iOS",
+          "Web",
+          "ReactJs"
+        ]
+      },
+      {
+        "title": "Arquitetura e Padrões",
+        "skills": [
+          "Design Systems escaláveis",
+          "Atomic Design",
+          "Clean Architecture",
+          "MVVM (Model-View-ViewModel)",
+          "Bloc / Cubit",
+          "Provider",
+          "Princípios SOLID",
+          "Componentização de interfaces",
+          "Tokens de Design"
+        ]
+      },
+      {
+        "title": "Ferramentas e Infraestrutura",
+        "skills": [
+          "Firebase (Auth, Database, Analytics, Push Notifications)",
+          "Codemagic",
+          "Datadog",
+          "Crashlytics",
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jira / Atlassian",
+          "Google Cloud Platform (GCP)",
+          "Figma",
+          "Pacotes Adobe (After Effects, Premiere Pro)"
+        ]
+      },
+      {
+        "title": "Engenharia e DevOps",
+        "skills": [
+          "CI/CD",
+          "Performance Optimization",
+          "Segurança de dados e proteção contra vazamentos",
+          "Autenticidade de aplicações",
+          "Desenvolvimento Cross-platform",
+          "Integração de APIs e sistemas de pagamento (PIX, Crédito, Boletos)",
+          "Persistência de dados offline (SharedPreferences / Local Storage)",
+          "WebSockets / Conexões em tempo real",
+          "GraphQL"
+        ]
+      },
+      {
+        "title": "Design de Experiência e Produto (UI/UX)",
+        "skills": [
+          "Product Design",
+          "UX/UI Design",
+          "Interfaces Responsivas",
+          "Motion Design",
+          "Animações e Micro interações",
+          "Prototipagem de baixa e alta fidelidade"
+        ]
+      },
+      {
+        "title": "Gestão e Negócios",
+        "skills": [
+          "Gestão de Projetos",
+          "Gestão de Funcionários",
+          "Gamificação de aplicativos",
+          "Tomada de Decisão Estratégica",
+          "Rotinas de Varejo, Atacado e Logística"
+        ]
+      }
     ],
     "photo": "",
     "buttons": [
@@ -34,8 +127,77 @@
   "main": {
     "url": "https://www.pexels.com/pt-br/download/video/12978459/",
     "title": "Tudo o que imaginar, você pode construir.",
-    "description": "Criação de aplicativos personalizados para empresas que buscam escala, qualidade e experiência do usuário de alto nível.",
+    "description": "Da primeira linha de código até o topo das lojas de aplicativos, transformo ideias audaciosas em experiências mobile de alto impacto.",
     "buttonText": ""
+  },
+  "experience": {
+    "title": "EXPERIÊNCIAS",
+    "yearLabel": "ano",
+    "yearsLabel": "anos",
+    "items": [
+      {
+        "year": 2015,
+        "period": "2015 – 2017",
+        "company": "Grupo Mateus",
+        "url": "https://www.grupomateus.com.br",
+        "logo": "https://www.google.com/s2/favicons?domain=grupomateus.com.br&sz=128",
+        "roles": [
+          {
+            "title": "Aprendiz",
+            "period": "2015 – 2016"
+          },
+          {
+            "title": "Product Designer",
+            "period": "2016 – 2017"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "period": "2017 – 2021",
+        "company": "Pulse",
+        "url": "https://www.linkedin.com/company/pulseoficial/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHxMkWtbZypVA/company-logo_200_200/company-logo_200_200/0/1704803475942?e=2147483647&v=beta&t=pjU2Qkt7l9ZnaJteQikXp8E4pA2EGw33QnF227sZt6I",
+        "roles": [
+          {
+            "title": "Product Designer (UI/UX)",
+            "period": "2017 – 2019"
+          },
+          {
+            "title": "Mobile Engineer (React Native)",
+            "period": "2019 – 2021"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "period": "2021 – 2024",
+        "company": "Gupy",
+        "url": "https://www.gupy.io",
+        "logo": "https://www.google.com/s2/favicons?domain=gupy.io&sz=128",
+        "roles": [
+          {
+            "title": "Mobile Engineer (Flutter)",
+            "period": "2021 – 2024"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "period": "2025 – Atual",
+        "company": "Brasil Card",
+        "companyFull": "Brasil Card Instituição de Pagamentos",
+        "current": true,
+        "url": "https://www.brasilcarddigital.com.br",
+        "logo": "https://play-lh.googleusercontent.com/-rryDhw7Trvu2vNujRvMBCYwBweTPc2tn3E2WRrC1YDuGM0DFiRiicyywX5m98xTggCpdsdLQkdNi2177G5dOXE=w480-h960-rw",
+        "roles": [
+          {
+            "title": "Mobile Engineer (Flutter)",
+            "period": "2025 – Atual"
+          }
+        ]
+      }
+    ]
   },
   "about": {
     "title": "Um pouco sobre mim.",
@@ -69,7 +231,7 @@
   },
   "projects": {
     "professional": {
-      "title": "PROFISSIONAL",
+      "title": "APPS",
       "items": [
         {
           "title": "Brasil Card Digital",
@@ -146,7 +308,7 @@
       ]
     },
     "personal": {
-      "title": "PESSOAL",
+      "title": "GITHUB",
       "items": [
         {
           "title": "origemjhanpoll.com",
@@ -315,7 +477,10 @@
       "availableInStores": "Disponível nas lojas",
       "screenshots": "Screenshots",
       "technologies": "Tecnologias",
-      "selectProject": "Selecione um projeto para ver os detalhes"
+      "selectProject": "Selecione um projeto para ver os detalhes",
+      "back": "Voltar",
+      "filterAll": "Todos",
+      "noProjectsFound": "Nenhum projeto encontrado"
     }
   },
   "social": {

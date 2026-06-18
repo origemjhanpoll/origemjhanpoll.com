@@ -1,5 +1,6 @@
 
 export { default as Details } from './details';
+export { default as Experience } from './experience';
 export { default as Local } from './local';
 export { Main } from './main';
 export { default as Profile } from './profile';

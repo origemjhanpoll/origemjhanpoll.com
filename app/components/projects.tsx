@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from "react-icons/fa";
 import { useOgImage } from '~/hooks/use_og_image';
+import ProjectsFilter, { type FilterKey, filterBrandLabels } from './projects-filter';
+
 interface ProjectsProps {
   professionalProjects: Project[];
   personalProjects: Project[];
   titleProfessional: string;
   titlePersonal: string;
+  allLabel: string;
+  noResultsLabel: string;
   selectedProject?: Project | null;
   onClick?: (project: Project) => void;
 }
@@ -25,36 +29,89 @@ interface Project {
   types?: string[];
 }
 
+const matchesFilter = (project: Project, filter: FilterKey): boolean => {
+  switch (filter) {
+    case 'android':
+      return !!project.playstore;
+    case 'ios':
+      return !!project.appstore;
+    case 'github':
+      return !!project.github;
+    default:
+      return true;
+  }
+};
+
 const Projects: React.FC<ProjectsProps> = (props) => {
+  const [filter, setFilter] = useState<FilterKey>('all');
+
+  const professionalProjects = props.professionalProjects.filter((project) => matchesFilter(project, filter));
+  const personalProjects = props.personalProjects.filter((project) => matchesFilter(project, filter));
+  const filteredProjects = [...professionalProjects, ...personalProjects];
+  const hasResults = filteredProjects.length > 0;
+
+  const headingLabel = filter === 'all' ? props.titleProfessional : filterBrandLabels[filter];
+
   return (
-    <section className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans md:overflow-y-auto p-4 md:p-6 2xl:p-8">
-      <h2 className="text-md font-medium text-[var(--color-text-secondary)] mb-4">{props.titleProfessional}</h2>
-      <div className="flex flex-col gap-2">
-        {props.professionalProjects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            project={project}
-            isSelected={props.selectedProject?.title === project.title}
-            onClick={() => props.onClick && props.onClick(project)}
-          />
-        ))}
+    <section id='project-section' className="flex flex-1 flex-col bg-[var(--color-card-bg)] text-[var(--color-text-primary)] rounded-3xl font-sans overflow-hidden">
+      <div className="scrollbar-custom flex flex-1 flex-col md:overflow-y-auto p-4 md:p-6 2xl:p-8">
+      <div className="flex items-center justify-between gap-4 mb-4">
+        <h2 className="text-md font-medium text-[var(--color-text-secondary)]">
+          {hasResults ? headingLabel : ''}
+        </h2>
+        <ProjectsFilter value={filter} onChange={setFilter} allLabel={props.allLabel} />
       </div>
 
-      {props.personalProjects.length > 0 && (
+      {filter === 'all' ? (
         <>
-          <h3 className="text-md font-medium text-[var(--color-text-secondary)] mt-6 mb-4">{props.titlePersonal}</h3>
-          <div className="flex flex-col gap-2">
-            {props.personalProjects.map((project, index) => (
-              <ProjectCard
-                key={`personal-${index}`}
-                project={project}
-                isSelected={props.selectedProject?.title === project.title}
-                onClick={() => props.onClick && props.onClick(project)}
-              />
-            ))}
-          </div>
+          {professionalProjects.length > 0 && (
+            <div className="flex flex-col gap-2">
+              {professionalProjects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  project={project}
+                  isSelected={props.selectedProject?.title === project.title}
+                  onClick={() => props.onClick && props.onClick(project)}
+                />
+              ))}
+            </div>
+          )}
+
+          {personalProjects.length > 0 && (
+            <>
+              <h3 className="text-md font-medium text-[var(--color-text-secondary)] mt-6 mb-4">{props.titlePersonal}</h3>
+              <div className="flex flex-col gap-2">
+                {personalProjects.map((project, index) => (
+                  <ProjectCard
+                    key={`personal-${index}`}
+                    project={project}
+                    isSelected={props.selectedProject?.title === project.title}
+                    onClick={() => props.onClick && props.onClick(project)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </>
+      ) : (
+        <div className="flex flex-col gap-2">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              isSelected={props.selectedProject?.title === project.title}
+              onClick={() => props.onClick && props.onClick(project)}
+            />
+          ))}
+        </div>
       )}
+
+      {!hasResults && (
+        <div className="flex flex-1 items-center justify-center">
+          <p className="text-[var(--color-text-secondary)] text-center">{props.noResultsLabel}</p>
+        </div>
+      )}
+      </div>
     </section>
   );
 };

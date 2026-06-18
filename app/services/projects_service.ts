@@ -1,6 +1,7 @@
 import dataPt from "../assets/json/pt/data.json";
 import dataEn from "../assets/json/en/data.json";
 import dataCn from "../assets/json/cn/data.json";
+import { slugify } from "../utils/slugify";
 
 const getData = (locale: string) => {
   switch (locale) {
@@ -21,4 +22,13 @@ export const getProjectsService = (locale: string = 'pt') => {
     personal: data.projects.personal,
     translations: data.projects.translations
   };
+};
+
+export const getProjectBySlug = (slug: string, locale: string = 'pt') => {
+  const { professional, personal, translations } = getProjectsService(locale);
+  const project = [...professional.items, ...personal.items].find(
+    (item) => slugify(item.title) === slug
+  );
+
+  return { project: project ?? null, translations };
 };

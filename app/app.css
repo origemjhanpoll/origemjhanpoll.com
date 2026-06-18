@@ -1,10 +1,47 @@
 @import "tailwindcss";
+@import "./routes/home.css";
 @plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans: "TikTok Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --animate-ping: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Mobile e sm: fundo geométrico chega até 0.2 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+/* A partir de md: chega até 0.5 */
+@variant md {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: .8;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 html,
@@ -22,4 +59,34 @@ body {
 
   background-color: black;
   color: white;
+}
+
+/* Scrollbar custom — fina, arredondada e discreta, alinhada ao tema dark */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-tag-bg) transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
+  /* afasta o thumb dos cantos arredondados do card */
+  margin: 0.75rem 0;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: var(--color-tag-bg);
+  border-radius: 9999px;
+  /* deixa o thumb mais fino e com respiro dentro da trilha */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text-tertiary);
 }

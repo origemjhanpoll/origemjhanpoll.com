@@ -3,7 +3,7 @@
     "greeting": "Hello!",
     "name": "I'm Jean Paul",
     "role": "Mobile Developer",
-    "description": "with 6+ years creating intuitive and secure mobile and web solutions. Specialized in responsive interfaces, scalable Design Systems and user experience.",
+    "description": "with {years}+ years creating intuitive and secure mobile and web solutions. Specialized in responsive interfaces, scalable Design Systems and user experience.",
     "username": "origemjhanpoll",
     "tags": [
       "29 y.o",
@@ -16,6 +16,99 @@
       "Web",
       "ReactJs",
       "JavaScript"
+    ],
+    "skillsTitle": "Skills",
+    "skills": [
+      {
+        "title": "Languages & Core",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "Dart",
+          "Kotlin",
+          "Swift",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "title": "Frameworks & Platforms",
+        "skills": [
+          "Flutter",
+          "React Native",
+          "Android",
+          "iOS",
+          "Web",
+          "ReactJs"
+        ]
+      },
+      {
+        "title": "Architecture & Patterns",
+        "skills": [
+          "Scalable Design Systems",
+          "Atomic Design",
+          "Clean Architecture",
+          "MVVM (Model-View-ViewModel)",
+          "Bloc / Cubit",
+          "Provider",
+          "SOLID Principles",
+          "Interface Componentization",
+          "Design Tokens"
+        ]
+      },
+      {
+        "title": "Tools & Infrastructure",
+        "skills": [
+          "Firebase (Auth, Database, Analytics, Push Notifications)",
+          "Codemagic",
+          "Datadog",
+          "Crashlytics",
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jira / Atlassian",
+          "Google Cloud Platform (GCP)",
+          "Figma",
+          "Adobe Suite (After Effects, Premiere Pro)"
+        ]
+      },
+      {
+        "title": "Engineering & DevOps",
+        "skills": [
+          "CI/CD",
+          "Performance Optimization",
+          "Data security and leak protection",
+          "Application authenticity",
+          "Cross-platform Development",
+          "API and payment system integration (PIX, Credit, Boletos)",
+          "Offline data persistence (SharedPreferences / Local Storage)",
+          "WebSockets / Real-time connections",
+          "GraphQL"
+        ]
+      },
+      {
+        "title": "Experience & Product Design (UI/UX)",
+        "skills": [
+          "Product Design",
+          "UX/UI Design",
+          "Responsive Interfaces",
+          "Motion Design",
+          "Animations & Micro-interactions",
+          "Low and high fidelity prototyping"
+        ]
+      },
+      {
+        "title": "Management & Business",
+        "skills": [
+          "Project Management",
+          "Staff Management",
+          "App Gamification",
+          "Strategic Decision Making",
+          "Retail, Wholesale & Logistics Operations"
+        ]
+      }
     ],
     "photo": "",
     "buttons": [
@@ -36,6 +129,75 @@
     "title": "Everything you imagine, you can build.",
     "description": "Custom app development for companies seeking scale, quality and high-level user experience.",
     "buttonText": ""
+  },
+  "experience": {
+    "title": "PROFESSIONAL EXPERIENCE",
+    "yearLabel": "year",
+    "yearsLabel": "years",
+    "items": [
+      {
+        "year": 2015,
+        "period": "2015 – 2017",
+        "company": "Grupo Mateus",
+        "url": "https://www.grupomateus.com.br",
+        "logo": "https://www.google.com/s2/favicons?domain=grupomateus.com.br&sz=128",
+        "roles": [
+          {
+            "title": "Apprentice",
+            "period": "2015 – 2016"
+          },
+          {
+            "title": "Product Designer (UX/UI)",
+            "period": "2016 – 2017"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "period": "2017 – 2021",
+        "company": "Pulse",
+        "url": "https://www.linkedin.com/company/pulseoficial/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHxMkWtbZypVA/company-logo_200_200/company-logo_200_200/0/1704803475942?e=2147483647&v=beta&t=pjU2Qkt7l9ZnaJteQikXp8E4pA2EGw33QnF227sZt6I",
+        "roles": [
+          {
+            "title": "Product Designer (UX/UI)",
+            "period": "2017 – 2019"
+          },
+          {
+            "title": "Mobile Engineer (React Native)",
+            "period": "2019 – 2021"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "period": "2021 – 2024",
+        "company": "Gupy",
+        "url": "https://www.gupy.io",
+        "logo": "https://www.google.com/s2/favicons?domain=gupy.io&sz=128",
+        "roles": [
+          {
+            "title": "Mobile Engineer (Flutter)",
+            "period": "2021 – 2024"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "period": "2025 – Present",
+        "company": "Brasil Card",
+        "companyFull": "Brasil Card Instituição de Pagamentos",
+        "current": true,
+        "url": "https://www.brasilcarddigital.com.br",
+        "logo": "https://www.google.com/s2/favicons?domain=brasilcarddigital.com.br&sz=128",
+        "roles": [
+          {
+            "title": "Mobile Engineer (Flutter)",
+            "period": "2025 – Present"
+          }
+        ]
+      }
+    ]
   },
   "about": {
     "title": "A little about me.",
@@ -315,7 +477,10 @@
       "availableInStores": "Available in stores",
       "screenshots": "Screenshots",
       "technologies": "Technologies",
-      "selectProject": "Select a project to see details"
+      "selectProject": "Select a project to see details",
+      "back": "Back",
+      "filterAll": "All",
+      "noProjectsFound": "No projects found"
     }
   },
   "social": {
