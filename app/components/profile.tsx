@@ -35,13 +35,13 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 			<GeometricBackground className="absolute inset-0 w-full h-full opacity-0 animate-[fadeIn_2s_ease-in_forwards]" />
 			<div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[var(--color-card-bg)] to-transparent pointer-events-none"></div>
 
-			<div className='relative z-10 flex flex-1 flex-col md:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start md:overflow-y-auto p-4 md:p-6 2xl:p-8 sm:pt-48 pt-48'>
-				<div className="flex flex-col justify-center items-center md:items-start mt-auto">
+			<div className='relative z-10 flex flex-1 flex-col sm:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start md:overflow-y-auto p-4 md:p-6 2xl:p-8 sm:pt-48 pt-48'>
+				<div className="flex flex-col justify-center items-center sm:items-start mt-auto">
 					<span className="text-md font-medium text-[var(--color-text-secondary)]">@{props.username}</span>
 					<h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] md:text-start text-center">{props.greeting}</h2>
 					<h1 className="text-3xl md:text-5xl font-bold mb-1 text-[var(--color-text-primary)] md:text-start text-center">{props.name}</h1>
 				</div>
-				<div className="my-4 break-words md:text-start text-center leading-tight">
+				<div className="my-4 break-words sm:text-start text-center leading-tight">
 					<span className="font-medium text-[var(--color-text-primary)] pr-1">
 						{props.role}
 					</span>
@@ -49,7 +49,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 						{description}
 					</span>
 				</div>
-				<div className="font-light flex flex-wrap gap-2 justify-center md:justify-start">
+				<div className="font-light flex flex-wrap gap-2 justify-center sm:justify-start">
 					{props.tags.map((tag, index) => (
 						<span key={index} className="border border-[var(--color-text-secondary)]/30 font-light px-4 py-1.5 rounded-full text-sm backdrop-blur-sm text-[var(--color-text-secondary)]">{tag}</span>
 					))}

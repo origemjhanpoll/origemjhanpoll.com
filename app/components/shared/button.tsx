@@ -5,7 +5,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   isFull?: boolean;
   color?: string;
   label?: string;
-  outline?: boolean; // If true, renders a transparent button with a border instead of a filled background
+  outline?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {icon}
-      {label && <span className="hidden xl:flex">{label}</span>}
+      {label && <span className="hidden xl:flex tall:flex">{label}</span>}
     </button>
   );
 };

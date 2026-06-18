@@ -28,9 +28,9 @@ export const Local: React.FC<LocalProps> = ({ address, label }) => {
 
 	return (
 		<section id='local-section' className="relative overflow-hidden bg-[var(--color-card-bg)] rounded-3xl">
-			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-4 md:p-6 2xl:p-8">
-				{address && <h1 className='md:text-sm lg:text-lg font-semibold'>{address}</h1>}
-				<p className='text-[var(--color-text-secondary)] md:text-xs lg:text-sm font-light'>
+			<div className="relative z-10 flex flex-col justify-center text-[var(--color-text-primary)] p-4 md:p-6 2xl:p-8 min-[64rem]:max-[1100px]:text-xs">
+				{address && <h1 className='emibold'>{address}</h1>}
+				<p className='text-[var(--color-text-secondary)] font-light'>
 					{timeString} {label}
 				</p>
 			</div>
