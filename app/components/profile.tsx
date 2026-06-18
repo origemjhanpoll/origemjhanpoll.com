@@ -67,7 +67,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 			<GeometricBackground className="absolute inset-0 w-full h-full opacity-0 animate-[fadeIn_2s_ease-in_forwards]" />
 			<div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[var(--color-card-bg)] to-transparent pointer-events-none"></div>
 
-			<div ref={contentRef} className='scrollbar-custom relative z-10 flex flex-1 flex-col sm:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start md:overflow-y-auto p-4 md:p-6 2xl:p-8 sm:pt-48 pt-48'>
+			<div ref={contentRef} className='scrollbar-custom relative z-10 flex flex-1 flex-col sm:items-start items-center justify-start text-[var(--color-text-primary)] font-sans md:text-start text-start md:overflow-y-auto tall:overflow-y-auto p-4 md:p-6 2xl:p-8 sm:pt-48 pt-48'>
 				<div className="flex flex-col justify-center items-center sm:items-start mt-auto">
 					<span className="text-md font-medium text-[var(--color-text-secondary)]">@{props.username}</span>
 					<h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] md:text-start text-center">{props.greeting}</h2>
@@ -95,7 +95,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
 								aria-label={props.skillsTitle}
 								aria-expanded={showSkills}
 								title={props.skillsTitle}
-								className="flex items-center justify-center px-3 py-1.5 rounded-full text-sm bg-[var(--color-button-bg)] text-[var(--color-button-text)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300">
+								className="flex items-center justify-center size-8 rounded-full bg-[var(--color-button-bg)] text-[var(--color-button-text)] transition hover:scale-105 active:scale-95 cursor-pointer duration-300">
 								<MdAdd size={18} />
 							</button>
 						)}

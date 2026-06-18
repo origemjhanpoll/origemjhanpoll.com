@@ -1,6 +1,9 @@
 /* Variante customizada por altura: telas com mais de 2000px de altura */
 @custom-variant tall (@media (min-height: 1024px));
 
+/* Breakpoint 3xl (não existe no Tailwind por padrão) */
+@custom-variant 3xl (@media (min-width: 120rem));
+
 /* Mapeamento das Content-areas do grid */
 #home-grid-content-1 {
   @apply grid;
@@ -158,15 +161,12 @@
   }
 }
 
-/* Telas muito altas (> 1024px de altura) — clonado do 2xl como ponto de partida */
-@variant tall {
+@variant 3xl {
   .home-grid-container {
     @apply grid gap-4 p-4 h-dvh min-h-0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "content-1 content-3"
-      "content-2 content-3";
+    grid-template-columns: minmax(26rem, 1fr) minmax(20rem, 1fr) auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "content-1 content-2 content-3";
   }
 
   #home-grid-content-1 {
@@ -178,16 +178,86 @@
 
   #home-grid-content-2 {
     @apply grid gap-4 min-h-0;
-    grid-template-rows: 1fr auto auto;
-    grid-template-columns: auto;
-    grid-template-areas: "main" "social" "local";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: min-content 1fr;
+    grid-template-areas:
+      "main main"
+      "social local";
   }
 
   #home-grid-content-3 {
     @apply grid gap-4 min-h-0;
+    grid-template-rows: 1fr;
+    grid-template-columns: minmax(16rem, 28rem) minmax(16rem, 28rem);
+    grid-template-areas: "experience projects";
+  }
+}
+
+/* Telas muito altas (> 1024px de altura) — clonado do 2xl como ponto de partida */
+@variant tall {
+  .home-grid-container {
+    @apply grid gap-2 p-2 h-dvh min-h-0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "content-1"
+      "content-2"
+      "content-3";
+  }
+
+  #home-grid-content-1 {
+    @apply gap-4 min-h-0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "profile";
+  }
+
+  #home-grid-content-2 {
+    @apply grid gap-2 min-h-0;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: "social" "local";
+  }
+
+  #home-grid-content-3 {
+    @apply grid gap-2 min-h-0;
     grid-template-rows: min-content 1fr;
     grid-template-columns: auto;
     grid-template-areas: "experience" "projects";
+  }
+}
+
+@variant md {
+  @variant tall {
+    .home-grid-container {
+      @apply grid gap-4 p-4 h-dvh min-h-0;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "content-1 content-3"
+        "content-2 content-3";
+    }
+
+    #home-grid-content-1 {
+      @apply gap-4 min-h-0;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "profile";
+    }
+
+    #home-grid-content-2 {
+      @apply grid gap-4 min-h-0;
+      grid-template-rows: 1fr auto auto;
+      grid-template-columns: auto;
+      grid-template-areas: "main" "social" "local";
+    }
+
+    #home-grid-content-3 {
+      @apply grid gap-4 min-h-0;
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: auto;
+      grid-template-areas: "experience" "projects";
+    }
   }
 }
 
@@ -209,7 +279,15 @@
 /* Em telas altas (min-height >= 1024px) o layout tall reserva a área "main": exibe o main */
 @variant tall {
   #main-section {
-    @apply grid;
+    @apply hidden;
+  }
+}
+
+@variant md {
+  @variant tall {
+    #main-section {
+      @apply grid;
+    }
   }
 }
 
