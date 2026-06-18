@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdOpenInNew } from 'react-icons/md';
 
 export interface ExperienceRole {
   title: string;
@@ -67,7 +68,7 @@ export const Experience: React.FC<ExperienceProps> = ({ title, yearLabel, yearsL
           return (
             <li
               key={item.company}
-              className="relative flex gap-4 pb-8 last:pb-0"
+              className="relative flex flex-col pb-8 last:pb-0"
             >
               {!isLast && (
                 <span
@@ -76,26 +77,29 @@ export const Experience: React.FC<ExperienceProps> = ({ title, yearLabel, yearsL
                 />
               )}
 
-              <div className="relative z-10 shrink-0">
-                <img
-                  src={item.logo}
-                  alt={`Logo ${item.company}`}
-                  loading="lazy"
-                  className="size-12 aspect-square shrink-0 rounded-xl bg-white object-contain p-1"
-                />
-              </div>
-
-              <div className="flex-1">
-                <div className="flex flex-wrap items-t gap-x-2 gap-y-1">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg font-semibold leading-tight text-[var(--color-text-primary)] transition-colors hover:text-[var(--color-text-secondary)]"
-                  >
-                    {item.companyFull ?? item.company}
-                  </a>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex w-fit max-w-full items-center gap-4 rounded-xl transition hover:scale-105 active:scale-95 cursor-pointer duration-300"
+              >
+                <div className="relative z-10 shrink-0">
+                  <img
+                    src={item.logo}
+                    alt={`Logo ${item.company}`}
+                    loading="lazy"
+                    className="size-12 aspect-square shrink-0 rounded-xl bg-white object-contain p-1"
+                  />
+                  <div className="absolute inset-0 bg-black/60 rounded-xl flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100">
+                    <MdOpenInNew size={20} className="text-white transition-all duration-300 scale-75 group-hover:scale-100" />
+                  </div>
                 </div>
+                <span className="min-w-0 text-lg font-semibold leading-tight text-[var(--color-text-primary)] transition-colors group-hover:text-[var(--color-text-secondary)]">
+                  {item.companyFull ?? item.company}
+                </span>
+              </a>
+
+              <div className="pl-16">
                 {tenure && (
                   <p className="text-sm font-light text-[var(--color-text-secondary)]">
                     {`${tenure.start} – ${tenure.endLabel}`}
