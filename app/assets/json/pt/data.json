@@ -17,6 +17,99 @@
       "ReactJs",
       "JavaScript"
     ],
+    "skillsTitle": "Habilidades",
+    "skills": [
+      {
+        "title": "Linguagens e Core",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "Dart",
+          "Kotlin",
+          "Swift",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "title": "Frameworks e Plataformas",
+        "skills": [
+          "Flutter",
+          "React Native",
+          "Android",
+          "iOS",
+          "Web",
+          "ReactJs"
+        ]
+      },
+      {
+        "title": "Arquitetura e Padrões",
+        "skills": [
+          "Design Systems escaláveis",
+          "Atomic Design",
+          "Clean Architecture",
+          "MVVM (Model-View-ViewModel)",
+          "Bloc / Cubit",
+          "Provider",
+          "Princípios SOLID",
+          "Componentização de interfaces",
+          "Tokens de Design"
+        ]
+      },
+      {
+        "title": "Ferramentas e Infraestrutura",
+        "skills": [
+          "Firebase (Auth, Database, Analytics, Push Notifications)",
+          "Codemagic",
+          "Datadog",
+          "Crashlytics",
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jira / Atlassian",
+          "Google Cloud Platform (GCP)",
+          "Figma",
+          "Pacotes Adobe (After Effects, Premiere Pro)"
+        ]
+      },
+      {
+        "title": "Engenharia e DevOps",
+        "skills": [
+          "CI/CD",
+          "Performance Optimization",
+          "Segurança de dados e proteção contra vazamentos",
+          "Autenticidade de aplicações",
+          "Desenvolvimento Cross-platform",
+          "Integração de APIs e sistemas de pagamento (PIX, Crédito, Boletos)",
+          "Persistência de dados offline (SharedPreferences / Local Storage)",
+          "WebSockets / Conexões em tempo real",
+          "GraphQL"
+        ]
+      },
+      {
+        "title": "Design de Experiência e Produto (UI/UX)",
+        "skills": [
+          "Product Design",
+          "UX/UI Design",
+          "Interfaces Responsivas",
+          "Motion Design",
+          "Animações e Micro interações",
+          "Prototipagem de baixa e alta fidelidade"
+        ]
+      },
+      {
+        "title": "Gestão e Negócios",
+        "skills": [
+          "Gestão de Projetos",
+          "Gestão de Funcionários",
+          "Gamificação de aplicativos",
+          "Tomada de Decisão Estratégica",
+          "Rotinas de Varejo, Atacado e Logística"
+        ]
+      }
+    ],
     "photo": "",
     "buttons": [
       {

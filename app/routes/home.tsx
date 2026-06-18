@@ -47,6 +47,8 @@ export default function Home() {
           role={profileData.role}
           description={profileData.description}
           tags={profileData.tags}
+          skills={profileData.skills}
+          skillsTitle={profileData.skillsTitle}
           photoUrl={profileData.photo}
           buttons={profileData.buttons}
           flag={flags[currentFlagIndex].icon}

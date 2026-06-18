@@ -17,6 +17,99 @@
       "ReactJs",
       "JavaScript"
     ],
+    "skillsTitle": "Skills",
+    "skills": [
+      {
+        "title": "Languages & Core",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "Dart",
+          "Kotlin",
+          "Swift",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "title": "Frameworks & Platforms",
+        "skills": [
+          "Flutter",
+          "React Native",
+          "Android",
+          "iOS",
+          "Web",
+          "ReactJs"
+        ]
+      },
+      {
+        "title": "Architecture & Patterns",
+        "skills": [
+          "Scalable Design Systems",
+          "Atomic Design",
+          "Clean Architecture",
+          "MVVM (Model-View-ViewModel)",
+          "Bloc / Cubit",
+          "Provider",
+          "SOLID Principles",
+          "Interface Componentization",
+          "Design Tokens"
+        ]
+      },
+      {
+        "title": "Tools & Infrastructure",
+        "skills": [
+          "Firebase (Auth, Database, Analytics, Push Notifications)",
+          "Codemagic",
+          "Datadog",
+          "Crashlytics",
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jira / Atlassian",
+          "Google Cloud Platform (GCP)",
+          "Figma",
+          "Adobe Suite (After Effects, Premiere Pro)"
+        ]
+      },
+      {
+        "title": "Engineering & DevOps",
+        "skills": [
+          "CI/CD",
+          "Performance Optimization",
+          "Data security and leak protection",
+          "Application authenticity",
+          "Cross-platform Development",
+          "API and payment system integration (PIX, Credit, Boletos)",
+          "Offline data persistence (SharedPreferences / Local Storage)",
+          "WebSockets / Real-time connections",
+          "GraphQL"
+        ]
+      },
+      {
+        "title": "Experience & Product Design (UI/UX)",
+        "skills": [
+          "Product Design",
+          "UX/UI Design",
+          "Responsive Interfaces",
+          "Motion Design",
+          "Animations & Micro-interactions",
+          "Low and high fidelity prototyping"
+        ]
+      },
+      {
+        "title": "Management & Business",
+        "skills": [
+          "Project Management",
+          "Staff Management",
+          "App Gamification",
+          "Strategic Decision Making",
+          "Retail, Wholesale & Logistics Operations"
+        ]
+      }
+    ],
     "photo": "",
     "buttons": [
       {

@@ -17,6 +17,99 @@
       "ReactJs",
       "JavaScript"
     ],
+    "skillsTitle": "技能",
+    "skills": [
+      {
+        "title": "语言与核心",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "Dart",
+          "Kotlin",
+          "Swift",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "title": "框架与平台",
+        "skills": [
+          "Flutter",
+          "React Native",
+          "Android",
+          "iOS",
+          "Web",
+          "ReactJs"
+        ]
+      },
+      {
+        "title": "架构与模式",
+        "skills": [
+          "可扩展设计系统",
+          "Atomic Design",
+          "Clean Architecture",
+          "MVVM (Model-View-ViewModel)",
+          "Bloc / Cubit",
+          "Provider",
+          "SOLID 原则",
+          "界面组件化",
+          "设计令牌 (Design Tokens)"
+        ]
+      },
+      {
+        "title": "工具与基础设施",
+        "skills": [
+          "Firebase (Auth, Database, Analytics, Push Notifications)",
+          "Codemagic",
+          "Datadog",
+          "Crashlytics",
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jira / Atlassian",
+          "Google Cloud Platform (GCP)",
+          "Figma",
+          "Adobe 套件 (After Effects, Premiere Pro)"
+        ]
+      },
+      {
+        "title": "工程与 DevOps",
+        "skills": [
+          "CI/CD",
+          "Performance Optimization",
+          "数据安全与防泄漏",
+          "应用真实性",
+          "跨平台开发",
+          "API 与支付系统集成 (PIX, 信用卡, Boletos)",
+          "离线数据持久化 (SharedPreferences / Local Storage)",
+          "WebSockets / 实时连接",
+          "GraphQL"
+        ]
+      },
+      {
+        "title": "体验与产品设计 (UI/UX)",
+        "skills": [
+          "Product Design",
+          "UX/UI Design",
+          "响应式界面",
+          "Motion Design",
+          "动画与微交互",
+          "低保真与高保真原型"
+        ]
+      },
+      {
+        "title": "管理与业务",
+        "skills": [
+          "项目管理",
+          "员工管理",
+          "应用游戏化",
+          "战略决策",
+          "零售、批发与物流运营"
+        ]
+      }
+    ],
     "photo": "",
     "buttons": [
       {
